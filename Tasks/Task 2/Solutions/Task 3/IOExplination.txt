@@ -1,0 +1,11 @@
+How I/O can be handled by polling (wait loops) or by using interrupts and why interrupt driven mechanisms allow for more efficient use of a computer system?
+
+Interrupt Method:
+• Send a character
+• Repeat
+	• test TTY’s “done” flag
+• Until flag is set (signifying that last character printed)
+
+Details:
+Polling - the CPU asking every peripheral if they need anything over and over again
+Interrupts - when the CPU goes on with work, devices send signals when they need something

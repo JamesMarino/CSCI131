@@ -1,0 +1,2652 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+12 0 R
+16 0 R
+20 0 R
+22 0 R
+25 0 R
+27 0 R
+29 0 R
+32 0 R
+34 0 R
+36 0 R
+42 0 R
+46 0 R
+54 0 R
+86 0 R
+]
+/Count 15
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+/F3 24 0 R
+/F4 31 0 R
+>>
+/XObject << 
+/I1 10 0 R
+/I2 11 0 R
+>>
+>>
+/MediaBox [0.000 0.000 595.280 841.890]
+ >>
+endobj
+4 0 obj
+[/PDF /Text /ImageC ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20150723112041+10'00')
+/ModDate (D:20150723112041+10'00')
+/Title (CSCI131)
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 8295 >>
+stream
+
+q
+168.000 0 0 30.000 393.264 777.874 cm /I2 Do
+Q
+0.000 0.000 0.000 rg
+BT 266.632 743.362 Td /F2 24.0 Tf  [(SCIT)] TJ ET
+BT 322.648 743.362 Td /F1 24.0 Tf  [(†)] TJ ET
+BT 141.124 707.722 Td /F2 12.0 Tf  [(†)] TJ ET
+BT 144.124 707.722 Td /F2 14.4 Tf  [(School of Computing and Information Technology)] TJ ET
+BT 152.646 683.314 Td /F2 14.4 Tf  [(Faculty of Engineering & Information Sciences)] TJ ET
+BT 296.140 650.482 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 140.320 614.842 Td /F1 12.0 Tf  [(Head of School Professor Willy Susilo, Student Resource Centre,)] TJ ET
+BT 249.478 579.202 Td /F1 12.0 Tf  [(Tel: \(02\) 4221 3491)] TJ ET
+BT 296.140 543.562 Td /F1 12.0 Tf  [(†)] TJ ET
+0.867 0.867 0.867 rg
+34.016 407.014 527.249 129.420 re f
+0.000 0.000 0.000 rg
+BT 183.646 507.922 Td /F2 12.0 Tf  [(CSCI131 Introduction to Computer Systems)] TJ ET
+BT 257.470 472.282 Td /F2 12.0 Tf  [(Subject Outline)] TJ ET
+BT 246.628 436.642 Td /F2 12.0 Tf  [(Spring Session 2015)] TJ ET
+34.016 380.758 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 383.609 Td /F2 12.0 Tf  [(Consultation Times:†)] TJ ET
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 356.758 m 561.264 356.758 l 559.764 355.258 l 35.516 355.258 l  f
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+34.016 275.234 m 561.264 275.234 l 559.764 276.734 l 35.516 276.734 l  f
+561.264 356.758 m 561.264 275.234 l 559.764 276.734 l 559.764 355.258 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 356.758 m 34.016 275.234 l 35.516 276.734 l 35.516 355.258 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 353.758 m 253.592 353.758 l 252.592 352.758 l 38.016 352.758 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 336.002 m 253.592 336.002 l 252.592 337.002 l 38.016 337.002 l  f
+253.592 353.758 m 253.592 336.002 l 252.592 337.002 l 252.592 352.758 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 353.758 m 37.016 336.002 l 38.016 337.002 l 38.016 352.758 l  f
+BT 38.766 340.603 Td /F2 12.0 Tf  [(Subject Coordinator)] TJ ET
+255.092 353.758 m 558.264 353.758 l 557.264 352.758 l 256.092 352.758 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+255.092 336.002 m 558.264 336.002 l 557.264 337.002 l 256.092 337.002 l  f
+558.264 353.758 m 558.264 336.002 l 557.264 337.002 l 557.264 352.758 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+255.092 353.758 m 255.092 336.002 l 256.092 337.002 l 256.092 352.758 l  f
+BT 256.842 340.906 Td /F1 12.0 Tf  [(Associate Professor Neil Gray†)] TJ ET
+37.016 334.502 m 253.592 334.502 l 252.592 333.502 l 38.016 333.502 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 316.746 m 253.592 316.746 l 252.592 317.746 l 38.016 317.746 l  f
+253.592 334.502 m 253.592 316.746 l 252.592 317.746 l 252.592 333.502 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 334.502 m 37.016 316.746 l 38.016 317.746 l 38.016 333.502 l  f
+BT 38.766 321.650 Td /F1 12.0 Tf  [(Telephone Number:)] TJ ET
+255.092 334.502 m 558.264 334.502 l 557.264 333.502 l 256.092 333.502 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+255.092 316.746 m 558.264 316.746 l 557.264 317.746 l 256.092 317.746 l  f
+558.264 334.502 m 558.264 316.746 l 557.264 317.746 l 557.264 333.502 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+255.092 334.502 m 255.092 316.746 l 256.092 317.746 l 256.092 333.502 l  f
+BT 256.842 321.650 Td /F1 12.0 Tf  [(4221 3812)] TJ ET
+37.016 315.246 m 253.592 315.246 l 252.592 314.246 l 38.016 314.246 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 297.490 m 253.592 297.490 l 252.592 298.490 l 38.016 298.490 l  f
+253.592 315.246 m 253.592 297.490 l 252.592 298.490 l 252.592 314.246 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 315.246 m 37.016 297.490 l 38.016 298.490 l 38.016 314.246 l  f
+BT 38.766 302.394 Td /F1 12.0 Tf  [(Email:)] TJ ET
+255.092 315.246 m 558.264 315.246 l 557.264 314.246 l 256.092 314.246 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+255.092 297.490 m 558.264 297.490 l 557.264 298.490 l 256.092 298.490 l  f
+558.264 315.246 m 558.264 297.490 l 557.264 298.490 l 557.264 314.246 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+255.092 315.246 m 255.092 297.490 l 256.092 298.490 l 256.092 314.246 l  f
+BT 256.842 302.394 Td /F1 12.0 Tf  [(nabg@uow.edu.au†)] TJ ET
+37.016 295.990 m 253.592 295.990 l 252.592 294.990 l 38.016 294.990 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 278.234 m 253.592 278.234 l 252.592 279.234 l 38.016 279.234 l  f
+253.592 295.990 m 253.592 278.234 l 252.592 279.234 l 252.592 294.990 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 295.990 m 37.016 278.234 l 38.016 279.234 l 38.016 294.990 l  f
+BT 38.766 283.138 Td /F1 12.0 Tf  [(Location:)] TJ ET
+255.092 295.990 m 558.264 295.990 l 557.264 294.990 l 256.092 294.990 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+255.092 278.234 m 558.264 278.234 l 557.264 279.234 l 256.092 279.234 l  f
+558.264 295.990 m 558.264 278.234 l 557.264 279.234 l 557.264 294.990 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+255.092 295.990 m 255.092 278.234 l 256.092 279.234 l 256.092 294.990 l  f
+BT 256.842 283.138 Td /F1 12.0 Tf  [(3.206)] TJ ET
+BT 34.016 234.722 Td /F1 12.0 Tf  [(A/Prof. Gray's consultation times during session:)] TJ ET
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 215.594 m 561.264 215.594 l 559.764 214.094 l 35.516 214.094 l  f
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+34.016 153.326 m 561.264 153.326 l 559.764 154.826 l 35.516 154.826 l  f
+561.264 215.594 m 561.264 153.326 l 559.764 154.826 l 559.764 214.094 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 215.594 m 34.016 153.326 l 35.516 154.826 l 35.516 214.094 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 212.594 m 268.668 212.594 l 267.668 211.594 l 38.016 211.594 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 194.838 m 268.668 194.838 l 267.668 195.838 l 38.016 195.838 l  f
+268.668 212.594 m 268.668 194.838 l 267.668 195.838 l 267.668 211.594 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 212.594 m 37.016 194.838 l 38.016 195.838 l 38.016 211.594 l  f
+BT 38.766 199.742 Td /F1 12.0 Tf  [(Day)] TJ ET
+270.168 212.594 m 558.264 212.594 l 557.264 211.594 l 271.168 211.594 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+270.168 194.838 m 558.264 194.838 l 557.264 195.838 l 271.168 195.838 l  f
+558.264 212.594 m 558.264 194.838 l 557.264 195.838 l 557.264 211.594 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+270.168 212.594 m 270.168 194.838 l 271.168 195.838 l 271.168 211.594 l  f
+BT 271.918 199.742 Td /F1 12.0 Tf  [(Time)] TJ ET
+37.016 193.338 m 268.668 193.338 l 267.668 192.338 l 38.016 192.338 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 175.582 m 268.668 175.582 l 267.668 176.582 l 38.016 176.582 l  f
+268.668 193.338 m 268.668 175.582 l 267.668 176.582 l 267.668 192.338 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 193.338 m 37.016 175.582 l 38.016 176.582 l 38.016 192.338 l  f
+BT 38.766 180.486 Td /F1 12.0 Tf  [(†Monday)] TJ ET
+270.168 193.338 m 558.264 193.338 l 557.264 192.338 l 271.168 192.338 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+270.168 175.582 m 558.264 175.582 l 557.264 176.582 l 271.168 176.582 l  f
+558.264 193.338 m 558.264 175.582 l 557.264 176.582 l 557.264 192.338 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+270.168 193.338 m 270.168 175.582 l 271.168 176.582 l 271.168 192.338 l  f
+BT 271.918 180.486 Td /F1 12.0 Tf  [(†9.30-11.30)] TJ ET
+37.016 174.082 m 268.668 174.082 l 267.668 173.082 l 38.016 173.082 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 156.326 m 268.668 156.326 l 267.668 157.326 l 38.016 157.326 l  f
+268.668 174.082 m 268.668 156.326 l 267.668 157.326 l 267.668 173.082 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 174.082 m 37.016 156.326 l 38.016 157.326 l 38.016 173.082 l  f
+BT 38.766 161.230 Td /F1 12.0 Tf  [(†Friday)] TJ ET
+270.168 174.082 m 558.264 174.082 l 557.264 173.082 l 271.168 173.082 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+270.168 156.326 m 558.264 156.326 l 557.264 157.326 l 271.168 157.326 l  f
+558.264 174.082 m 558.264 156.326 l 557.264 157.326 l 557.264 173.082 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+270.168 174.082 m 270.168 156.326 l 271.168 157.326 l 271.168 173.082 l  f
+BT 271.918 161.230 Td /F1 12.0 Tf  [(†13.30-15.30)] TJ ET
+BT 34.016 112.814 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 34.016 77.174 Td /F1 12.0 Tf  [(†)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<<
+/Type /XObject
+/Subtype /Image
+/Width 224
+/Height 40
+/Filter /FlateDecode
+/DecodeParms << /Predictor 15 /Colors 1 /Columns 224 /BitsPerComponent 8>>
+/ColorSpace /DeviceGray
+/BitsPerComponent 8
+/Length 72>>
+stream
+hÅÌœ  ¿∞˚7*2“*ÿÊ|n^l3Xg∞Œ`ù¡:ÉuÎ÷¨3Xg∞Œ`ù¡:ÉuÎ÷¨3Xg∞Œ`›—∞ﬁˇ
+endstream
+endobj
+11 0 obj
+<<
+/Type /XObject
+/Subtype /Image
+/Width 224
+/Height 40
+/SMask 10 0 R
+/Filter /FlateDecode
+/DecodeParms << /Predictor 15 /Colors 3 /Columns 224 /BitsPerComponent 8>>
+/ColorSpace /DeviceRGB
+/BitsPerComponent 8
+/Length 3195>>
+stream
+xúÌúTW«o Å	ÚS≠fH’Çµnl¥¢‘V€n%]Ï©˝£ú≠ûÌñ`{Vˆ?¥∂U[€Ï⁄„i{tZ∑•k-Ën=Óv+£‚ñV"G´ï°eÅ Ådˇxgß≥IàIàÓ|é«3ysﬂ˜›ysÁΩ˚ﬁ$ L`D ‡t:Ô¥w"ëh‹⁄è[K˜©	â„÷ñ†~cÎÈ∑∂Ñ ò–*0°	π”‹;(£±—TóÜá_∞v∏
+*·”sñåF°Âá≥ ®¿X†å∆fœôª˛øvt7ÜÑÑ˘[}hhP˝–°}Âm--TüçJPÅ‡–iãÄˆCDË;‚P«¿ô©√Ìíà'Z ¿—'G8Üªc˚ˇ6ÔRËÏaGü ƒ<≥P®Ô˙Âç~ôª¨†A¶øfÍ¿◊∏££`:Ãê&˜}/q6L4':⁄lé{»Ã ËØërf·ZaÑ≠Ua/TŒ=‹˚—tq\o¯⁄GN*Ì2Á-â˝–Ã¡Zëty®XÒ`œ˚”·äd‡€˘|≥ﬁ√I#ÈyPì…d2ôºóxÑ$…í¢R_/)P∆Æ≥Ÿ¨’j5EQ¸rÉ¡@í$ﬂ~o‹÷æ¡¯t— °14ı«ÄXFEÆ∂âÔ≥á>ÿ"πœ.íOs‹¯1\”*öoKmMΩ!éùÜÃ&≠nçê∏éIÄ;Z˝Íé≠æ^R†[))*‚‚úúú÷÷÷≤≤2óÚ™™*~aYYY^^ﬂü?Ω˜Gü.ƒäâr∂˝4=diqtG8„aÜ√M±_àµ◊ú˙^ √0ÏºØ_¢ú=≈w»‚Ì#	éIöø!oŸ™¨±PüVhö^∑6W£—∏îg¶Vîs- òÕfµZ W€iïJ5˛‹E8˙ƒìbÎB^	ç=5ò+äÉƒ—O≈ÆÉæxàæﬁ›ê Äd≤€8–$I«»ÇcíÉ‚8Ó~wÔ“V¯(SíiöF«√∞,´P(Q	EQˇœ'Î;Ÿö<mœ∂7ÜñH≥Æ„“Î3ã?}ÅÈñÜÃ±~üzˇa˝«Ò©≠L∑4ÌÉç9÷gÛ˚%Ñµ\6w⁄ûmdSjl∏Õ]6 Â≤(t‡íú°SUUUÉÅ_´§®‘l6£cä¢JäJ√0ú "Ü·'|H–≈ík•§®ÙDÌqt¿ï˝q˘»·Ó ßy¢ˆxIQ©Kä„8  ˇ-Üa*ï
+ç£®$:Ûri^hÔ•áπæBÂ®ª∆HÕwHjZ;ı˚ì+û›∑qÈ/9˚–ÈVÂ™ä¸5{ÛÛ¨iøïêw`ÕöΩ˘´*ÚO∑*èú}hÈ/>ªocﬁë_¥≥QWfè®ÎÇ Ç©§xs	 ‰ÊÊ™’jÖB ÕÕÕ¸SNß”h4Úı´´´9≥  J @u1ÎÍÍ‚öP´’®‹h4r"A∏Xr≠†S»πGDvv62´´´ÄÍÍjó´sq ye4	Ç  ÖBAD]]ùK- ®¨¨D≠Å˛ÁN°V<*Ûv9ˆnÔ±áùNgnn.AÜ!o«BÕ#xÑÎÜ•2{˛âïO˝∂Ô[∂“˜B˙^Xº˝ìÆ4Ü-€çNIWπrdÜN-ﬂTY∏~ΩªÚhßxçFSWWá«?øgt? ‹√zÏh5Üah⁄∂m[vvv]]EQrπúø¯0õÕsÁŒ•(Jß”Ä^ØœÕÕ%I“b±∏X"Hí\∑6†∂2”ÆQ4ªOæúHç:ùU\∑6ó$Iî\ÚQ(gjÎ†·‚ŸÃ4bŸ™,4Ç¢Z.ó∆WˆÇw{è=l6õ´™™–ı“ÜÇ∏∏8ÓzÉ´ vß() ö>´s˘‚Y˘ŸÛ>ﬂû”^°≠}ÌØûK´}m{ÖˆÛÌ9˘ŸÛñ/ûï>´3,Ã√¥Œg¥äb›wp«0Ïÿ—jÙÒDÌq≤√òÕfT ¥ZmMMWK≠V{‹+êÀÂtPw≤üYÕ≤,7´’jπ\Œ7@hµZ$´—h¯x«Ò´Ì4í}8mæJ•bYñ¢(4ô‚8ÓØÚmÌ=ˆ°áU*∫®e´≤∏¨)∏jÅ íΩñÒØOü2ÍÈ|sc˙æÕ+üŒT ÂÚ˘3„û_1{˛Ã8π\˛t¶rﬂÊïonL◊=“πgŸ_ñLΩ
+"ÔêcæQØ—hPÇ ã(u(äBcÍVÆJdd$_·•ÂÂÂ(r5è®’j√Nû<â⁄JOOw1@p˜iFí¬«ªíôF†ƒî¶itS
+Ö≈b9S[èrïˆd‘cjTwﬂPHØ=ÏfØÑ_ﬁk‡ÏÓÎµﬂ˛≠˝x(∑√≤lFFw™∞∞0+++++´ºº|dÿ∫}KÒÊíWwl≈q‹˜©G£— cã≈ƒ≈µ2%Ÿb±ê$…Â**ïÍLm˝’vz§id,P¶$s8ä¢PN9A‘äé≠(opMç<2)tµo˚˜µ‡q¢Û Õ»»@≥mcc#Üa¸¨Œe·‚EdÎˆ-ÕÕÕ8égeeUUU˘“.
+Pä¢Xñ‚né„,À;ZÕ˝ºîüù®=NQ‘å§Q›Wø–jµ√ËızÙÓ •‡wPMŒvZ„1 ˇËç¨¯R´◊V±˙SÌÁA$ãêBg[´ÿÌõPc†‹lKí‰hüAËız_Ï—ÉQUU•P(Ç8∂°K¯∞¢<3ç@%hùÑR“`µ‚*ï™¶¶∆`0¨[õªu˚ñ;´v¡⁄—aµNÌ±ÃxAÛ…wK DÚ?S¸$ô‘•÷§–¡ùuKOP”‡Å8—Âö•··.6ﬁ«qóç@ä¢∏Ÿhñojj‚îüâÄ…dZ∞`Å«∫√pì5 d¶‹Vπw–fä¡`8øª8–pÒ,  }A°P–4ÕÖ#Z'±,;}˙Ù îÛ‰ÌÌÔÙÙÙ†ı8?ûÇ´Ê÷õ2ÎôEÛß4w≈†íõ›∂ko˝ÂŒo.t|s°£⁄L°É˙Àù-÷ﬁõ›6 îÖˆ'+ßâõ;⁄:‹øQÔ-@u:M”‹à•◊ÎiöÊñﬁæÉ"Ãl6Û–ÏÏÏ˝˚˜3√0ÃªÔæÎæéA†%—+Øº¬0EQVî{Èqó]qçFC”ÙH√6ÁÄŸl&I≠|}ÅK=9Q“∆e/˛*‡	Zk„8Æ”È	ÆöÔ»"£œVˇ-}f¯÷%ï/<\k∑›d∫⁄Œ]∫‰`ÈDôÌ⁄ı^ ∏vΩ7Qfs∞ÙπKóòÆ6¶ªß0Ì¥"⁄∂0%ˆÃóG= zPçFc4M&ìH$âD&ì…h40Mgdd–4ÌíÄ_æ|9&&&&&&22“ÀÊ—Æ]ª:;;cbbíìì—Gwõ¸yËΩÄGÆé¥B*..F≤,P©Tæ?x*ïä[!q%.óÊór ûDEEaGQTaaarr2∑1\5ﬂπ`Ìhh∫qÌ¯û∂◊s>{˛zc≠ﬂu∂z◊Åœﬁ⁄ΩÁÂ+µo.ùb˛˛DÈÓ=/¯Ï-ÚÔ;¨ıª{€≥Ê“∞pÒ§ÜS5µW∫YwŸ€ˇeÜa–î¡mïí$£¢¢‹˜√=Z¬cŒ#»Oæö…d“Îıﬁ_6˙ÓÄø¯´Ïó=é„zΩMn√îïï°˜√c§ÊBÚ§óf R£#B÷Ω∫o”˛∂Å[="ÈOﬂ/√£¨ãÆê?Œig£¯Â z˛ÇØwol∫x%¿ ΩKaF•Ri4ö ÉâèH$2ç‹ËËÀ£Dµë î—ÿ‹Â„õø˚‰róıFòÏß¯¡Aô˚{£-yœRzí<1í‡Ω˘ìΩ^è‚2∞/=L|
+
+
+Ùz=Ií3í›˝¨…dÕïQÌJ7Îh∫oÎ_ﬂd0ùJ˙¶Ó£¸Ë¥ŸíÔ«ÛÛƒÛávyâN∏WGP4CÈt∫†Á$≥Ÿ|Ë¿a òú£’jGπïÊóöó°å∆ß$>˜b—wŒôuâ?î⁄la2ôvŸúåÎó{w64]Ù.uo®¿òr€ Ä‘ÑƒÅ˛˛'ü|,ÂâıÁª"é|€ﬁ¸ì˚ËBúPÿ¸˙Û√=  Mù]ﬁuÑ _°å∆"¬ƒYèÆòµ‰q6$I.a€,’_˘¢√z”G!@¸∆˜ E†?âì8%Ò÷çÎ=}˝~’T¿o¸–— ¸.^`B#®¿ÑFPÅ	ç†ÅÚ.mY
+endstream
+endobj
+12 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 14 0 R ]
+/Contents 13 0 R
+>>
+endobj
+13 0 obj
+<<
+/Length 4810 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 781.618 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 784.469 Td /F2 12.0 Tf  [(Subject Organisation:†)] TJ ET
+1 w 0 J [  ] 0 d
+34.266 756.868 m 187.564 756.868 l S
+1 w 0 J [  ] 0 d
+34.766 757.368 m 34.766 739.612 l S
+0.000 0.000 0.000 rg
+BT 36.016 744.516 Td /F1 12.0 Tf  [(Session:)] TJ ET
+1 w 0 J [  ] 0 d
+186.564 756.868 m 561.014 756.868 l S
+1 w 0 J [  ] 0 d
+187.064 757.368 m 187.064 739.612 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+560.514 757.368 m 560.514 739.612 l S
+BT 188.314 744.516 Td /F1 12.0 Tf  [(†Spring Session 2015, Wollongong Campus†)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.266 740.112 m 187.564 740.112 l S
+1 w 0 J [  ] 0 d
+34.766 740.612 m 34.766 722.856 l S
+BT 36.016 727.760 Td /F1 12.0 Tf  [(Credit Points)] TJ ET
+1 w 0 J [  ] 0 d
+186.564 740.112 m 561.014 740.112 l S
+1 w 0 J [  ] 0 d
+187.064 740.612 m 187.064 722.856 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+560.514 740.612 m 560.514 722.856 l S
+BT 188.314 727.760 Td /F1 12.0 Tf  [(†6 credit points†)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.266 723.356 m 187.564 723.356 l S
+1 w 0 J [  ] 0 d
+34.766 723.856 m 34.766 706.100 l S
+BT 36.016 711.004 Td /F1 12.0 Tf  [(Contact hours per week:)] TJ ET
+1 w 0 J [  ] 0 d
+186.564 723.356 m 561.014 723.356 l S
+1 w 0 J [  ] 0 d
+187.064 723.856 m 187.064 706.100 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+560.514 723.856 m 560.514 706.100 l S
+BT 188.314 711.004 Td /F1 12.0 Tf  [(†3hr lect; 2hr computer lab†)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.266 706.600 m 187.564 706.600 l S
+1 w 0 J [  ] 0 d
+34.766 707.100 m 34.766 632.320 l S
+BT 36.016 665.736 Td /F1 12.0 Tf  [(Lecture Times & Location:)] TJ ET
+1 w 0 J [  ] 0 d
+186.564 706.600 m 561.014 706.600 l S
+1 w 0 J [  ] 0 d
+187.064 707.100 m 187.064 632.320 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+560.514 707.100 m 560.514 632.320 l S
+BT 188.314 676.838 Td /F1 12.0 Tf  [(†Tue 10:30-12:30; 35-G45)] TJ ET
+BT 188.314 641.198 Td /F1 12.0 Tf  [(†Wed 9:30-10:30; 67-303)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.266 632.820 m 187.564 632.820 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+34.266 601.808 m 187.564 601.808 l S
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.766 633.320 m 34.766 601.308 l S
+BT 36.016 620.468 Td /F1 12.0 Tf  [(Tutorial Day, Time and )] TJ ET
+BT 36.016 606.212 Td /F1 12.0 Tf  [(Location can be found at:)] TJ ET
+1 w 0 J [  ] 0 d
+186.564 632.820 m 561.014 632.820 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+186.564 601.808 m 561.014 601.808 l S
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+187.064 633.320 m 187.064 601.308 l S
+0.160 0.160 0.160 RG
+1 w 0 J [  ] 0 d
+560.514 633.320 m 560.514 601.308 l S
+BT 188.314 613.340 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/timetables/index.html)] TJ ET
+BT 34.016 560.546 Td /F1 12.0 Tf  [(†Students should check the subject's web site regularly as important information, including details of )] TJ ET
+BT 34.016 524.906 Td /F1 12.0 Tf  [(unavoidable changes in assessment requirements will be posted from time to time via Moodle space )] TJ ET
+BT 37.616 489.266 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/)] TJ ET
+0.6 w 0 J [  ] 0 d
+37.616 486.566 m 191.948 486.566 l S
+BT 198.548 489.266 Td /F1 12.0 Tf  [(. Any information posted to the web site is deemed to have been notified )] TJ ET
+BT 34.016 453.626 Td /F1 12.0 Tf  [(to all students.)] TJ ET
+34.016 420.242 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 423.093 Td /F2 12.0 Tf  [(Subject Description:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 379.730 Td /F1 12.0 Tf  [(The subject explores how programs written in high level languages such as C/C++ actually run on a )] TJ ET
+BT 34.016 344.090 Td /F1 12.0 Tf  [(computer. The first part covers the basics of machine architecture, instruction sets, addressing modes, and )] TJ ET
+BT 34.016 308.450 Td /F1 12.0 Tf  [(assembly language. The richer programming environment provided by an operating system is then )] TJ ET
+BT 34.016 272.810 Td /F1 12.0 Tf  [(examined. Finally, the compilation process is reviewed.)] TJ ET
+34.016 239.426 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 242.277 Td /F2 12.0 Tf  [(Subject Objectives:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 198.626 Td /F1 12.0 Tf  [(On successful completion of this subject, students will be able to:)] TJ ET
+BT 34.016 162.626 Td /F1 12.0 Tf  [(1. Specify how data of different types are represented.)] TJ ET
+BT 34.016 126.626 Td /F1 12.0 Tf  [(2. Describe the structure of a simple computer and extensions for performance.)] TJ ET
+BT 34.016 90.626 Td /F1 12.0 Tf  [(3. Explain how data are manipulated.)] TJ ET
+BT 34.016 54.914 Td /F1 12.0 Tf  [(4. Explain how standard programming constructs - loops, conditionals, function calls - are realised in )] TJ ET
+BT 34.016 18.986 Td /F1 12.0 Tf  [(hardware.)] TJ ET
+endstream
+endobj
+14 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 15 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 488.1863 195.5477 500.0663 ]
+>>
+endobj
+15 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/)
+>>
+endobj
+16 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 18 0 R ]
+/Contents 17 0 R
+>>
+endobj
+17 0 obj
+<<
+/Length 2579 >>
+stream
+
+0.000 0.000 0.000 rg
+0.160 0.160 0.160 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 779.074 Td /F1 12.0 Tf  [(5. Implement simple programs in assembly language for a simulated system.)] TJ ET
+BT 34.016 743.074 Td /F1 12.0 Tf  [(6. Explain how I/O is performed.)] TJ ET
+BT 34.016 707.074 Td /F1 12.0 Tf  [(7. Explain the distinct "supervisor" and "user" mode operations of a CPU.)] TJ ET
+BT 34.016 671.074 Td /F1 12.0 Tf  [(8. Explain the role of an operating system and specific responsibilities such as support of a file system.)] TJ ET
+BT 34.016 635.074 Td /F1 12.0 Tf  [(9. Have an understanding of assemblers, linkers, loaders; use of libraries; the program build process.)] TJ ET
+BT 34.016 599.362 Td /F1 12.0 Tf  [(10. Explain the workings of lexical scanners, parsers, code-generators, code-optimisers; implement simple )] TJ ET
+BT 34.016 563.722 Td /F1 12.0 Tf  [(versions of some components.)] TJ ET
+34.016 530.338 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 533.189 Td /F2 12.0 Tf  [(Graduate Qualities:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 489.826 Td /F1 12.0 Tf  [("Graduate Qualities" are the aspirational qualities that students will progressively develop through their )] TJ ET
+BT 34.016 454.186 Td /F1 12.0 Tf  [(learning experiences at UOW.† These Graduate Qualities are not achieved in a single subject - their )] TJ ET
+BT 34.016 418.546 Td /F1 12.0 Tf  [(development is an ongoing process across an entire program of study. This subject will contribute to the )] TJ ET
+BT 34.016 382.906 Td /F1 12.0 Tf  [(following Graduate Qualities:)] TJ ET
+BT 34.016 346.978 Td /F1 12.0 Tf  [(Innovation and design)] TJ ET
+BT 34.016 310.978 Td /F1 12.0 Tf  [(Informed)] TJ ET
+BT 34.016 274.978 Td /F1 12.0 Tf  [(Independent learners)] TJ ET
+BT 34.016 238.978 Td /F1 12.0 Tf  [(Problem solvers)] TJ ET
+BT 34.016 202.978 Td /F1 12.0 Tf  [(Effective communicators)] TJ ET
+BT 34.016 130.978 Td /F1 12.0 Tf  [(Further information can be found at:)] TJ ET
+BT 37.616 95.266 Td /F1 12.0 Tf  [(http://eis.uow.edu.au/future-students/graduate-qualities/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+37.616 92.566 m 357.596 92.566 l S
+34.016 61.882 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 64.733 Td /F2 12.0 Tf  [(Graduate Qualities Explained:†)] TJ ET
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 37.882 m 561.264 37.882 l 560.514 37.132 l 34.766 37.132 l  f
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+561.264 37.882 m 561.264 36.382 l 560.514 36.382 l 560.514 37.132 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 37.882 m 34.016 36.382 l 34.766 36.382 l 34.766 37.132 l  f
+endstream
+endobj
+18 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 19 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 94.1863 361.1957 106.0663 ]
+>>
+endobj
+19 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://eis.uow.edu.au/future-students/graduate-qualities/index.html)
+>>
+endobj
+20 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 21 0 R
+>>
+endobj
+21 0 obj
+<<
+/Length 10765 >>
+stream
+
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+0.6 w 0 J [  ] 0 d
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+34.016 681.088 m 561.264 681.088 l 560.514 681.838 l 34.766 681.838 l  f
+561.264 807.874 m 561.264 681.088 l 560.514 681.838 l 560.514 807.874 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 807.874 m 34.016 681.088 l 34.766 681.838 l 34.766 807.874 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 806.374 m 206.263 806.374 l 205.263 805.374 l 37.266 805.374 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 787.118 m 206.263 787.118 l 205.263 788.118 l 37.266 788.118 l  f
+206.263 806.374 m 206.263 787.118 l 205.263 788.118 l 205.263 805.374 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 806.374 m 36.266 787.118 l 37.266 788.118 l 37.266 805.374 l  f
+BT 38.766 792.772 Td /F1 12.0 Tf  [(Graduate Qualities)] TJ ET
+207.763 806.374 m 405.509 806.374 l 404.509 805.374 l 208.763 805.374 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+207.763 787.118 m 405.509 787.118 l 404.509 788.118 l 208.763 788.118 l  f
+405.509 806.374 m 405.509 787.118 l 404.509 788.118 l 404.509 805.374 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+207.763 806.374 m 207.763 787.118 l 208.763 788.118 l 208.763 805.374 l  f
+BT 210.263 792.772 Td /F1 12.0 Tf  [(Covered in)] TJ ET
+407.009 806.374 m 559.014 806.374 l 558.014 805.374 l 408.009 805.374 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.009 787.118 m 559.014 787.118 l 558.014 788.118 l 408.009 788.118 l  f
+559.014 806.374 m 559.014 787.118 l 558.014 788.118 l 558.014 805.374 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.009 806.374 m 407.009 787.118 l 408.009 788.118 l 408.009 805.374 l  f
+BT 409.509 792.772 Td /F1 12.0 Tf  [(Assessed in)] TJ ET
+36.266 785.618 m 206.263 785.618 l 205.263 784.618 l 37.266 784.618 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 766.362 m 206.263 766.362 l 205.263 767.362 l 37.266 767.362 l  f
+206.263 785.618 m 206.263 766.362 l 205.263 767.362 l 205.263 784.618 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 785.618 m 36.266 766.362 l 37.266 767.362 l 37.266 784.618 l  f
+BT 38.766 772.016 Td /F1 12.0 Tf  [(Innovation and design)] TJ ET
+207.763 785.618 m 405.509 785.618 l 404.509 784.618 l 208.763 784.618 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+207.763 766.362 m 405.509 766.362 l 404.509 767.362 l 208.763 767.362 l  f
+405.509 785.618 m 405.509 766.362 l 404.509 767.362 l 404.509 784.618 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+207.763 785.618 m 207.763 766.362 l 208.763 767.362 l 208.763 784.618 l  f
+BT 210.263 772.016 Td /F1 12.0 Tf  [(†Assignments, and lectures)] TJ ET
+407.009 785.618 m 559.014 785.618 l 558.014 784.618 l 408.009 784.618 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.009 766.362 m 559.014 766.362 l 558.014 767.362 l 408.009 767.362 l  f
+559.014 785.618 m 559.014 766.362 l 558.014 767.362 l 558.014 784.618 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.009 785.618 m 407.009 766.362 l 408.009 767.362 l 408.009 784.618 l  f
+BT 409.509 772.016 Td /F1 12.0 Tf  [(†Assignments)] TJ ET
+36.266 764.862 m 206.263 764.862 l 205.263 763.862 l 37.266 763.862 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 745.606 m 206.263 745.606 l 205.263 746.606 l 37.266 746.606 l  f
+206.263 764.862 m 206.263 745.606 l 205.263 746.606 l 205.263 763.862 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 764.862 m 36.266 745.606 l 37.266 746.606 l 37.266 763.862 l  f
+BT 38.766 751.260 Td /F1 12.0 Tf  [(Informed)] TJ ET
+207.763 764.862 m 405.509 764.862 l 404.509 763.862 l 208.763 763.862 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+207.763 745.606 m 405.509 745.606 l 404.509 746.606 l 208.763 746.606 l  f
+405.509 764.862 m 405.509 745.606 l 404.509 746.606 l 404.509 763.862 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+207.763 764.862 m 207.763 745.606 l 208.763 746.606 l 208.763 763.862 l  f
+BT 210.263 751.260 Td /F1 12.0 Tf  [(†Exercises, lectures, and assignments)] TJ ET
+407.009 764.862 m 559.014 764.862 l 558.014 763.862 l 408.009 763.862 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.009 745.606 m 559.014 745.606 l 558.014 746.606 l 408.009 746.606 l  f
+559.014 764.862 m 559.014 745.606 l 558.014 746.606 l 558.014 763.862 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.009 764.862 m 407.009 745.606 l 408.009 746.606 l 408.009 763.862 l  f
+BT 409.509 751.260 Td /F1 12.0 Tf  [(†Exam)] TJ ET
+36.266 744.106 m 206.263 744.106 l 205.263 743.106 l 37.266 743.106 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 724.850 m 206.263 724.850 l 205.263 725.850 l 37.266 725.850 l  f
+206.263 744.106 m 206.263 724.850 l 205.263 725.850 l 205.263 743.106 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 744.106 m 36.266 724.850 l 37.266 725.850 l 37.266 743.106 l  f
+BT 38.766 730.504 Td /F1 12.0 Tf  [(Independent Learners)] TJ ET
+207.763 744.106 m 405.509 744.106 l 404.509 743.106 l 208.763 743.106 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+207.763 724.850 m 405.509 724.850 l 404.509 725.850 l 208.763 725.850 l  f
+405.509 744.106 m 405.509 724.850 l 404.509 725.850 l 404.509 743.106 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+207.763 744.106 m 207.763 724.850 l 208.763 725.850 l 208.763 743.106 l  f
+BT 210.263 730.504 Td /F1 12.0 Tf  [(†Exercises,† and assignments)] TJ ET
+407.009 744.106 m 559.014 744.106 l 558.014 743.106 l 408.009 743.106 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.009 724.850 m 559.014 724.850 l 558.014 725.850 l 408.009 725.850 l  f
+559.014 744.106 m 559.014 724.850 l 558.014 725.850 l 558.014 743.106 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.009 744.106 m 407.009 724.850 l 408.009 725.850 l 408.009 743.106 l  f
+BT 409.509 730.504 Td /F1 12.0 Tf  [(†Assignments and exam)] TJ ET
+36.266 723.350 m 206.263 723.350 l 205.263 722.350 l 37.266 722.350 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 704.094 m 206.263 704.094 l 205.263 705.094 l 37.266 705.094 l  f
+206.263 723.350 m 206.263 704.094 l 205.263 705.094 l 205.263 722.350 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 723.350 m 36.266 704.094 l 37.266 705.094 l 37.266 722.350 l  f
+BT 38.766 709.748 Td /F1 12.0 Tf  [(Problem Solvers)] TJ ET
+207.763 723.350 m 405.509 723.350 l 404.509 722.350 l 208.763 722.350 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+207.763 704.094 m 405.509 704.094 l 404.509 705.094 l 208.763 705.094 l  f
+405.509 723.350 m 405.509 704.094 l 404.509 705.094 l 404.509 722.350 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+207.763 723.350 m 207.763 704.094 l 208.763 705.094 l 208.763 722.350 l  f
+BT 210.263 709.748 Td /F1 12.0 Tf  [(†Assignments)] TJ ET
+407.009 723.350 m 559.014 723.350 l 558.014 722.350 l 408.009 722.350 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.009 704.094 m 559.014 704.094 l 558.014 705.094 l 408.009 705.094 l  f
+559.014 723.350 m 559.014 704.094 l 558.014 705.094 l 558.014 722.350 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.009 723.350 m 407.009 704.094 l 408.009 705.094 l 408.009 722.350 l  f
+BT 409.509 709.748 Td /F1 12.0 Tf  [(†Assignments)] TJ ET
+36.266 702.594 m 206.263 702.594 l 205.263 701.594 l 37.266 701.594 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 683.338 m 206.263 683.338 l 205.263 684.338 l 37.266 684.338 l  f
+206.263 702.594 m 206.263 683.338 l 205.263 684.338 l 205.263 701.594 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 702.594 m 36.266 683.338 l 37.266 684.338 l 37.266 701.594 l  f
+BT 38.766 688.992 Td /F1 12.0 Tf  [(Effective Communicators)] TJ ET
+207.763 702.594 m 405.509 702.594 l 404.509 701.594 l 208.763 701.594 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+207.763 683.338 m 405.509 683.338 l 404.509 684.338 l 208.763 684.338 l  f
+405.509 702.594 m 405.509 683.338 l 404.509 684.338 l 404.509 701.594 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+207.763 702.594 m 207.763 683.338 l 208.763 684.338 l 208.763 701.594 l  f
+BT 210.263 688.992 Td /F1 12.0 Tf  [(†Assignments and lectures)] TJ ET
+407.009 702.594 m 559.014 702.594 l 558.014 701.594 l 408.009 701.594 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.009 683.338 m 559.014 683.338 l 558.014 684.338 l 408.009 684.338 l  f
+559.014 702.594 m 559.014 683.338 l 558.014 684.338 l 558.014 701.594 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.009 702.594 m 407.009 683.338 l 408.009 684.338 l 408.009 701.594 l  f
+BT 409.509 688.992 Td /F1 12.0 Tf  [(†Assignments and exam)] TJ ET
+34.016 642.832 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 645.683 Td /F2 12.0 Tf  [(Recent Improvements:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 602.320 Td /F1 12.0 Tf  [(CSCI131 has not been on offer at our Wollongong campus for a number of years.† This year \(2015\) we have )] TJ ET
+BT 34.016 566.680 Td /F1 12.0 Tf  [(a trial of a totally new version of the subject.)] TJ ET
+34.016 533.296 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 536.147 Td /F2 12.0 Tf  [(Attendance Requirements:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 509.179 Td /F1 12.0 Tf  [(It is the responsibility of students to attend all lectures/tutorials/labs/seminars/ practical work for subjects for )] TJ ET
+BT 34.016 494.032 Td /F1 12.0 Tf  [(which you are enrolled. It should be noted that the amount of time spent on each 6 credit point subject )] TJ ET
+BT 34.016 478.885 Td /F1 12.0 Tf  [(should be at least 12 hours per week, which includes lectures/tutorials/labs etc.)] TJ ET
+BT 34.016 447.343 Td /F1 12.0 Tf  [(Satisfactory attendance is deemed by the University, to be attendance at approximately 80% of the allocated )] TJ ET
+BT 34.016 411.703 Td /F1 12.0 Tf  [(contact hours.)] TJ ET
+34.016 378.319 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 381.170 Td /F2 12.0 Tf  [(Optional Attendence Statement:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 337.807 Td /F1 12.0 Tf  [(Attendance rolls†may be kept for lectures, and laboratories. If you are present for less than 80% and would )] TJ ET
+BT 34.016 302.167 Td /F1 12.0 Tf  [(have otherwise passed you need to apply for student academic consideration, otherwise a TF \(technical fail\) )] TJ ET
+BT 34.016 266.527 Td /F1 12.0 Tf  [(grade will be recorded. Students MUST attend their allocated tutorial unless they have the written )] TJ ET
+BT 34.016 230.887 Td /F1 12.0 Tf  [(permission of the subject coordinator.)] TJ ET
+34.016 197.503 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 200.354 Td /F2 12.0 Tf  [(Method of Presentation:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 156.991 Td /F1 12.0 Tf  [(In order to maximize learning outcomes, it is strongly recommended that students attend all lectures.)] TJ ET
+34.016 123.607 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 126.458 Td /F2 12.0 Tf  [(Lecture Schedule:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 83.095 Td /F1 12.0 Tf  [(†)] TJ ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 23 0 R
+>>
+endobj
+23 0 obj
+<<
+/Length 5314 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+1 w 0 J [  ] 0 d
+34.766 807.874 m 125.682 807.874 l S
+0.662 0.662 0.662 RG
+1.5 w 0 J [  ] 0 d
+35.516 808.374 m 35.516 789.118 l S
+BT 65.685 794.469 Td /F2 12.0 Tf  [(Week)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+124.682 807.874 m 342.473 807.874 l S
+1 w 0 J [  ] 0 d
+342.473 807.874 m 560.514 807.874 l S
+1 w 0 J [  ] 0 d
+125.182 808.374 m 125.182 789.118 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+559.764 808.374 m 559.764 789.118 l S
+BT 327.803 794.469 Td /F2 12.0 Tf  [(Topic)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.766 789.618 m 125.682 789.618 l S
+0.662 0.662 0.662 RG
+1.5 w 0 J [  ] 0 d
+35.516 790.118 m 35.516 770.862 l S
+BT 72.351 776.516 Td /F1 12.0 Tf  [(1-4)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+124.682 789.618 m 342.473 789.618 l S
+1 w 0 J [  ] 0 d
+342.473 789.618 m 560.514 789.618 l S
+1 w 0 J [  ] 0 d
+125.182 790.118 m 125.182 770.862 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+559.764 790.118 m 559.764 770.862 l S
+BT 127.182 776.516 Td /F1 12.0 Tf  [(††Introduction, and basic machine principles)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.766 771.362 m 125.682 771.362 l S
+0.662 0.662 0.662 RG
+1.5 w 0 J [  ] 0 d
+35.516 771.862 m 35.516 752.606 l S
+BT 72.351 758.260 Td /F1 12.0 Tf  [(5-7)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+124.682 771.362 m 342.473 771.362 l S
+1 w 0 J [  ] 0 d
+342.473 771.362 m 560.514 771.362 l S
+1 w 0 J [  ] 0 d
+125.182 771.862 m 125.182 752.606 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+559.764 771.862 m 559.764 752.606 l S
+BT 127.182 758.260 Td /F1 12.0 Tf  [(††Assembly language programming)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.766 753.106 m 125.682 753.106 l S
+0.662 0.662 0.662 RG
+1.5 w 0 J [  ] 0 d
+35.516 753.606 m 35.516 734.350 l S
+BT 69.351 740.004 Td /F1 12.0 Tf  [(8-10)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+124.682 753.106 m 342.473 753.106 l S
+1 w 0 J [  ] 0 d
+342.473 753.106 m 560.514 753.106 l S
+1 w 0 J [  ] 0 d
+125.182 753.606 m 125.182 734.350 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+559.764 753.606 m 559.764 734.350 l S
+BT 127.182 740.004 Td /F1 12.0 Tf  [(††OS, libraries, and packages)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+34.766 734.850 m 125.682 734.850 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+34.766 716.594 m 125.682 716.594 l S
+0.662 0.662 0.662 RG
+1.5 w 0 J [  ] 0 d
+35.516 735.350 m 35.516 715.844 l S
+BT 66.351 721.748 Td /F1 12.0 Tf  [(11-13)] TJ ET
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+124.682 734.850 m 342.473 734.850 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+124.682 716.594 m 342.473 716.594 l S
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+342.473 734.850 m 560.514 734.850 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+342.473 716.594 m 560.514 716.594 l S
+0.000 0.000 0.000 RG
+1 w 0 J [  ] 0 d
+125.182 735.350 m 125.182 715.844 l S
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+559.764 735.350 m 559.764 715.844 l S
+BT 127.182 721.748 Td /F1 12.0 Tf  [(††Assemblers, loaders, and compilers)] TJ ET
+34.016 676.838 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 679.689 Td /F2 12.0 Tf  [(Subject Materials:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 636.326 Td /F1 12.0 Tf  [(Any readings/references are recommended only and are not intended to be an exhaustive list. Students are )] TJ ET
+BT 34.016 600.686 Td /F1 12.0 Tf  [(encouraged to use the library catalogue and databases to locate additional readings.)] TJ ET
+BT 34.016 565.046 Td /F1 12.0 Tf  [(Suggested supplementary readings will appear as references in some lecture slides.)] TJ ET
+BT 34.016 529.406 Td /F1 12.0 Tf  [(†There are course related materials used in the laboratories that can be downloaded to your own computers)] TJ ET
+34.016 496.022 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 498.873 Td /F2 12.0 Tf  [(Textbook\(s\):†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 455.510 Td /F1 12.0 Tf  [(There is no recommended textbook.† The following books are references that provide )] TJ ET
+BT 446.588 455.510 Td /F3 12.0 Tf  [(much more detailed)] TJ ET
+BT 34.016 419.870 Td /F1 12.0 Tf  [(coverage of topics that form part of CSCI131.)] TJ ET
+BT 34.016 384.230 Td /F2 12.0 Tf  [(Computer Organization)] TJ ET
+BT 34.016 348.590 Td /F1 12.0 Tf  [(These two text books are widely used in universities and colleges that have a "computer organization" )] TJ ET
+BT 34.016 312.950 Td /F1 12.0 Tf  [(subject in their CS or Computer Engineering degrees.† These books†both have extensive coverage of )] TJ ET
+BT 34.016 277.310 Td /F1 12.0 Tf  [(computer hardware \(though much is more relevant to a computer engineering degree than a CS degree\).†)] TJ ET
+BT 34.016 241.670 Td /F1 12.0 Tf  [("The Essentials of Computer Organization and Architecture", Linda Null and Julia Lobur)] TJ ET
+BT 34.016 206.030 Td /F1 12.0 Tf  [(\(The Null/Lobur text is used for the old version of CSCI131 that is†still running at our Dubai campus\).)] TJ ET
+BT 34.016 170.390 Td /F1 12.0 Tf  [("Computer Organization and Design", David Patterson and John Hennessy)] TJ ET
+BT 34.016 134.750 Td /F2 12.0 Tf  [(OS level)] TJ ET
+BT 34.016 99.110 Td /F1 12.0 Tf  [(Kerrisk's guide to Linux provides much more than you will need to know for CSCI131 \(but you will need to )] TJ ET
+BT 34.016 63.470 Td /F1 12.0 Tf  [(know most of it by the time you get a job!\))] TJ ET
+endstream
+endobj
+24 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+>>
+endobj
+25 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 26 0 R
+>>
+endobj
+26 0 obj
+<<
+/Length 2427 >>
+stream
+
+0.000 0.000 0.000 rg
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+BT 34.016 779.362 Td /F1 12.0 Tf  [("The Linux Programming Interface", Michael Kerrisk.)] TJ ET
+BT 34.016 743.722 Td /F1 12.0 Tf  [(You can get John Lion's "Commentary on Unix 6th Edition" free on-line.† It is more of historical interest )] TJ ET
+BT 34.016 708.082 Td /F1 12.0 Tf  [(presenting the first widely used version of Unix.† But any student with ambitions of contributing to the )] TJ ET
+BT 34.016 672.442 Td /F1 12.0 Tf  [(development of Linux might find this a useful starting point \(Unix V6 was a lot simpler than the current )] TJ ET
+BT 34.016 636.802 Td /F1 12.0 Tf  [(Linux\).† There are many web-resources explaining aspects of the Linux OS.)] TJ ET
+BT 34.016 601.162 Td /F2 12.0 Tf  [(Compilers)] TJ ET
+BT 34.016 565.522 Td /F1 12.0 Tf  [(In the last few weeks, the lectures in CSCI131 will focus on assemblers, loaders, and compilers.† There are )] TJ ET
+BT 34.016 529.882 Td /F1 12.0 Tf  [(numerous compiler text books \(the most popular as university texts are the one by Aho, Lam, Sethi and )] TJ ET
+BT 34.016 494.242 Td /F1 12.0 Tf  [(Ullman and that†by Cooper and Torczon\).† Unfortunately,†most are†far too hard for 100-level students.† )] TJ ET
+BT 34.016 458.602 Td /F1 12.0 Tf  [(Wirth \(the guy who created the Pascal language\) has a short relatively easy text available free on-line. )] TJ ET
+BT 34.016 422.962 Td /F1 12.0 Tf  [(\(Wirth's argument is that compilers are simple to understand; his book supports his argument but it uses the )] TJ ET
+BT 34.016 387.322 Td /F1 12.0 Tf  [(little known "Oberon" language both for implentation and as the target language that is to be compiled.† The )] TJ ET
+BT 34.016 351.682 Td /F1 12.0 Tf  [(current g++ and clang compilers are built using the "recursive descent" approach espoused by Wirth.\)†)] TJ ET
+BT 34.016 316.042 Td /F1 12.0 Tf  [(CSCI131's coverage of compilers†is quite limited just introducing the principles of compilation and using )] TJ ET
+BT 34.016 280.402 Td /F1 12.0 Tf  [(some simple tools to create a "compiler".† There is a reference text for the tools used:)] TJ ET
+BT 34.016 244.762 Td /F1 12.0 Tf  [("flex and bison", John Levine)] TJ ET
+BT 34.016 209.122 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 34.016 173.482 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 34.016 137.842 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 34.016 102.202 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 34.016 66.562 Td /F1 12.0 Tf  [(†)] TJ ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Length 23865 >>
+stream
+
+0.000 0.000 0.000 rg
+0.172 0.172 0.172 RG
+1.5 w 0 J [  ] 0 d
+34.016 781.618 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 784.469 Td /F2 12.0 Tf  [(Assessment:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 741.106 Td /F1 12.0 Tf  [(This subject has the following assessment components.)] TJ ET
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 721.978 m 561.264 721.978 l 559.764 720.478 l 35.516 720.478 l  f
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+34.016 320.908 m 561.264 320.908 l 559.764 322.408 l 35.516 322.408 l  f
+561.264 721.978 m 561.264 320.908 l 559.764 322.408 l 559.764 720.478 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 721.978 m 34.016 320.908 l 35.516 322.408 l 35.516 720.478 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 719.728 m 214.835 719.728 l 213.835 718.728 l 37.266 718.728 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 671.528 m 214.835 671.528 l 213.835 672.528 l 37.266 672.528 l  f
+214.835 719.728 m 214.835 671.528 l 213.835 672.528 l 213.835 718.728 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 719.728 m 36.266 671.528 l 37.266 672.528 l 37.266 718.728 l  f
+BT 38.766 691.654 Td /F1 12.0 Tf  [(ASSESSMENT ITEMS)] TJ ET
+215.585 719.728 m 299.640 719.728 l 298.640 718.728 l 216.585 718.728 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 671.528 m 299.640 671.528 l 298.640 672.528 l 216.585 672.528 l  f
+299.640 719.728 m 299.640 671.528 l 298.640 672.528 l 298.640 718.728 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 719.728 m 215.585 671.528 l 216.585 672.528 l 216.585 718.728 l  f
+BT 218.085 698.782 Td /F1 12.0 Tf  [(% OF FINAL )] TJ ET
+BT 218.085 684.526 Td /F1 12.0 Tf  [(MARK)] TJ ET
+300.390 719.728 m 406.471 719.728 l 405.471 718.728 l 301.390 718.728 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 671.528 m 406.471 671.528 l 405.471 672.528 l 301.390 672.528 l  f
+406.471 719.728 m 406.471 671.528 l 405.471 672.528 l 405.471 718.728 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 719.728 m 300.390 671.528 l 301.390 672.528 l 301.390 718.728 l  f
+BT 302.890 706.068 Td /F1 12.0 Tf  [(GROUP/)] TJ ET
+BT 302.890 691.668 Td /F1 12.0 Tf  [(INDIVIDUAL)] TJ ET
+407.221 719.728 m 559.014 719.728 l 558.014 718.728 l 408.221 718.728 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 671.528 m 559.014 671.528 l 558.014 672.528 l 408.221 672.528 l  f
+559.014 719.728 m 559.014 671.528 l 558.014 672.528 l 558.014 718.728 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 719.728 m 407.221 671.528 l 408.221 672.528 l 408.221 718.728 l  f
+BT 409.721 691.654 Td /F1 12.0 Tf  [(DUE DATE)] TJ ET
+36.266 670.778 m 214.835 670.778 l 213.835 669.778 l 37.266 669.778 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 637.266 m 214.835 637.266 l 213.835 638.266 l 37.266 638.266 l  f
+214.835 670.778 m 214.835 637.266 l 213.835 638.266 l 213.835 669.778 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 670.778 m 36.266 637.266 l 37.266 638.266 l 37.266 669.778 l  f
+BT 38.766 657.176 Td /F1 12.0 Tf  [(†Exercise 1: Using an IDE for )] TJ ET
+BT 38.766 642.920 Td /F1 12.0 Tf  [(C/C++ development)] TJ ET
+215.585 670.778 m 299.640 670.778 l 298.640 669.778 l 216.585 669.778 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 637.266 m 299.640 637.266 l 298.640 638.266 l 216.585 638.266 l  f
+299.640 670.778 m 299.640 637.266 l 298.640 638.266 l 298.640 669.778 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 670.778 m 215.585 637.266 l 216.585 638.266 l 216.585 669.778 l  f
+BT 218.085 650.048 Td /F1 12.0 Tf  [(†7)] TJ ET
+300.390 670.778 m 406.471 670.778 l 405.471 669.778 l 301.390 669.778 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 637.266 m 406.471 637.266 l 405.471 638.266 l 301.390 638.266 l  f
+406.471 670.778 m 406.471 637.266 l 405.471 638.266 l 405.471 669.778 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 670.778 m 300.390 637.266 l 301.390 638.266 l 301.390 669.778 l  f
+BT 302.890 650.048 Td /F1 12.0 Tf  [(†Individual)] TJ ET
+407.221 670.778 m 559.014 670.778 l 558.014 669.778 l 408.221 669.778 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 637.266 m 559.014 637.266 l 558.014 638.266 l 408.221 638.266 l  f
+559.014 670.778 m 559.014 637.266 l 558.014 638.266 l 558.014 669.778 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 670.778 m 407.221 637.266 l 408.221 638.266 l 408.221 669.778 l  f
+BT 409.721 657.176 Td /F1 12.0 Tf  [(†In a laboratory class in week )] TJ ET
+BT 409.721 642.920 Td /F1 12.0 Tf  [(2 or 3)] TJ ET
+36.266 636.516 m 214.835 636.516 l 213.835 635.516 l 37.266 635.516 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 603.004 m 214.835 603.004 l 213.835 604.004 l 37.266 604.004 l  f
+214.835 636.516 m 214.835 603.004 l 213.835 604.004 l 213.835 635.516 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 636.516 m 36.266 603.004 l 37.266 604.004 l 37.266 635.516 l  f
+BT 38.766 622.914 Td /F1 12.0 Tf  [(†Assignment 1: bit manipulation in )] TJ ET
+BT 38.766 608.658 Td /F1 12.0 Tf  [(C)] TJ ET
+215.585 636.516 m 299.640 636.516 l 298.640 635.516 l 216.585 635.516 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 603.004 m 299.640 603.004 l 298.640 604.004 l 216.585 604.004 l  f
+299.640 636.516 m 299.640 603.004 l 298.640 604.004 l 298.640 635.516 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 636.516 m 215.585 603.004 l 216.585 604.004 l 216.585 635.516 l  f
+BT 218.085 615.786 Td /F1 12.0 Tf  [(†5)] TJ ET
+300.390 636.516 m 406.471 636.516 l 405.471 635.516 l 301.390 635.516 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 603.004 m 406.471 603.004 l 405.471 604.004 l 301.390 604.004 l  f
+406.471 636.516 m 406.471 603.004 l 405.471 604.004 l 405.471 635.516 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 636.516 m 300.390 603.004 l 301.390 604.004 l 301.390 635.516 l  f
+BT 302.890 615.786 Td /F1 12.0 Tf  [(†Individual)] TJ ET
+407.221 636.516 m 559.014 636.516 l 558.014 635.516 l 408.221 635.516 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 603.004 m 559.014 603.004 l 558.014 604.004 l 408.221 604.004 l  f
+559.014 636.516 m 559.014 603.004 l 558.014 604.004 l 558.014 635.516 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 636.516 m 407.221 603.004 l 408.221 604.004 l 408.221 635.516 l  f
+BT 409.721 615.786 Td /F1 12.0 Tf  [(†Friday August 21st)] TJ ET
+36.266 602.254 m 214.835 602.254 l 213.835 601.254 l 37.266 601.254 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 568.742 m 214.835 568.742 l 213.835 569.742 l 37.266 569.742 l  f
+214.835 602.254 m 214.835 568.742 l 213.835 569.742 l 213.835 601.254 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 602.254 m 36.266 568.742 l 37.266 569.742 l 37.266 601.254 l  f
+BT 38.766 588.652 Td /F1 12.0 Tf  [(†Exercise 2: Assembly language )] TJ ET
+BT 38.766 574.396 Td /F1 12.0 Tf  [(programming)] TJ ET
+215.585 602.254 m 299.640 602.254 l 298.640 601.254 l 216.585 601.254 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 568.742 m 299.640 568.742 l 298.640 569.742 l 216.585 569.742 l  f
+299.640 602.254 m 299.640 568.742 l 298.640 569.742 l 298.640 601.254 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 602.254 m 215.585 568.742 l 216.585 569.742 l 216.585 601.254 l  f
+BT 218.085 581.524 Td /F1 12.0 Tf  [(†8)] TJ ET
+300.390 602.254 m 406.471 602.254 l 405.471 601.254 l 301.390 601.254 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 568.742 m 406.471 568.742 l 405.471 569.742 l 301.390 569.742 l  f
+406.471 602.254 m 406.471 568.742 l 405.471 569.742 l 405.471 601.254 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 602.254 m 300.390 568.742 l 301.390 569.742 l 301.390 601.254 l  f
+BT 302.890 581.524 Td /F1 12.0 Tf  [(†Individual)] TJ ET
+407.221 602.254 m 559.014 602.254 l 558.014 601.254 l 408.221 601.254 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 568.742 m 559.014 568.742 l 558.014 569.742 l 408.221 569.742 l  f
+559.014 602.254 m 559.014 568.742 l 558.014 569.742 l 558.014 601.254 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 602.254 m 407.221 568.742 l 408.221 569.742 l 408.221 601.254 l  f
+BT 409.721 588.652 Td /F1 12.0 Tf  [(†In a†laboratory class before )] TJ ET
+BT 409.721 574.396 Td /F1 12.0 Tf  [(the end of week 5)] TJ ET
+36.266 567.992 m 214.835 567.992 l 213.835 566.992 l 37.266 566.992 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 534.480 m 214.835 534.480 l 213.835 535.480 l 37.266 535.480 l  f
+214.835 567.992 m 214.835 534.480 l 213.835 535.480 l 213.835 566.992 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 567.992 m 36.266 534.480 l 37.266 535.480 l 37.266 566.992 l  f
+BT 38.766 554.390 Td /F1 12.0 Tf  [(†Assignment 2: Assembly language )] TJ ET
+BT 38.766 540.134 Td /F1 12.0 Tf  [(programming)] TJ ET
+215.585 567.992 m 299.640 567.992 l 298.640 566.992 l 216.585 566.992 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 534.480 m 299.640 534.480 l 298.640 535.480 l 216.585 535.480 l  f
+299.640 567.992 m 299.640 534.480 l 298.640 535.480 l 298.640 566.992 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 567.992 m 215.585 534.480 l 216.585 535.480 l 216.585 566.992 l  f
+BT 218.085 547.262 Td /F1 12.0 Tf  [(†8)] TJ ET
+300.390 567.992 m 406.471 567.992 l 405.471 566.992 l 301.390 566.992 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 534.480 m 406.471 534.480 l 405.471 535.480 l 301.390 535.480 l  f
+406.471 567.992 m 406.471 534.480 l 405.471 535.480 l 405.471 566.992 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 567.992 m 300.390 534.480 l 301.390 535.480 l 301.390 566.992 l  f
+BT 302.890 547.262 Td /F1 12.0 Tf  [(†Individual)] TJ ET
+407.221 567.992 m 559.014 567.992 l 558.014 566.992 l 408.221 566.992 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 534.480 m 559.014 534.480 l 558.014 535.480 l 408.221 535.480 l  f
+559.014 567.992 m 559.014 534.480 l 558.014 535.480 l 558.014 566.992 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 567.992 m 407.221 534.480 l 408.221 535.480 l 408.221 566.992 l  f
+BT 409.721 547.262 Td /F1 12.0 Tf  [(†Friday September 4th)] TJ ET
+36.266 533.730 m 214.835 533.730 l 213.835 532.730 l 37.266 532.730 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 500.218 m 214.835 500.218 l 213.835 501.218 l 37.266 501.218 l  f
+214.835 533.730 m 214.835 500.218 l 213.835 501.218 l 213.835 532.730 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 533.730 m 36.266 500.218 l 37.266 501.218 l 37.266 532.730 l  f
+BT 38.766 520.128 Td /F1 12.0 Tf  [(Exercise 3: Linux OS interface and )] TJ ET
+BT 38.766 505.872 Td /F1 12.0 Tf  [(OS services)] TJ ET
+215.585 533.730 m 299.640 533.730 l 298.640 532.730 l 216.585 532.730 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 500.218 m 299.640 500.218 l 298.640 501.218 l 216.585 501.218 l  f
+299.640 533.730 m 299.640 500.218 l 298.640 501.218 l 298.640 532.730 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 533.730 m 215.585 500.218 l 216.585 501.218 l 216.585 532.730 l  f
+BT 218.085 513.000 Td /F1 12.0 Tf  [(7)] TJ ET
+300.390 533.730 m 406.471 533.730 l 405.471 532.730 l 301.390 532.730 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 500.218 m 406.471 500.218 l 405.471 501.218 l 301.390 501.218 l  f
+406.471 533.730 m 406.471 500.218 l 405.471 501.218 l 405.471 532.730 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 533.730 m 300.390 500.218 l 301.390 501.218 l 301.390 532.730 l  f
+BT 302.890 513.000 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 533.730 m 559.014 533.730 l 558.014 532.730 l 408.221 532.730 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 500.218 m 559.014 500.218 l 558.014 501.218 l 408.221 501.218 l  f
+559.014 533.730 m 559.014 500.218 l 558.014 501.218 l 558.014 532.730 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 533.730 m 407.221 500.218 l 408.221 501.218 l 408.221 532.730 l  f
+BT 409.721 520.128 Td /F1 12.0 Tf  [(In a†laboratory class before )] TJ ET
+BT 409.721 505.872 Td /F1 12.0 Tf  [(the end of week 7)] TJ ET
+36.266 499.468 m 214.835 499.468 l 213.835 498.468 l 37.266 498.468 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 465.956 m 214.835 465.956 l 213.835 466.956 l 37.266 466.956 l  f
+214.835 499.468 m 214.835 465.956 l 213.835 466.956 l 213.835 498.468 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 499.468 m 36.266 465.956 l 37.266 466.956 l 37.266 498.468 l  f
+BT 38.766 485.866 Td /F1 12.0 Tf  [(Assignment 3: Linux OS interface )] TJ ET
+BT 38.766 471.610 Td /F1 12.0 Tf  [(and OS services)] TJ ET
+215.585 499.468 m 299.640 499.468 l 298.640 498.468 l 216.585 498.468 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 465.956 m 299.640 465.956 l 298.640 466.956 l 216.585 466.956 l  f
+299.640 499.468 m 299.640 465.956 l 298.640 466.956 l 298.640 498.468 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 499.468 m 215.585 465.956 l 216.585 466.956 l 216.585 498.468 l  f
+BT 218.085 478.738 Td /F1 12.0 Tf  [(7)] TJ ET
+300.390 499.468 m 406.471 499.468 l 405.471 498.468 l 301.390 498.468 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 465.956 m 406.471 465.956 l 405.471 466.956 l 301.390 466.956 l  f
+406.471 499.468 m 406.471 465.956 l 405.471 466.956 l 405.471 498.468 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 499.468 m 300.390 465.956 l 301.390 466.956 l 301.390 498.468 l  f
+BT 302.890 478.738 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 499.468 m 559.014 499.468 l 558.014 498.468 l 408.221 498.468 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 465.956 m 559.014 465.956 l 558.014 466.956 l 408.221 466.956 l  f
+559.014 499.468 m 559.014 465.956 l 558.014 466.956 l 558.014 498.468 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 499.468 m 407.221 465.956 l 408.221 466.956 l 408.221 498.468 l  f
+BT 409.721 478.738 Td /F1 12.0 Tf  [(Friday September 18th)] TJ ET
+36.266 465.206 m 214.835 465.206 l 213.835 464.206 l 37.266 464.206 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 431.694 m 214.835 431.694 l 213.835 432.694 l 37.266 432.694 l  f
+214.835 465.206 m 214.835 431.694 l 213.835 432.694 l 213.835 464.206 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 465.206 m 36.266 431.694 l 37.266 432.694 l 37.266 464.206 l  f
+BT 38.766 451.604 Td /F1 12.0 Tf  [(Exercise 4: Libraries and the build )] TJ ET
+BT 38.766 437.348 Td /F1 12.0 Tf  [(process)] TJ ET
+215.585 465.206 m 299.640 465.206 l 298.640 464.206 l 216.585 464.206 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 431.694 m 299.640 431.694 l 298.640 432.694 l 216.585 432.694 l  f
+299.640 465.206 m 299.640 431.694 l 298.640 432.694 l 298.640 464.206 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 465.206 m 215.585 431.694 l 216.585 432.694 l 216.585 464.206 l  f
+BT 218.085 444.476 Td /F1 12.0 Tf  [(6)] TJ ET
+300.390 465.206 m 406.471 465.206 l 405.471 464.206 l 301.390 464.206 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 431.694 m 406.471 431.694 l 405.471 432.694 l 301.390 432.694 l  f
+406.471 465.206 m 406.471 431.694 l 405.471 432.694 l 405.471 464.206 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 465.206 m 300.390 431.694 l 301.390 432.694 l 301.390 464.206 l  f
+BT 302.890 444.476 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 465.206 m 559.014 465.206 l 558.014 464.206 l 408.221 464.206 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 431.694 m 559.014 431.694 l 558.014 432.694 l 408.221 432.694 l  f
+559.014 465.206 m 559.014 431.694 l 558.014 432.694 l 558.014 464.206 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 465.206 m 407.221 431.694 l 408.221 432.694 l 408.221 464.206 l  f
+BT 409.721 451.604 Td /F1 12.0 Tf  [(In a†laboratory class before )] TJ ET
+BT 409.721 437.348 Td /F1 12.0 Tf  [(the end of week 9)] TJ ET
+36.266 430.944 m 214.835 430.944 l 213.835 429.944 l 37.266 429.944 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 397.432 m 214.835 397.432 l 213.835 398.432 l 37.266 398.432 l  f
+214.835 430.944 m 214.835 397.432 l 213.835 398.432 l 213.835 429.944 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 430.944 m 36.266 397.432 l 37.266 398.432 l 37.266 429.944 l  f
+BT 38.766 417.342 Td /F1 12.0 Tf  [(Assignment 4: Libraries and the )] TJ ET
+BT 38.766 403.086 Td /F1 12.0 Tf  [(build process)] TJ ET
+215.585 430.944 m 299.640 430.944 l 298.640 429.944 l 216.585 429.944 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 397.432 m 299.640 397.432 l 298.640 398.432 l 216.585 398.432 l  f
+299.640 430.944 m 299.640 397.432 l 298.640 398.432 l 298.640 429.944 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 430.944 m 215.585 397.432 l 216.585 398.432 l 216.585 429.944 l  f
+BT 218.085 410.214 Td /F1 12.0 Tf  [(6)] TJ ET
+300.390 430.944 m 406.471 430.944 l 405.471 429.944 l 301.390 429.944 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 397.432 m 406.471 397.432 l 405.471 398.432 l 301.390 398.432 l  f
+406.471 430.944 m 406.471 397.432 l 405.471 398.432 l 405.471 429.944 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 430.944 m 300.390 397.432 l 301.390 398.432 l 301.390 429.944 l  f
+BT 302.890 410.214 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 430.944 m 559.014 430.944 l 558.014 429.944 l 408.221 429.944 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 397.432 m 559.014 397.432 l 558.014 398.432 l 408.221 398.432 l  f
+559.014 430.944 m 559.014 397.432 l 558.014 398.432 l 558.014 429.944 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 430.944 m 407.221 397.432 l 408.221 398.432 l 408.221 429.944 l  f
+BT 409.721 417.342 Td /F1 12.0 Tf  [(Friday October 9th \(week )] TJ ET
+BT 409.721 403.086 Td /F1 12.0 Tf  [(after session break\))] TJ ET
+36.266 396.682 m 214.835 396.682 l 213.835 395.682 l 37.266 395.682 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 363.170 m 214.835 363.170 l 213.835 364.170 l 37.266 364.170 l  f
+214.835 396.682 m 214.835 363.170 l 213.835 364.170 l 213.835 395.682 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 396.682 m 36.266 363.170 l 37.266 364.170 l 37.266 395.682 l  f
+BT 38.766 375.952 Td /F1 12.0 Tf  [(Exercise 5: Compilers)] TJ ET
+215.585 396.682 m 299.640 396.682 l 298.640 395.682 l 216.585 395.682 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 363.170 m 299.640 363.170 l 298.640 364.170 l 216.585 364.170 l  f
+299.640 396.682 m 299.640 363.170 l 298.640 364.170 l 298.640 395.682 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 396.682 m 215.585 363.170 l 216.585 364.170 l 216.585 395.682 l  f
+BT 218.085 375.952 Td /F1 12.0 Tf  [(8)] TJ ET
+300.390 396.682 m 406.471 396.682 l 405.471 395.682 l 301.390 395.682 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 363.170 m 406.471 363.170 l 405.471 364.170 l 301.390 364.170 l  f
+406.471 396.682 m 406.471 363.170 l 405.471 364.170 l 405.471 395.682 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 396.682 m 300.390 363.170 l 301.390 364.170 l 301.390 395.682 l  f
+BT 302.890 375.952 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 396.682 m 559.014 396.682 l 558.014 395.682 l 408.221 395.682 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 363.170 m 559.014 363.170 l 558.014 364.170 l 408.221 364.170 l  f
+559.014 396.682 m 559.014 363.170 l 558.014 364.170 l 558.014 395.682 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 396.682 m 407.221 363.170 l 408.221 364.170 l 408.221 395.682 l  f
+BT 409.721 383.080 Td /F1 12.0 Tf  [(In a†laboratory class before )] TJ ET
+BT 409.721 368.824 Td /F1 12.0 Tf  [(the end of week 12)] TJ ET
+36.266 362.420 m 214.835 362.420 l 213.835 361.420 l 37.266 361.420 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 343.164 m 214.835 343.164 l 213.835 344.164 l 37.266 344.164 l  f
+214.835 362.420 m 214.835 343.164 l 213.835 344.164 l 213.835 361.420 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 362.420 m 36.266 343.164 l 37.266 344.164 l 37.266 361.420 l  f
+BT 38.766 348.818 Td /F1 12.0 Tf  [(Assignment 5: Compilers)] TJ ET
+215.585 362.420 m 299.640 362.420 l 298.640 361.420 l 216.585 361.420 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 343.164 m 299.640 343.164 l 298.640 344.164 l 216.585 344.164 l  f
+299.640 362.420 m 299.640 343.164 l 298.640 344.164 l 298.640 361.420 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 362.420 m 215.585 343.164 l 216.585 344.164 l 216.585 361.420 l  f
+BT 218.085 348.818 Td /F1 12.0 Tf  [(8)] TJ ET
+300.390 362.420 m 406.471 362.420 l 405.471 361.420 l 301.390 361.420 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 343.164 m 406.471 343.164 l 405.471 344.164 l 301.390 344.164 l  f
+406.471 362.420 m 406.471 343.164 l 405.471 344.164 l 405.471 361.420 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 362.420 m 300.390 343.164 l 301.390 344.164 l 301.390 361.420 l  f
+BT 302.890 348.818 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 362.420 m 559.014 362.420 l 558.014 361.420 l 408.221 361.420 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 343.164 m 559.014 343.164 l 558.014 344.164 l 408.221 344.164 l  f
+559.014 362.420 m 559.014 343.164 l 558.014 344.164 l 558.014 361.420 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 362.420 m 407.221 343.164 l 408.221 344.164 l 408.221 361.420 l  f
+BT 409.721 348.818 Td /F1 12.0 Tf  [(Friday October 30th)] TJ ET
+36.266 342.414 m 214.835 342.414 l 213.835 341.414 l 37.266 341.414 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+36.266 323.158 m 214.835 323.158 l 213.835 324.158 l 37.266 324.158 l  f
+214.835 342.414 m 214.835 323.158 l 213.835 324.158 l 213.835 341.414 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+36.266 342.414 m 36.266 323.158 l 37.266 324.158 l 37.266 341.414 l  f
+BT 38.766 328.812 Td /F1 12.0 Tf  [(Exam)] TJ ET
+215.585 342.414 m 299.640 342.414 l 298.640 341.414 l 216.585 341.414 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+215.585 323.158 m 299.640 323.158 l 298.640 324.158 l 216.585 324.158 l  f
+299.640 342.414 m 299.640 323.158 l 298.640 324.158 l 298.640 341.414 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+215.585 342.414 m 215.585 323.158 l 216.585 324.158 l 216.585 341.414 l  f
+BT 218.085 328.812 Td /F1 12.0 Tf  [(30)] TJ ET
+300.390 342.414 m 406.471 342.414 l 405.471 341.414 l 301.390 341.414 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+300.390 323.158 m 406.471 323.158 l 405.471 324.158 l 301.390 324.158 l  f
+406.471 342.414 m 406.471 323.158 l 405.471 324.158 l 405.471 341.414 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+300.390 342.414 m 300.390 323.158 l 301.390 324.158 l 301.390 341.414 l  f
+BT 302.890 328.812 Td /F1 12.0 Tf  [(Individual)] TJ ET
+407.221 342.414 m 559.014 342.414 l 558.014 341.414 l 408.221 341.414 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+407.221 323.158 m 559.014 323.158 l 558.014 324.158 l 408.221 324.158 l  f
+559.014 342.414 m 559.014 323.158 l 558.014 324.158 l 558.014 341.414 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+407.221 342.414 m 407.221 323.158 l 408.221 324.158 l 408.221 341.414 l  f
+BT 409.721 328.812 Td /F1 12.0 Tf  [(As scheduled by University)] TJ ET
+BT 34.016 280.396 Td /F1 12.0 Tf  [(†The subject has a small examination component.† The focus is on being able to exploit tools to build )] TJ ET
+BT 34.016 244.756 Td /F1 12.0 Tf  [(software systems rather than to remember facts for regurgitation in an exam.)] TJ ET
+BT 34.016 209.116 Td /F1 12.0 Tf  [(The exercises and assignments are closely related.† You MUST complete the exercise before trying to get )] TJ ET
+BT 34.016 173.476 Td /F1 12.0 Tf  [(too deeply into the related†assignment.)] TJ ET
+BT 34.016 137.836 Td /F1 12.0 Tf  [(The exercises are "easy marks" - you just follow the detailed instructions and learn how tools work and get )] TJ ET
+BT 34.016 102.196 Td /F1 12.0 Tf  [(to understand some aspect of computer systems.† The assignments exploit your experience with the tools and )] TJ ET
+BT 34.016 66.556 Td /F1 12.0 Tf  [(test your understanding of the technology.)] TJ ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 30 0 R
+>>
+endobj
+30 0 obj
+<<
+/Length 2655 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+1.5 w 0 J [  ] 0 d
+BT 34.016 779.362 Td /F1 12.0 Tf  [(For the assignments, you submit a report \(as a PDF file\) that contains your annotated code and evidence, )] TJ ET
+BT 34.016 743.722 Td /F1 12.0 Tf  [(such as screen shots, showing that it works.† The turnin submission closes a little after midnight \(an )] TJ ET
+BT 34.016 708.082 Td /F1 12.0 Tf  [(assignment submitted at 1.30 am on Saturday September 5th would just make the deadline for Assignment )] TJ ET
+BT 34.016 672.442 Td /F1 12.0 Tf  [(2\).)] TJ ET
+BT 34.016 636.802 Td /F1 12.0 Tf  [(Apart from the assembly language programming exercise and assignment, most of the work will use C.† C is )] TJ ET
+BT 34.016 601.162 Td /F1 12.0 Tf  [(still more common in low level system code than C++.† You can treat C as a subset of the C++ that you are )] TJ ET
+BT 34.016 565.522 Td /F1 12.0 Tf  [(learning in the CS core.† Apart from all the things that C leaves out \(like classes\) the main differences that )] TJ ET
+BT 34.016 529.882 Td /F1 12.0 Tf  [(you will see are the use of a different I/O library, and a somewhat clumsier syntax for function arguments )] TJ ET
+BT 34.016 494.242 Td /F1 12.0 Tf  [(that are passed by reference \(there used to be lots more differences, but the last revision for the C standard )] TJ ET
+BT 34.016 458.602 Td /F1 12.0 Tf  [(adopted many minor syntactic features that had been introduced during the development of C++\).)] TJ ET
+BT 34.016 422.962 Td /F1 12.0 Tf  [(†)] TJ ET
+34.016 389.578 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 392.429 Td /F2 12.0 Tf  [(Notes on Assessment:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 349.066 Td /F1 12.0 Tf  [(All assignments are expected to be completed independently.† Plagiarism may result in a FAIL grade being )] TJ ET
+BT 34.016 313.138 Td /F1 12.0 Tf  [(recorded for that assignment. )] TJ ET
+BT 34.016 241.138 Td /F2 12.0 Tf  [(Electronic Submission of Assessment Items:)] TJ ET
+BT 34.016 205.426 Td /F1 12.0 Tf  [(Assignments are submitted electronically, using the "turnin" program that runs on the banshee server.† )] TJ ET
+BT 34.016 169.786 Td /F1 12.0 Tf  [(Details of how to submit work are included in the assignments.)] TJ ET
+34.016 136.402 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 139.253 Td /F2 12.0 Tf  [(Assessment General:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 95.890 Td /F4 12.0 Tf  [(Delete the following if not applicable:)] TJ ET
+BT 34.016 59.962 Td /F1 12.0 Tf  [(Submission of assessment items via email will not be accepted.)] TJ ET
+BT 34.016 -12.038 Td /F2 12.0 Tf  [(Other Procedures for the submission of assessment items: )] TJ ET
+endstream
+endobj
+31 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F4
+/BaseFont /Times-BoldItalic
+/Encoding /WinAnsiEncoding
+>>
+endobj
+32 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 33 0 R
+>>
+endobj
+33 0 obj
+<<
+/Length 1725 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+1.5 w 0 J [  ] 0 d
+BT 34.016 743.074 Td /F1 12.0 Tf  [(All assignments will be returned within†3 weeks of their submission.)] TJ ET
+BT 34.016 707.074 Td /F2 12.0 Tf  [(Technical Fail)] TJ ET
+BT 34.016 599.362 Td /F1 12.0 Tf  [(To be eligible for a Pass in this subject a student must achieve a mark of at least†12 in the final exam \(which )] TJ ET
+BT 34.016 563.722 Td /F1 12.0 Tf  [(is only worth 30\).†Students who fail to achieve this minimum mark & would have otherwise passed†may be )] TJ ET
+BT 34.016 528.082 Td /F1 12.0 Tf  [(given a TF \(Technical Fail\) for this subject.)] TJ ET
+BT 34.016 492.442 Td /F2 12.0 Tf  [(Supplementary Exams)] TJ ET
+BT 34.016 456.802 Td /F1 12.0 Tf  [(1. A student whose overall performance results in a TF will only be granted a supplementary assessment task )] TJ ET
+BT 34.016 420.874 Td /F1 12.0 Tf  [(\(e.g. a supplementary exam or a supplementary assignment\) if approved by the school assessment committee.)] TJ ET
+BT 34.016 349.162 Td /F1 12.0 Tf  [(2. A student who achieves a mark of 48-49% will normally be eligible for a grade of WS and a )] TJ ET
+BT 34.016 313.522 Td /F1 12.0 Tf  [(supplementary exam organised by the University.† In this case, the maximum grade attainable is PS \(Pass )] TJ ET
+BT 34.016 277.594 Td /F1 12.0 Tf  [(Supplementary\) and a mark of 50%.)] TJ ET
+BT 34.016 205.594 Td /F1 12.0 Tf  [(3. A student who has successfully applied for academic consideration will receive either:)] TJ ET
+BT 34.016 133.882 Td /F1 12.0 Tf  [(†† a. A WD† - Withheld Deferred Exam -† and be allowed to sit only a supplementary exam, which will be )] TJ ET
+BT 34.016 97.954 Td /F1 12.0 Tf  [(supervised by the University or)] TJ ET
+endstream
+endobj
+34 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 35 0 R
+>>
+endobj
+35 0 obj
+<<
+/Length 2937 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+1.5 w 0 J [  ] 0 d
+BT 34.016 779.362 Td /F1 12.0 Tf  [(†† b. A WH ? Withheld ? and be allowed to sit a supplementary exam not supervised by the University or )] TJ ET
+BT 34.016 743.434 Td /F1 12.0 Tf  [(complete some other supplementary task)] TJ ET
+BT 34.016 671.722 Td /F1 12.0 Tf  [(4. If a student is being investigated for misconduct and the investigation cannot be completed before the )] TJ ET
+BT 34.016 636.082 Td /F1 12.0 Tf  [(grades are released the student will receive a grade of WH until a mark is declared.)] TJ ET
+BT 34.016 600.442 Td /F1 12.0 Tf  [(Calculators will/will not be allowed in the final exam.)] TJ ET
+34.016 567.058 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 569.909 Td /F2 12.0 Tf  [(Procedure for the return of assessment items:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 526.546 Td /F1 12.0 Tf  [(Marker reports will be emailed to students; marks will appear on SOLS.)] TJ ET
+34.016 493.162 527.249 14.256 re f
+1.000 1.000 1.000 rg
+BT 34.016 496.013 Td /F2 12.0 Tf  [(Penalties for late submission of assessment items:†)] TJ ET
+0.000 0.000 0.000 rg
+BT 34.016 452.650 Td /F1 12.0 Tf  [(Penalties apply to all late work, except if student academic consideration has been granted. Late submissions )] TJ ET
+BT 34.016 417.010 Td /F1 12.0 Tf  [(will attract a penalty of†10% per day†of the assessment mark.† The "turnin" assignment submission system is )] TJ ET
+BT 34.016 381.370 Td /F1 12.0 Tf  [(configured to support late submission; you do not have to request the right to submit late.† Details of how to )] TJ ET
+BT 34.016 345.730 Td /F1 12.0 Tf  [(use late submission are included in the assignments.† There is no late submission for assignment 5 because it )] TJ ET
+BT 34.016 309.802 Td /F1 12.0 Tf  [(is due on the last day of session.)] TJ ET
+BT 34.016 238.090 Td /F1 12.0 Tf  [(Work more than 4 days late will be awarded a mark of zero.)] TJ ET
+BT 34.016 202.450 Td /F1 12.0 Tf  [(Exercises must be demonstrated in the laboratory by their deadlines in order to gain marks.)] TJ ET
+BT 34.016 183.205 Td /F2 12.0 Tf  [(Reasonable Adjustment to Assessment)] TJ ET
+BT 34.016 151.663 Td /F1 12.0 Tf  [(A student with a disability may be entitled to reasonable adjustment to assessment.†)] TJ ET
+BT 34.016 132.418 Td /F1 12.0 Tf  [(A reasonable adjustment document is a recommendation that needs to be discussed and ratified by subject )] TJ ET
+BT 34.016 117.271 Td /F1 12.0 Tf  [(coordinators.† Normal subject assessment requirements can only be adjusted with explicit written permission )] TJ ET
+BT 34.016 102.124 Td /F1 12.0 Tf  [(of the subject coordinator. In particular students cannot assume† that a reasonable adjustment document )] TJ ET
+BT 34.016 86.977 Td /F1 12.0 Tf  [(bestows a right to deferred or supplementary exams)] TJ ET
+BT 282.296 86.977 Td /F2 12.0 Tf  [(.†)] TJ ET
+BT 34.016 55.147 Td /F2 12.0 Tf  [(Tutorial/Lab Closure Policy)] TJ ET
+endstream
+endobj
+36 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 38 0 R 40 0 R ]
+/Contents 37 0 R
+>>
+endobj
+37 0 obj
+<<
+/Length 2647 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+1.5 w 0 J [  ] 0 d
+BT 34.016 779.362 Td /F1 12.0 Tf  [(If for any reason, the number of students in a tutorial or lab falls below a sustainable enrolment level, as )] TJ ET
+BT 34.016 743.434 Td /F1 12.0 Tf  [(determined by the Head of School, tutorials/labs offered for that subject may be collapsed or deleted.)] TJ ET
+BT 34.016 707.434 Td /F1 12.0 Tf  [(You will have to attend the new tutorials/lab if this closure affects the one you are attending.)] TJ ET
+BT 34.016 671.722 Td /F1 12.0 Tf  [(We will endeavour to make this decision no later than Week 4 of session.)] TJ ET
+BT 34.016 636.082 Td /F2 12.0 Tf  [(Exams)] TJ ET
+BT 34.016 600.442 Td /F1 12.0 Tf  [(Exams will be run in accordance with UOW Exam rules, please refer to changes to exams†and grades at: )] TJ ET
+BT 37.616 564.802 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/exams/UOW115867.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+37.616 562.102 m 315.608 562.102 l S
+BT 34.016 529.162 Td /F2 12.0 Tf  [(Supplementary Exams)] TJ ET
+BT 34.016 493.522 Td /F1 12.0 Tf  [(The School does not†offer a supplementary exam to a student who has sat a scheduled exam.)] TJ ET
+BT 34.016 457.882 Td /F1 12.0 Tf  [(Supplementary Exams will be dealt with in accordance with student academic consideration policy \()] TJ ET
+BT 37.616 421.954 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW060110.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+37.616 419.254 m 306.944 419.254 l S
+BT 313.544 421.954 Td /F1 12.0 Tf  [(\) 9.2 Timing of Supplementary Exams.)] TJ ET
+BT 34.016 350.242 Td /F1 12.0 Tf  [(While the School normally grants supplementary exams when the student does not sit the standard exam for )] TJ ET
+BT 34.016 314.602 Td /F1 12.0 Tf  [(an acceptable reason, each case will be assessed on its own merit and there is no guarantee a supplementary )] TJ ET
+BT 34.016 278.962 Td /F1 12.0 Tf  [(exam will be granted.† If a supplementary exam is granted, you will normally be notified via SOLS Mail the )] TJ ET
+BT 34.016 243.034 Td /F1 12.0 Tf  [(time and date of this supplementary exam. You must follow the instructions given in the email message.)] TJ ET
+BT 34.016 171.322 Td /F1 12.0 Tf  [(Please note that if this is your last session and you are granted a supplementary exam, be aware that your )] TJ ET
+BT 34.016 135.682 Td /F1 12.0 Tf  [(results will not be processed in time to meet the graduation deadline.)] TJ ET
+BT 34.016 99.754 Td /F2 12.0 Tf  [(Student Academic Consideration Policy)] TJ ET
+BT 34.016 64.042 Td /F1 12.0 Tf  [(The School recognises that it has a responsibility to ensure equity and consistency across its subjects for all )] TJ ET
+endstream
+endobj
+38 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 39 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 563.7223 319.2077 575.6023 ]
+>>
+endobj
+39 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/exams/UOW115867.html)
+>>
+endobj
+40 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 41 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 420.8743 310.5437 432.7543 ]
+>>
+endobj
+41 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW060110.html)
+>>
+endobj
+42 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 44 0 R ]
+/Contents 43 0 R
+>>
+endobj
+43 0 obj
+<<
+/Length 3599 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 779.362 Td /F1 12.0 Tf  [(students. Sometimes, in exceptional circumstances, students need to apply for student academic )] TJ ET
+BT 34.016 743.434 Td /F1 12.0 Tf  [(consideration in order to complete all assessable work.)] TJ ET
+BT 34.016 671.722 Td /F1 12.0 Tf  [(The University applies strict criteria to the granting of student academic consideration. Before applying for )] TJ ET
+BT 34.016 636.082 Td /F1 12.0 Tf  [(student academic consideration, students should carefully read the University?s policy which can be found )] TJ ET
+BT 34.016 600.442 Td /F1 12.0 Tf  [(at: )] TJ ET
+BT 52.616 600.442 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058721.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+52.616 597.742 m 321.944 597.742 l S
+BT 34.016 564.514 Td /F2 12.0 Tf  [(Plagiarism)] TJ ET
+BT 89.348 564.514 Td /F1 12.0 Tf  [(†† †)] TJ ET
+BT 34.016 528.802 Td /F2 12.0 Tf  [(When you submit an assessment task, you are declaring the following)] TJ ET
+BT 33.816 498.874 Td /F1 12.0 Tf  [(1.)] TJ ET
+BT 49.016 487.162 Td /F1 12.0 Tf  [(It is your own work and you did not collaborate with or copy from others.)] TJ ET
+BT 33.816 463.234 Td /F1 12.0 Tf  [(2.)] TJ ET
+BT 49.016 451.522 Td /F1 12.0 Tf  [(You have read and understand your responsibilities under the University of Wollongong's policy on )] TJ ET
+BT 49.016 415.882 Td /F1 12.0 Tf  [(plagiarism.)] TJ ET
+BT 33.816 391.954 Td /F1 12.0 Tf  [(3.)] TJ ET
+BT 49.016 380.242 Td /F1 12.0 Tf  [(You have not plagiarised from published work \(including the internet\). Where you have used the work )] TJ ET
+BT 49.016 344.602 Td /F1 12.0 Tf  [(from others, you have referenced it in the text and provided a reference list at the end to the assignment.)] TJ ET
+BT 34.016 302.962 Td /F1 12.0 Tf  [(Students must remember that:)] TJ ET
+42.816 270.734 m 
+42.816 271.284 42.589 271.830 42.201 272.219 c
+41.812 272.608 41.266 272.834 40.716 272.834 c
+40.166 272.834 39.620 272.608 39.231 272.219 c
+38.842 271.830 38.616 271.284 38.616 270.734 c
+38.616 270.184 38.842 269.638 39.231 269.249 c
+39.620 268.861 40.166 268.634 40.716 268.634 c
+41.266 268.634 41.812 268.861 42.201 269.249 c
+42.589 269.638 42.816 270.184 42.816 270.734 c f
+BT 49.016 261.322 Td /F1 12.0 Tf  [(Plagiarism will not be tolerated.)] TJ ET
+42.816 235.094 m 
+42.816 235.644 42.589 236.190 42.201 236.579 c
+41.812 236.968 41.266 237.194 40.716 237.194 c
+40.166 237.194 39.620 236.968 39.231 236.579 c
+38.842 236.190 38.616 235.644 38.616 235.094 c
+38.616 234.544 38.842 233.998 39.231 233.609 c
+39.620 233.221 40.166 232.994 40.716 232.994 c
+41.266 232.994 41.812 233.221 42.201 233.609 c
+42.589 233.998 42.816 234.544 42.816 235.094 c f
+BT 49.016 225.682 Td /F1 12.0 Tf  [(Students are responsible for submitting original work for assessment, without plagiarising or cheating, )] TJ ET
+BT 49.016 190.042 Td /F1 12.0 Tf  [(abiding by the University?s Academic Integrity and Plagiarism Policy as set out in the University )] TJ ET
+BT 49.016 154.402 Td /F1 12.0 Tf  [(Handbook, the††University's online†Policy Directory and in Faculty handbooks and subject guides. Re-)] TJ ET
+BT 49.016 118.762 Td /F1 12.0 Tf  [(using any of your own work \(either in part or in full\) which you have submitted previously for )] TJ ET
+BT 49.016 83.122 Td /F1 12.0 Tf  [(assessment is not permitted without appropriate acknowledgement - Plagiarism has led to the expulsion )] TJ ET
+BT 49.016 47.482 Td /F1 12.0 Tf  [(from the University.)] TJ ET
+BT 34.016 5.554 Td /F2 12.0 Tf  [(Coursework Student Academic Complaints Policy)] TJ ET
+endstream
+endobj
+44 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 45 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 49.0157 599.3623 325.5437 611.2423 ]
+>>
+endobj
+45 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058721.html)
+>>
+endobj
+46 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 48 0 R 50 0 R 52 0 R ]
+/Contents 47 0 R
+>>
+endobj
+47 0 obj
+<<
+/Length 2367 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 779.362 Td /F1 12.0 Tf  [(The School aims to provide a fair, equitable and productive learning environment for all its students. The )] TJ ET
+BT 34.016 743.722 Td /F1 12.0 Tf  [(Coursework Student Academic Complaints Policy \()] TJ ET
+BT 286.604 743.722 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058653.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+286.604 741.022 m 555.932 741.022 l S
+BT 34.016 708.082 Td /F1 12.0 Tf  [(\)†seeks to support the achievement of this goal by providing a transparent and consistent process for )] TJ ET
+BT 34.016 672.154 Td /F1 12.0 Tf  [(resolving student academic complaints.)] TJ ET
+BT 34.016 600.442 Td /F1 12.0 Tf  [(Any student who has a complaint over a result should obtain a Faculty of Engineering and Information )] TJ ET
+BT 34.016 564.802 Td /F1 12.0 Tf  [(Sciences Coursework Student Academic Review/Complaint form \()] TJ ET
+BT 37.616 529.162 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/complaints/UOW008298.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+37.616 526.462 m 337.616 526.462 l S
+BT 344.216 529.162 Td /F1 12.0 Tf  [(\) from the EIS Central. The student should )] TJ ET
+BT 34.016 493.522 Td /F1 12.0 Tf  [(firstly take the form to the marker/lecturer to discuss the matter and, if the student is still not satisfied, s/he )] TJ ET
+BT 34.016 457.594 Td /F1 12.0 Tf  [(should take the next step as outlined on the form.)] TJ ET
+BT 34.016 385.882 Td /F1 12.0 Tf  [(Once the complaint has been considered by the Faculty, if the student still feels the situation has not been )] TJ ET
+BT 34.016 350.242 Td /F1 12.0 Tf  [(fully resolved s/he may refer the matter to the Student Ombudsman.)] TJ ET
+BT 34.016 314.314 Td /F2 12.0 Tf  [(Relevant University Policies, procedures and students services:)] TJ ET
+BT 34.016 278.602 Td /F1 12.0 Tf  [(For more information students must refer to the Course Handbook, relevant online references or consult the )] TJ ET
+BT 34.016 242.962 Td /F1 12.0 Tf  [(UOW General Course Rules in full )] TJ ET
+BT 209.588 242.962 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058680.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+209.588 240.262 m 478.916 240.262 l S
+BT 485.516 242.962 Td /F1 12.0 Tf  [( which )] TJ ET
+BT 34.016 207.322 Td /F1 12.0 Tf  [(contains a range of policies on educational issues and student matters.)] TJ ET
+endstream
+endobj
+48 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 49 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 283.0037 742.6423 559.5317 754.5223 ]
+>>
+endobj
+49 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058653.html)
+>>
+endobj
+50 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 51 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 528.0823 341.2157 539.9623 ]
+>>
+endobj
+51 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/complaints/UOW008298.html)
+>>
+endobj
+52 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 53 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 205.9877 241.8823 482.5157 253.7623 ]
+>>
+endobj
+53 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058680.html)
+>>
+endobj
+54 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 56 0 R 58 0 R 60 0 R 62 0 R 64 0 R 66 0 R 68 0 R 70 0 R 72 0 R 74 0 R 76 0 R 78 0 R 80 0 R 82 0 R 84 0 R ]
+/Contents 55 0 R
+>>
+endobj
+55 0 obj
+<<
+/Length 9226 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 782.069 Td /F1 12.0 Tf  [(This outline should be read in conjunction with the following:)] TJ ET
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 767.218 m 561.264 767.218 l 559.764 765.718 l 35.516 765.718 l  f
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+561.264 767.218 m 561.264 67.704 l 559.764 67.704 l 559.764 765.718 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 767.218 m 34.016 67.704 l 35.516 67.704 l 35.516 765.718 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 764.218 m 563.982 764.218 l 562.982 763.218 l 38.016 763.218 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 725.078 m 563.982 725.078 l 562.982 726.078 l 38.016 726.078 l  f
+563.982 764.218 m 563.982 725.078 l 562.982 726.078 l 562.982 763.218 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 764.218 m 37.016 725.078 l 38.016 726.078 l 38.016 763.218 l  f
+BT 38.766 733.956 Td /F1 12.0 Tf  [(Code of Practice - Teaching and Assessment:†)] TJ ET
+BT 263.322 733.956 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058666.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+263.322 731.256 m 532.650 731.256 l S
+37.016 723.578 m 563.982 723.578 l 562.982 722.578 l 38.016 722.578 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 705.822 m 563.982 705.822 l 562.982 706.822 l 38.016 706.822 l  f
+563.982 723.578 m 563.982 705.822 l 562.982 706.822 l 562.982 722.578 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 723.578 m 37.016 705.822 l 38.016 706.822 l 38.016 722.578 l  f
+BT 38.766 710.726 Td /F1 12.0 Tf  [(Code of Practice-Honours: )] TJ ET
+BT 174.006 710.423 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058661.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+174.006 707.723 m 443.334 707.723 l S
+37.016 704.322 m 563.982 704.322 l 562.982 703.322 l 38.016 703.322 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 665.182 m 563.982 665.182 l 562.982 666.182 l 38.016 666.182 l  f
+563.982 704.322 m 563.982 665.182 l 562.982 666.182 l 562.982 703.322 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 704.322 m 37.016 665.182 l 38.016 666.182 l 38.016 703.322 l  f
+BT 38.766 674.060 Td /F1 12.0 Tf  [(Key Dates: )] TJ ET
+BT 99.018 674.060 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/dates/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+99.018 671.360 m 333.018 671.360 l S
+37.016 663.682 m 563.982 663.682 l 562.982 662.682 l 38.016 662.682 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 624.542 m 563.982 624.542 l 562.982 625.542 l 38.016 625.542 l  f
+563.982 663.682 m 563.982 624.542 l 562.982 625.542 l 562.982 662.682 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 663.682 m 37.016 624.542 l 38.016 625.542 l 38.016 662.682 l  f
+BT 38.766 633.420 Td /F1 12.0 Tf  [(Course Progress Requirements: )] TJ ET
+BT 196.686 633.420 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/cp/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+196.686 630.720 m 417.354 630.720 l S
+37.016 623.042 m 563.982 623.042 l 562.982 622.042 l 38.016 622.042 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 548.262 m 563.982 548.262 l 562.982 549.262 l 38.016 549.262 l  f
+563.982 623.042 m 563.982 548.262 l 562.982 549.262 l 562.982 622.042 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 623.042 m 37.016 548.262 l 38.016 549.262 l 38.016 622.042 l  f
+BT 38.766 592.780 Td /F1 12.0 Tf  [(Academic Grievance Policy \(Coursework and honours students\): )] TJ ET
+BT 42.366 557.140 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058653.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+42.366 554.440 m 311.694 554.440 l S
+37.016 546.762 m 563.982 546.762 l 562.982 545.762 l 38.016 545.762 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 529.006 m 563.982 529.006 l 562.982 530.006 l 38.016 530.006 l  f
+563.982 546.762 m 563.982 529.006 l 562.982 530.006 l 562.982 545.762 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 546.762 m 37.016 529.006 l 38.016 530.006 l 38.016 545.762 l  f
+BT 38.766 533.910 Td /F1 12.0 Tf  [(Student Charter: )] TJ ET
+BT 124.362 533.607 Td /F1 12.0 Tf  [(www.uow.edu.au/student/charter/)] TJ ET
+0.6 w 0 J [  ] 0 d
+124.362 530.907 m 286.662 530.907 l S
+37.016 527.506 m 563.982 527.506 l 562.982 526.506 l 38.016 526.506 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 488.366 m 563.982 488.366 l 562.982 489.366 l 38.016 489.366 l  f
+563.982 527.506 m 563.982 488.366 l 562.982 489.366 l 562.982 526.506 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 527.506 m 37.016 488.366 l 38.016 489.366 l 38.016 526.506 l  f
+BT 38.766 497.244 Td /F1 12.0 Tf  [(Occupational Health and Safety: )] TJ ET
+BT 201.666 497.244 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW016894.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+201.666 494.544 m 470.994 494.544 l S
+37.016 486.866 m 563.982 486.866 l 562.982 485.866 l 38.016 485.866 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 447.726 m 563.982 447.726 l 562.982 448.726 l 38.016 448.726 l  f
+563.982 486.866 m 563.982 447.726 l 562.982 448.726 l 562.982 485.866 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 486.866 m 37.016 447.726 l 38.016 448.726 l 38.016 485.866 l  f
+BT 38.766 456.604 Td /F1 12.0 Tf  [(Human Research Ethics Committee:† )] TJ ET
+BT 223.350 456.604 Td /F1 12.0 Tf  [(http://www.uow.edu.au/research/ethics/human/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+223.350 453.904 m 501.990 453.904 l S
+BT 508.590 456.604 Td /F1 12.0 Tf  [(††)] TJ ET
+37.016 446.226 m 563.982 446.226 l 562.982 445.226 l 38.016 445.226 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 335.806 m 563.982 335.806 l 562.982 336.806 l 38.016 336.806 l  f
+563.982 446.226 m 563.982 335.806 l 562.982 336.806 l 562.982 445.226 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 446.226 m 37.016 335.806 l 38.016 336.806 l 38.016 445.226 l  f
+BT 38.766 415.964 Td /F1 12.0 Tf  [(General Enquires: EIS Central Build 4, Ground floor, Room 12 Phone: 4221 3491)] TJ ET
+BT 38.766 380.324 Td /F1 12.0 Tf  [(Faculty of Engineering & Information Sciences current students website: )] TJ ET
+BT 395.982 380.324 Td /F1 12.0 Tf  [(http://eis.uow.edu.au/current-)] TJ ET
+0.6 w 0 J [  ] 0 d
+395.982 377.624 m 537.630 377.624 l S
+BT 38.766 344.684 Td /F1 12.0 Tf  [(students/)] TJ ET
+0.6 w 0 J [  ] 0 d
+38.766 341.984 m 81.438 341.984 l S
+37.016 334.306 m 563.982 334.306 l 562.982 333.306 l 38.016 333.306 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 245.270 m 563.982 245.270 l 562.982 246.270 l 38.016 246.270 l  f
+563.982 334.306 m 563.982 245.270 l 562.982 246.270 l 562.982 333.306 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 334.306 m 37.016 245.270 l 38.016 246.270 l 38.016 333.306 l  f
+BT 38.766 321.454 Td /F1 12.0 Tf  [(Student Support Services: )] TJ ET
+BT 170.034 321.151 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/services/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+170.034 318.451 m 418.026 318.451 l S
+BT 38.766 289.788 Td /F1 12.0 Tf  [(Faculty SEDLO \(Student Support & Peer Learning Officer\))] TJ ET
+BT 38.766 254.148 Td /F1 12.0 Tf  [(Mitz Perez - Build 4 Room 105 Phone 4221 3833 Mon - Wed, )] TJ ET
+BT 345.018 254.148 Td /F1 12.0 Tf  [(mitz-perez@uow.edu.au)] TJ ET
+0.6 w 0 J [  ] 0 d
+345.018 251.448 m 462.702 251.448 l S
+37.016 243.770 m 563.982 243.770 l 562.982 242.770 l 38.016 242.770 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 204.630 m 563.982 204.630 l 562.982 205.630 l 38.016 205.630 l  f
+563.982 243.770 m 563.982 204.630 l 562.982 205.630 l 562.982 242.770 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 243.770 m 37.016 204.630 l 38.016 205.630 l 38.016 242.770 l  f
+BT 38.766 213.508 Td /F1 12.0 Tf  [(Information Technology Services and Policies:† )] TJ ET
+BT 274.338 213.508 Td /F1 12.0 Tf  [(http://www.uow.edu.au/its/accounts/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+274.338 210.808 m 502.338 210.808 l S
+37.016 203.130 m 563.982 203.130 l 562.982 202.130 l 38.016 202.130 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 114.094 m 563.982 114.094 l 562.982 115.094 l 38.016 115.094 l  f
+563.982 203.130 m 563.982 114.094 l 562.982 115.094 l 562.982 202.130 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 203.130 m 37.016 114.094 l 38.016 115.094 l 38.016 202.130 l  f
+BT 38.766 190.278 Td /F1 12.0 Tf  [(†)] TJ ET
+BT 38.766 158.612 Td /F1 10.7 Tf  [(Student Representatives)] TJ ET
+BT 141.584 158.612 Td /F1 10.0 Tf  [(:)] TJ ET
+BT 144.364 158.612 Td /F1 12.0 Tf  [(† )] TJ ET
+BT 153.964 158.612 Td /F1 12.0 Tf  [(http://eis.uow.edu.au/current-students/get-involved/studentreps/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+153.964 155.912 m 511.948 155.912 l S
+BT 38.766 122.972 Td /F1 12.0 Tf  [(†)] TJ ET
+37.016 112.594 m 563.982 112.594 l 562.982 111.594 l 38.016 111.594 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 73.454 m 563.982 73.454 l 562.982 74.454 l 38.016 74.454 l  f
+563.982 112.594 m 563.982 73.454 l 562.982 74.454 l 562.982 111.594 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 112.594 m 37.016 73.454 l 38.016 74.454 l 38.016 111.594 l  f
+BT 38.766 82.332 Td /F1 12.0 Tf  [(Academic Integrity and Plagiarism Policy:††)] TJ ET
+BT 253.014 82.332 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058648.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+253.014 79.632 m 522.342 79.632 l S
+endstream
+endobj
+56 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 57 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 259.7217 732.8763 536.2497 744.7563 ]
+>>
+endobj
+57 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058666.html)
+>>
+endobj
+58 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 59 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 170.4057 709.3435 446.9337 721.2235 ]
+>>
+endobj
+59 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058661.html)
+>>
+endobj
+60 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 61 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 95.4177 672.9803 336.6177 684.8603 ]
+>>
+endobj
+61 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/dates/index.html)
+>>
+endobj
+62 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 63 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 193.0857 632.3403 420.9537 644.2203 ]
+>>
+endobj
+63 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/cp/index.html)
+>>
+endobj
+64 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 65 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 38.7657 556.0603 315.2937 567.9403 ]
+>>
+endobj
+65 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058653.html)
+>>
+endobj
+66 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 67 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 120.7617 532.5275 290.2617 544.4075 ]
+>>
+endobj
+67 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/charter/)
+>>
+endobj
+68 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 69 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 198.0657 496.1643 474.5937 508.0443 ]
+>>
+endobj
+69 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW016894.html)
+>>
+endobj
+70 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 71 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 219.7497 455.5243 505.5897 467.4043 ]
+>>
+endobj
+71 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/research/ethics/human/index.html)
+>>
+endobj
+72 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 73 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 392.3817 379.2443 541.2297 391.1243 ]
+>>
+endobj
+73 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://eis.uow.edu.au/current-students/)
+>>
+endobj
+74 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 75 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 38.7657 343.6043 85.0377 355.4843 ]
+>>
+endobj
+75 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://eis.uow.edu.au/current-students/)
+>>
+endobj
+76 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 77 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 166.4337 320.0715 421.6257 331.9515 ]
+>>
+endobj
+77 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/services/index.html)
+>>
+endobj
+78 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 79 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 341.4177 253.0683 466.3017 264.9483 ]
+>>
+endobj
+79 0 obj
+<< /Type /Action
+/S /URI
+/URI (mailto:mitz-perez@uow.edu.au)
+>>
+endobj
+80 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 81 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 270.7377 212.4283 505.9377 224.3083 ]
+>>
+endobj
+81 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/its/accounts/index.html)
+>>
+endobj
+82 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 83 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 150.3639 157.5323 515.5479 169.4123 ]
+>>
+endobj
+83 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://eis.uow.edu.au/current-students/get-involved/studentreps/index.html)
+>>
+endobj
+84 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 85 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 249.4137 81.2523 525.9417 93.1323 ]
+>>
+endobj
+85 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058648.html)
+>>
+endobj
+86 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 88 0 R 90 0 R 92 0 R 94 0 R 96 0 R 98 0 R 100 0 R 102 0 R 104 0 R 106 0 R 108 0 R 110 0 R ]
+/Contents 87 0 R
+>>
+endobj
+87 0 obj
+<<
+/Length 7466 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+0.172 0.172 0.172 rg
+0.172 0.172 0.172 RG
+34.016 179.634 m 561.264 179.634 l 559.764 181.134 l 35.516 181.134 l  f
+561.264 807.874 m 561.264 179.634 l 559.764 181.134 l 559.764 807.874 l  f
+0.662 0.662 0.662 rg
+0.662 0.662 0.662 RG
+34.016 807.874 m 34.016 179.634 l 35.516 181.134 l 35.516 807.874 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 806.374 m 563.982 806.374 l 562.982 805.374 l 38.016 805.374 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 767.234 m 563.982 767.234 l 562.982 768.234 l 38.016 768.234 l  f
+563.982 806.374 m 563.982 767.234 l 562.982 768.234 l 562.982 805.374 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 806.374 m 37.016 767.234 l 38.016 768.234 l 38.016 805.374 l  f
+BT 38.766 776.112 Td /F1 12.0 Tf  [(Student Academic Consideration Policy: )] TJ ET
+BT 241.026 776.112 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058721.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+241.026 773.412 m 510.354 773.412 l S
+37.016 765.734 m 563.982 765.734 l 562.982 764.734 l 38.016 764.734 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 726.594 m 563.982 726.594 l 562.982 727.594 l 38.016 727.594 l  f
+563.982 765.734 m 563.982 726.594 l 562.982 727.594 l 562.982 764.734 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 765.734 m 37.016 726.594 l 38.016 727.594 l 38.016 764.734 l  f
+BT 38.766 735.472 Td /F1 12.0 Tf  [(Rules for student conduct: )] TJ ET
+BT 171.690 735.472 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058723.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+171.690 732.772 m 441.018 732.772 l S
+37.016 725.094 m 563.982 725.094 l 562.982 724.094 l 38.016 724.094 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 685.954 m 563.982 685.954 l 562.982 686.954 l 38.016 686.954 l  f
+563.982 725.094 m 563.982 685.954 l 562.982 686.954 l 562.982 724.094 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 725.094 m 37.016 685.954 l 38.016 686.954 l 38.016 724.094 l  f
+BT 38.766 694.832 Td /F1 12.0 Tf  [(Code of Practice - Research: )] TJ ET
+BT 182.658 694.832 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058663.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+182.658 692.132 m 451.986 692.132 l S
+37.016 684.454 m 563.982 684.454 l 562.982 683.454 l 38.016 683.454 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 645.314 m 563.982 645.314 l 562.982 646.314 l 38.016 646.314 l  f
+563.982 684.454 m 563.982 645.314 l 562.982 646.314 l 562.982 683.454 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 684.454 m 37.016 645.314 l 38.016 646.314 l 38.016 683.454 l  f
+BT 38.766 654.192 Td /F1 12.0 Tf  [(Code of Practice? Student Professional Experience: )] TJ ET
+BT 292.986 654.192 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058662)] TJ ET
+0.6 w 0 J [  ] 0 d
+292.986 651.492 m 537.306 651.492 l S
+37.016 643.814 m 563.982 643.814 l 562.982 642.814 l 38.016 642.814 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 569.034 m 563.982 569.034 l 562.982 570.034 l 38.016 570.034 l  f
+563.982 643.814 m 563.982 569.034 l 562.982 570.034 l 562.982 642.814 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 643.814 m 37.016 569.034 l 38.016 570.034 l 38.016 642.814 l  f
+BT 38.766 613.552 Td /F1 12.0 Tf  [(IP Student Assignment of Intellectual Property Policy: )] TJ ET
+BT 42.366 577.912 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058690.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+42.366 575.212 m 311.694 575.212 l S
+37.016 567.534 m 563.982 567.534 l 562.982 566.534 l 38.016 566.534 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 528.394 m 563.982 528.394 l 562.982 529.394 l 38.016 529.394 l  f
+563.982 567.534 m 563.982 528.394 l 562.982 529.394 l 562.982 566.534 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 567.534 m 37.016 528.394 l 38.016 529.394 l 38.016 566.534 l  f
+BT 38.766 537.272 Td /F1 12.0 Tf  [(Research Misconduct Policy: )] TJ ET
+BT 186.018 537.272 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058715.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+186.018 534.572 m 455.346 534.572 l S
+37.016 526.894 m 563.982 526.894 l 562.982 525.894 l 38.016 525.894 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 452.114 m 563.982 452.114 l 562.982 453.114 l 38.016 453.114 l  f
+563.982 526.894 m 563.982 452.114 l 562.982 453.114 l 562.982 525.894 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 526.894 m 37.016 452.114 l 38.016 453.114 l 38.016 525.894 l  f
+BT 38.766 496.632 Td /F1 12.0 Tf  [(Non-Discriminatory Language Practice and Presentation:† )] TJ ET
+BT 42.366 460.992 Td /F1 12.0 Tf  [(http://www.uow.edu.au/about/policy/UOW058706.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+42.366 458.292 m 311.694 458.292 l S
+37.016 450.614 m 563.982 450.614 l 562.982 449.614 l 38.016 449.614 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 375.834 m 563.982 375.834 l 562.982 376.834 l 38.016 376.834 l  f
+563.982 450.614 m 563.982 375.834 l 562.982 376.834 l 562.982 449.614 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 450.614 m 37.016 375.834 l 38.016 376.834 l 38.016 449.614 l  f
+BT 38.766 420.352 Td /F1 12.0 Tf  [(Ownership of Work & Intellectual Property Policy: )] TJ ET
+BT 42.366 384.712 Td /F1 12.0 Tf  [(http://www.uow.edu.au/handbook/generalcourserules/UOW028651.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+42.366 382.012 m 392.322 382.012 l S
+BT 398.922 384.712 Td /F1 12.0 Tf  [(†††)] TJ ET
+37.016 374.334 m 563.982 374.334 l 562.982 373.334 l 38.016 373.334 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 335.194 m 563.982 335.194 l 562.982 336.194 l 38.016 336.194 l  f
+563.982 374.334 m 563.982 335.194 l 562.982 336.194 l 562.982 373.334 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 374.334 m 37.016 335.194 l 38.016 336.194 l 38.016 373.334 l  f
+BT 38.766 344.072 Td /F1 12.0 Tf  [(Netiquette Guide: )] TJ ET
+BT 131.022 344.072 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/elearning/netiquette/index.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+131.022 341.372 m 435.678 341.372 l S
+37.016 333.694 m 563.982 333.694 l 562.982 332.694 l 38.016 332.694 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 258.914 m 563.982 258.914 l 562.982 259.914 l 38.016 259.914 l  f
+563.982 333.694 m 563.982 258.914 l 562.982 259.914 l 562.982 332.694 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 333.694 m 37.016 258.914 l 38.016 259.914 l 38.016 332.694 l  f
+BT 38.766 303.432 Td /F1 12.0 Tf  [(Library Services: )] TJ ET
+BT 128.346 303.432 Td /F1 12.0 Tf  [(http://www.library.uow.edu.au)] TJ ET
+0.6 w 0 J [  ] 0 d
+128.346 300.732 m 276.330 300.732 l S
+BT 282.930 303.432 Td /F1 12.0 Tf  [( Bulding 16, Phone: 4221 3548)] TJ ET
+BT 38.766 267.792 Td /F1 12.0 Tf  [(Complete Start Smart: )] TJ ET
+BT 152.706 267.792 Td /F1 12.0 Tf  [(http://www.uow.edu.au/student/services/fye/resources/startsmart/)] TJ ET
+0.6 w 0 J [  ] 0 d
+152.706 265.092 m 466.998 265.092 l S
+37.016 257.414 m 563.982 257.414 l 562.982 256.414 l 38.016 256.414 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+37.016 182.634 m 563.982 182.634 l 562.982 183.634 l 38.016 183.634 l  f
+563.982 257.414 m 563.982 182.634 l 562.982 183.634 l 562.982 256.414 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+37.016 257.414 m 37.016 182.634 l 38.016 183.634 l 38.016 256.414 l  f
+BT 38.766 227.152 Td /F1 12.0 Tf  [(Subject Outlines: †)] TJ ET
+BT 42.366 191.512 Td /F1 12.0 Tf  [(https://ssl.informatics.uow.edu.au/subjectoutlines/CSCI/Current/)] TJ ET
+0.6 w 0 J [  ] 0 d
+42.366 188.812 m 353.046 188.812 l S
+endstream
+endobj
+88 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 89 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 237.4257 775.0323 513.9537 786.9123 ]
+>>
+endobj
+89 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058721.html)
+>>
+endobj
+90 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 91 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 168.0897 734.3923 444.6177 746.2723 ]
+>>
+endobj
+91 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058723.html)
+>>
+endobj
+92 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 93 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 179.0577 693.7523 455.5857 705.6323 ]
+>>
+endobj
+93 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058663.html)
+>>
+endobj
+94 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 95 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 289.3857 653.1123 540.9057 664.9923 ]
+>>
+endobj
+95 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058662)
+>>
+endobj
+96 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 97 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 38.7657 576.8323 315.2937 588.7123 ]
+>>
+endobj
+97 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058690.html)
+>>
+endobj
+98 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 99 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 182.4177 536.1923 458.9457 548.0723 ]
+>>
+endobj
+99 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058715.html)
+>>
+endobj
+100 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 101 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 38.7657 459.9123 315.2937 471.7923 ]
+>>
+endobj
+101 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/about/policy/UOW058706.html)
+>>
+endobj
+102 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 103 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 38.7657 383.6323 395.9217 395.5123 ]
+>>
+endobj
+103 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/handbook/generalcourserules/UOW028651.html)
+>>
+endobj
+104 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 105 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 127.4217 342.9923 439.2777 354.8723 ]
+>>
+endobj
+105 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/elearning/netiquette/index.html)
+>>
+endobj
+106 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 107 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 124.7457 302.3523 279.9297 314.2323 ]
+>>
+endobj
+107 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.library.uow.edu.au)
+>>
+endobj
+108 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 109 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 149.1057 266.7123 470.5977 278.5923 ]
+>>
+endobj
+109 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.uow.edu.au/student/services/fye/resources/startsmart/index.html)
+>>
+endobj
+110 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 111 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 38.7657 190.4323 356.6457 202.3123 ]
+>>
+endobj
+111 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://ssl.informatics.uow.edu.au/subjectoutlines/CSCI/Current/)
+>>
+endobj
+xref
+0 112
+0000000000 65535 f 
+0000000008 00000 n 
+0000000073 00000 n 
+0000000119 00000 n 
+0000000442 00000 n 
+0000000479 00000 n 
+0000000610 00000 n 
+0000000673 00000 n 
+0000009020 00000 n 
+0000009129 00000 n 
+0000009237 00000 n 
+0000009552 00000 n 
+0000013005 00000 n 
+0000013089 00000 n 
+0000017952 00000 n 
+0000018079 00000 n 
+0000018161 00000 n 
+0000018245 00000 n 
+0000020877 00000 n 
+0000021003 00000 n 
+0000021122 00000 n 
+0000021187 00000 n 
+0000032006 00000 n 
+0000032071 00000 n 
+0000037438 00000 n 
+0000037549 00000 n 
+0000037614 00000 n 
+0000040094 00000 n 
+0000040159 00000 n 
+0000064078 00000 n 
+0000064143 00000 n 
+0000066851 00000 n 
+0000066966 00000 n 
+0000067031 00000 n 
+0000068809 00000 n 
+0000068874 00000 n 
+0000071864 00000 n 
+0000071955 00000 n 
+0000074655 00000 n 
+0000074782 00000 n 
+0000074884 00000 n 
+0000075011 00000 n 
+0000075112 00000 n 
+0000075196 00000 n 
+0000078848 00000 n 
+0000078975 00000 n 
+0000079076 00000 n 
+0000079174 00000 n 
+0000081594 00000 n 
+0000081722 00000 n 
+0000081823 00000 n 
+0000081950 00000 n 
+0000082057 00000 n 
+0000082185 00000 n 
+0000082286 00000 n 
+0000082468 00000 n 
+0000091747 00000 n 
+0000091875 00000 n 
+0000091976 00000 n 
+0000092104 00000 n 
+0000092205 00000 n 
+0000092332 00000 n 
+0000092430 00000 n 
+0000092558 00000 n 
+0000092653 00000 n 
+0000092780 00000 n 
+0000092881 00000 n 
+0000093009 00000 n 
+0000093099 00000 n 
+0000093227 00000 n 
+0000093328 00000 n 
+0000093456 00000 n 
+0000093562 00000 n 
+0000093690 00000 n 
+0000093781 00000 n 
+0000093907 00000 n 
+0000093998 00000 n 
+0000094126 00000 n 
+0000094227 00000 n 
+0000094355 00000 n 
+0000094435 00000 n 
+0000094563 00000 n 
+0000094660 00000 n 
+0000094788 00000 n 
+0000094914 00000 n 
+0000095040 00000 n 
+0000095141 00000 n 
+0000095308 00000 n 
+0000102827 00000 n 
+0000102955 00000 n 
+0000103056 00000 n 
+0000103184 00000 n 
+0000103285 00000 n 
+0000103413 00000 n 
+0000103514 00000 n 
+0000103642 00000 n 
+0000103738 00000 n 
+0000103865 00000 n 
+0000103966 00000 n 
+0000104094 00000 n 
+0000104195 00000 n 
+0000104324 00000 n 
+0000104426 00000 n 
+0000104555 00000 n 
+0000104672 00000 n 
+0000104802 00000 n 
+0000104916 00000 n 
+0000105046 00000 n 
+0000105128 00000 n 
+0000105258 00000 n 
+0000105385 00000 n 
+0000105514 00000 n 
+trailer
+<<
+/Size 112
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+105631
+%%EOF
