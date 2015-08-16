@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>main.c</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: Monospaced}
+pre {color: #000000; background-color: #ffffff; font-family: Monospaced}
+table {color: #000000; background-color: #e9e8e2; font-family: Monospaced}
+.ST0 {color: #009b00; background-color: #e9eff8}
+.highlight-caret-row {background-color: #e9eff8}
+.ST4 {font-family: Monospaced; font-weight: bold}
+.preprocessor {color: #009b00}
+.ST2 {color: #009900}
+.comment {color: #969696}
+.literal {color: #0000e6}
+.pragma-omp-keyword-directive {color: #2e92c7}
+.ST1 {color: #ce7b00; background-color: #e9eff8}
+.ST3 {color: #009900; background-color: #eceba3}
+.ST5 {color: #ce7b00; font-family: Monospaced; font-weight: bold}
+.string {color: #ce7b00}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">/Users/james/UOW/UOW/UOW Repositories/CSCI131/Assignments/Assignment 1/Solutions - Netbeans/main.c</td></tr></table>
+<pre>
+  1 <span class="ST0">#</span><span class="ST0">include</span> <span class="ST1">&lt;time.h&gt;</span>
+  2 <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="string">&lt;stdlib.h&gt;</span>
+  3 <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="string">&lt;stdio.h&gt;</span>
+  4 <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="string">&lt;limits.h&gt;</span>
+  5 <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="string">&lt;string.h&gt;</span>
+  6 <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="string">&lt;ctype.h&gt;</span>
+  7 
+  8 <span class="literal">struct</span> Data {
+  9         <span class="literal">int</span> <span class="ST2">InputBase</span>;
+ 10         <span class="literal">int</span> <span class="ST2">OutputBase</span>;
+ 11         <span class="literal">unsigned</span> <span class="literal">short</span> <span class="ST2">ValueA</span>;
+ 12         <span class="literal">unsigned</span> <span class="literal">short</span> <span class="ST3">ValueB</span>;
+ 13         <span class="literal">unsigned</span> <span class="literal">short</span> <span class="ST2">Result</span>;
+ 14 };
+ 15 
+ 16 <span class="literal">typedef</span> <span class="literal">enum</span> {BITWISE, SHIFT_LOGICAL, SHIFT_ARITHMETIC} <span class="pragma-omp-keyword-directive">QuestionType</span>;
+ 17 <span class="literal">typedef</span> <span class="literal">struct</span> Data Data;
+ 18 
+ 19 <span class="literal">int</span> <span class="ST4">getRandomNumberBetween</span>(<span class="literal">int</span> min, <span class="literal">int</span> max)
+ 20 {
+ 21         <span class="literal">int</span> random = min;
+ 22         
+ 23         <span class="comment">//</span> <span class="comment">Gaurd</span>
+ 24         <span class="literal">while</span> (1) {
+ 25                 random = (rand() % (max + 1)) + min;
+ 26                 
+ 27                 <span class="literal">if</span> ((random &gt;= min) &amp;&amp; (random &lt;= max)) {
+ 28                         <span class="literal">break</span>;
+ 29                 }
+ 30         }
+ 31         
+ 32         <span class="literal">return</span> random;
+ 33 }
+ 34 
+ 35 Data <span class="ST4">generateData</span>()
+ 36 {
+ 37         Data temp;
+ 38         
+ 39         temp.<span class="ST2">InputBase</span> = getRandomNumberBetween(1, 3);
+ 40         temp.<span class="ST2">OutputBase</span> = getRandomNumberBetween(1, 3);
+ 41         temp.<span class="ST2">ValueA</span> = getRandomNumberBetween(0, <span class="pragma-omp-keyword-directive">SHRT_MAX</span>);
+ 42         temp.<span class="ST3">ValueB</span> = getRandomNumberBetween(0, <span class="pragma-omp-keyword-directive">SHRT_MAX</span>);
+ 43         temp.<span class="ST2">Result</span> = 0;
+ 44         
+ 45         <span class="literal">return</span> temp;
+ 46 }
+ 47 
+ 48 <span class="literal">unsigned</span> <span class="literal">short</span> <span class="ST4">computeLogicOperation</span>(Data data, <span class="pragma-omp-keyword-directive">QuestionType</span> type)
+ 49 {
+ 50         <span class="literal">unsigned</span> <span class="literal">short</span> result = 0;
+ 51         
+ 52         <span class="literal">if</span> (type == BITWISE) {
+ 53                 <span class="literal">int</span> random = getRandomNumberBetween(0, 5);
+ 54                 
+ 55                 <span class="literal">switch</span> (random) {
+ 56                         <span class="literal">case</span> 0:
+ 57                                 printf(<span class="ST5">&quot;</span><span class="string">~a</span><span class="ST5">&quot;</span>);
+ 58                                 result = ~data.<span class="ST2">ValueA</span>;
+ 59                                 <span class="literal">break</span>;
+ 60                                 
+ 61                         <span class="literal">case</span> 1:
+ 62                                 printf(<span class="ST5">&quot;</span><span class="string">a &amp; b</span><span class="ST5">&quot;</span>);
+ 63                                 result = data.<span class="ST2">ValueA</span> &amp; data.<span class="ST3">ValueB</span>;
+ 64                                 <span class="literal">break</span>;
+ 65                                 
+ 66                         <span class="literal">case</span> 2:
+ 67                                 printf(<span class="ST5">&quot;</span><span class="string">a &amp; ~b</span><span class="ST5">&quot;</span>);
+ 68                                 result = data.<span class="ST2">ValueA</span> &amp; ~data.<span class="ST3">ValueB</span>;
+ 69                                 <span class="literal">break</span>;
+ 70                                 
+ 71                         <span class="literal">case</span> 3:
+ 72                                 printf(<span class="ST5">&quot;</span><span class="string">a | b</span><span class="ST5">&quot;</span>);
+ 73                                 result = data.<span class="ST2">ValueA</span> | data.<span class="ST3">ValueB</span>;
+ 74                                 <span class="literal">break</span>;
+ 75                                 
+ 76                         <span class="literal">case</span> 4:
+ 77                                 printf(<span class="ST5">&quot;</span><span class="string">a ^ b</span><span class="ST5">&quot;</span>);
+ 78                                 result = data.<span class="ST2">ValueA</span> ^ data.<span class="ST3">ValueB</span>;
+ 79                                 <span class="literal">break</span>;
+ 80                                 
+ 81                         <span class="literal">case</span> 5:
+ 82                                 printf(<span class="ST5">&quot;</span><span class="string">~(~a &amp; ~b)</span><span class="ST5">&quot;</span>);
+ 83                                 result = ~(~data.<span class="ST2">ValueA</span> &amp; ~data.<span class="ST3">ValueB</span>);
+ 84                                 <span class="literal">break</span>;
+ 85                                 
+ 86                         <span class="literal">default</span>:
+ 87                                 result = 0;
+ 88                                 <span class="literal">break</span>;
+ 89                 }
+ 90                 
+ 91         } <span class="literal">else</span> <span class="literal">if</span> ((type == SHIFT_LOGICAL) || (type == SHIFT_ARITHMETIC)) {
+ 92                 
+ 93                 <span class="literal">int</span> random = getRandomNumberBetween(0, 1);
+ 94                 <span class="literal">int</span> randomValue = getRandomNumberBetween(1, 3);
+ 95                 
+ 96                 <span class="literal">switch</span> (random) {
+ 97                         <span class="literal">case</span> 0:
+ 98                                 printf(<span class="ST5">&quot;</span><span class="string">a &lt;&lt; %d</span><span class="ST5">&quot;</span>, randomValue);
+ 99                                 result = data.<span class="ST2">ValueA</span> &lt;&lt; randomValue;
+100                                 <span class="literal">break</span>;
+101                                 
+102                         <span class="literal">case</span> 1:
+103                                 printf(<span class="ST5">&quot;</span><span class="string">a &gt;&gt; %d</span><span class="ST5">&quot;</span>, randomValue);
+104                                 result = data.<span class="ST2">ValueA</span> &gt;&gt; randomValue;
+105                                 <span class="literal">break</span>;
+106                                 
+107                         <span class="literal">default</span>:
+108                                 result = 0;
+109                                 <span class="literal">break</span>;
+110                 }
+111                 
+112         }
+113         
+114         printf(<span class="ST5">&quot;</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+115         <span class="literal">return</span> result;
+116 }
+117 
+118 <span class="literal">void</span> <span class="ST4">printBinary</span>(<span class="literal">unsigned</span> <span class="literal">short</span> decimal)
+119 {
+120         <span class="literal">int</span> mask = <span class="pragma-omp-keyword-directive">SHRT_MIN</span>, count = 0;
+121         
+122         <span class="literal">for</span> (count = 0; count &lt; 16; count++) {
+123                 <span class="literal">char</span> ch = (decimal &amp; mask) ? <span class="string">&#39;</span><span class="string">1</span><span class="string">&#39;</span> : <span class="string">&#39;</span><span class="string">0</span><span class="string">&#39;</span>;
+124                 decimal = decimal &lt;&lt; 1;
+125                 printf(<span class="ST5">&quot;</span><span class="string">%c</span><span class="ST5">&quot;</span>, ch);
+126         }
+127 }
+128 
+129 <span class="literal">unsigned</span> <span class="literal">short</span> <span class="ST4">scanBinary</span>() {
+130         <span class="literal">char</span> buf[256];
+131         fgets(buf, <span class="literal">sizeof</span>(buf), <span class="pragma-omp-keyword-directive">stdin</span>);
+132         
+133         <span class="literal">unsigned</span> <span class="literal">short</span> val = 0;
+134         <span class="literal">int</span> len = (<span class="literal">int</span>)strlen(buf);
+135         <span class="literal">int</span> i = 0;
+136         
+137         <span class="literal">while</span> ((i &lt; len) &amp;&amp; (isspace(buf[i]))) {
+138                 i++;
+139         }
+140         
+141         <span class="literal">while</span> ((i &lt; len) &amp;&amp; ((buf[i] == <span class="string">&#39;</span><span class="string">0</span><span class="string">&#39;</span>) || (buf[i] == <span class="string">&#39;</span><span class="string">1</span><span class="string">&#39;</span>))) {
+142                 val = val &lt;&lt; 1;
+143                 
+144                 <span class="literal">if</span> (buf[i] == <span class="string">&#39;</span><span class="string">1</span><span class="string">&#39;</span>) {
+145                         val = val | 01;
+146                 }
+147                 
+148                 i++;
+149         }
+150         
+151         <span class="literal">return</span> val;
+152 }
+153 
+154 <span class="literal">void</span> <span class="ST4">printGeneratedValues</span>(Data data, <span class="pragma-omp-keyword-directive">QuestionType</span> type)
+155 {
+156         <span class="literal">switch</span> (data.<span class="ST2">InputBase</span>) {
+157                 <span class="literal">case</span> 1:
+158                         <span class="literal">if</span> (type == BITWISE) {
+159                                 printf(<span class="ST5">&quot;</span><span class="string">a = 0x%hx</span><span class="ST5">\n</span><span class="string">b = 0x%hx</span><span class="ST5">\n</span><span class="ST5">&quot;</span>, data.<span class="ST2">ValueA</span>, data.<span class="ST3">ValueB</span>);
+160                         } <span class="literal">else</span> {
+161                                 printf(<span class="ST5">&quot;</span><span class="string">a = 0x%hx</span><span class="ST5">\n</span><span class="ST5">&quot;</span>, data.<span class="ST2">ValueA</span>);
+162                         }
+163                         <span class="literal">break</span>;
+164                         
+165                 <span class="literal">case</span> 2:
+166                         <span class="literal">if</span> (type == BITWISE) {
+167                                 printf(<span class="ST5">&quot;</span><span class="string">a = </span><span class="ST5">&quot;</span>);
+168                                 printBinary(data.<span class="ST2">ValueA</span>);
+169                                 printf(<span class="ST5">&quot;</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+170                                 
+171                                 printf(<span class="ST5">&quot;</span><span class="string">b = </span><span class="ST5">&quot;</span>);
+172                                 printBinary(data.<span class="ST3">ValueB</span>);
+173                                 printf(<span class="ST5">&quot;</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+174                         } <span class="literal">else</span> {
+175                                 printf(<span class="ST5">&quot;</span><span class="string">a = </span><span class="ST5">&quot;</span>);
+176                                 printBinary(data.<span class="ST2">ValueA</span>);
+177                                 printf(<span class="ST5">&quot;</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+178                         }
+179                         <span class="literal">break</span>;
+180                         
+181                 <span class="literal">case</span> 3:
+182                         <span class="literal">if</span> (type == BITWISE) {
+183                                 printf(<span class="ST5">&quot;</span><span class="string">a = 0%ho</span><span class="ST5">\n</span><span class="string">b = 0%ho</span><span class="ST5">\n</span><span class="ST5">&quot;</span>, data.<span class="ST2">ValueA</span>, data.<span class="ST3">ValueB</span>);
+184                         } <span class="literal">else</span> {
+185                                 printf(<span class="ST5">&quot;</span><span class="string">a = 0%ho</span><span class="ST5">\n</span><span class="ST5">&quot;</span>, data.<span class="ST2">ValueA</span>);
+186                         }
+187                         <span class="literal">break</span>;
+188                         
+189                 <span class="literal">default</span>:
+190                         <span class="literal">break</span>;
+191         }
+192 }
+193 
+194 <span class="literal">unsigned</span> <span class="literal">short</span> <span class="ST4">getUserAnswer</span>(Data data)
+195 {
+196         <span class="literal">unsigned</span> <span class="literal">short</span> temp = 0;
+197         
+198         printf(<span class="ST5">&quot;</span><span class="string">Enter Answer (Base 10: %d) in </span><span class="ST5">&quot;</span>, data.<span class="ST2">Result</span>);
+199         
+200         <span class="literal">switch</span> (data.<span class="ST2">OutputBase</span>) {
+201                 <span class="literal">case</span> 1:
+202                         printf(<span class="ST5">&quot;</span><span class="string">Hexadecimal: </span><span class="ST5">&quot;</span>);
+203                         scanf(<span class="ST5">&quot;</span><span class="string">%hx</span><span class="ST5">&quot;</span>, &amp;temp);
+204                         <span class="literal">break</span>;
+205                         
+206                 <span class="literal">case</span> 2:
+207                         printf(<span class="ST5">&quot;</span><span class="string">Binary: </span><span class="ST5">&quot;</span>);
+208                         temp = scanBinary();
+209                         <span class="literal">break</span>;
+210                         
+211                 <span class="literal">case</span> 3:
+212                         printf(<span class="ST5">&quot;</span><span class="string">Octal: </span><span class="ST5">&quot;</span>);
+213                         scanf(<span class="ST5">&quot;</span><span class="string">%ho</span><span class="ST5">&quot;</span>, &amp;temp);
+214                         <span class="literal">break</span>;
+215                         
+216                 <span class="literal">default</span>:
+217                         <span class="literal">break</span>;
+218         }
+219         
+220         <span class="literal">return</span> temp;
+221 }
+222 
+223 <span class="literal">int</span> <span class="ST4">correctAnswer</span>(<span class="literal">unsigned</span> <span class="literal">short</span> user, <span class="literal">unsigned</span> <span class="literal">short</span> machine)
+224 {
+225         <span class="literal">if</span> (user == machine) {
+226                 <span class="comment">//</span> <span class="comment">True</span>
+227                 printf(<span class="ST5">&quot;</span><span class="string">Correct</span><span class="ST5">\n</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+228                 <span class="literal">return</span> 1;
+229         } <span class="literal">else</span> {
+230                 <span class="comment">//</span> <span class="comment">False</span>
+231                 printf(<span class="ST5">&quot;</span><span class="string">Incorrect, start all over again</span><span class="ST5">\n</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+232                 <span class="literal">return</span> 0;
+233         }
+234 }
+235 
+236 <span class="literal">int</span> <span class="ST4">correctAnswerArithmetic</span>(<span class="literal">signed</span> <span class="literal">short</span> user, <span class="literal">signed</span> <span class="literal">short</span> machine)
+237 {
+238         <span class="literal">if</span> (user == machine) {
+239                 <span class="comment">//</span> <span class="comment">True</span>
+240                 printf(<span class="ST5">&quot;</span><span class="string">Correct</span><span class="ST5">\n</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+241                 <span class="literal">return</span> 1;
+242         } <span class="literal">else</span> {
+243                 <span class="comment">//</span> <span class="comment">False</span>
+244                 printf(<span class="ST5">&quot;</span><span class="string">Incorrect, start all over again</span><span class="ST5">\n</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+245                 <span class="literal">return</span> 0;
+246         }
+247 }
+248 
+249 <span class="literal">void</span> <span class="ST4">runTestBitwise</span>()
+250 {
+251         <span class="literal">int</span> count = 0;
+252         
+253         <span class="literal">while</span> (count &lt; 12) {
+254                 <span class="literal">unsigned</span> <span class="literal">short</span> userResult = 0;
+255                 
+256                 <span class="comment">//</span> <span class="comment">Set</span> <span class="comment">a</span> <span class="comment">seed</span> <span class="comment">for</span> <span class="comment">random</span>
+257                 srand((<span class="literal">unsigned</span> <span class="literal">int</span>)time(<span class="pragma-omp-keyword-directive">NULL</span>));
+258                 
+259                 <span class="comment">//</span> <span class="comment">Generate</span> <span class="comment">Random</span> <span class="comment">Data</span>
+260                 Data data = generateData();
+261                 
+262                 <span class="comment">//</span> <span class="comment">Print</span> <span class="comment">generated</span> <span class="comment">values</span>
+263                 printGeneratedValues(data, BITWISE);
+264                 
+265                 <span class="comment">//</span> <span class="comment">Print</span> <span class="comment">and</span> <span class="comment">compute</span> <span class="comment">logic</span> <span class="comment">calculation</span>
+266                 data.<span class="ST2">Result</span> = computeLogicOperation(data, BITWISE);
+267                 
+268                 <span class="comment">//</span> <span class="comment">Get</span> <span class="comment">User</span> <span class="comment">Answer</span>
+269                 userResult = getUserAnswer(data);
+270                 
+271                 <span class="comment">//</span> <span class="comment">Check</span> <span class="comment">Answer</span>
+272                 <span class="literal">if</span> (correctAnswer(userResult, data.<span class="ST2">Result</span>)) {
+273                         count++;
+274                 } <span class="literal">else</span> {
+275                         count = 0;
+276                 }
+277         }
+278 }
+279 
+280 <span class="literal">void</span> <span class="ST4">runTestShiftLogical</span>()
+281 {
+282         <span class="literal">int</span> count = 0;
+283         
+284         <span class="literal">while</span> (count &lt; 6) {
+285                 <span class="literal">unsigned</span> <span class="literal">short</span> userResult = 0;
+286                 
+287                 <span class="comment">//</span> <span class="comment">Set</span> <span class="comment">a</span> <span class="comment">seed</span> <span class="comment">for</span> <span class="comment">random</span>
+288                 srand((<span class="literal">unsigned</span> <span class="literal">int</span>)time(<span class="pragma-omp-keyword-directive">NULL</span>));
+289                 
+290                 <span class="comment">//</span> <span class="comment">Generate</span> <span class="comment">Random</span> <span class="comment">Data</span>
+291                 Data data = generateData();
+292                 
+293                 <span class="comment">//</span> <span class="comment">Print</span> <span class="comment">generated</span> <span class="comment">values</span>
+294                 printGeneratedValues(data, SHIFT_LOGICAL);
+295                 
+296                 <span class="comment">//</span> <span class="comment">Print</span> <span class="comment">and</span> <span class="comment">compute</span> <span class="comment">logic</span> <span class="comment">calculation</span>
+297                 data.<span class="ST2">Result</span> = computeLogicOperation(data, SHIFT_LOGICAL);
+298                 
+299                 <span class="comment">//</span> <span class="comment">Get</span> <span class="comment">User</span> <span class="comment">Answer</span>
+300                 userResult = getUserAnswer(data);
+301                 
+302                 <span class="comment">//</span> <span class="comment">Check</span> <span class="comment">Answer</span>
+303                 <span class="literal">if</span> (correctAnswer(userResult, data.<span class="ST2">Result</span>)) {
+304                         count++;
+305                 } <span class="literal">else</span> {
+306                         count = 0;
+307                 }
+308         }
+309 }
+310 
+311 <span class="literal">void</span> <span class="ST4">runTestShiftArithmetic</span>()
+312 {
+313         <span class="literal">int</span> count = 0;
+314         
+315         <span class="literal">while</span> (count &lt; 6) {
+316                 <span class="literal">unsigned</span> <span class="literal">short</span> userResult = 0;
+317                 
+318                 <span class="comment">//</span> <span class="comment">Set</span> <span class="comment">a</span> <span class="comment">seed</span> <span class="comment">for</span> <span class="comment">random</span>
+319                 srand((<span class="literal">unsigned</span> <span class="literal">int</span>)time(<span class="pragma-omp-keyword-directive">NULL</span>));
+320                 
+321                 <span class="comment">//</span> <span class="comment">Generate</span> <span class="comment">Random</span> <span class="comment">Data</span>
+322                 Data data = generateData();
+323                 
+324                 <span class="comment">//</span> <span class="comment">Print</span> <span class="comment">generated</span> <span class="comment">values</span>
+325                 printGeneratedValues(data, SHIFT_ARITHMETIC);
+326                 
+327                 <span class="comment">//</span> <span class="comment">Print</span> <span class="comment">and</span> <span class="comment">compute</span> <span class="comment">logic</span> <span class="comment">calculation</span>
+328                 data.<span class="ST2">Result</span> = computeLogicOperation(data, SHIFT_ARITHMETIC);
+329                 
+330                 <span class="comment">//</span> <span class="comment">Get</span> <span class="comment">User</span> <span class="comment">Answer</span>
+331                 userResult = getUserAnswer(data);
+332                 
+333                 <span class="comment">//</span> <span class="comment">Cast</span> <span class="comment">to</span> <span class="comment">signed</span><span class="comment">, </span><span class="comment">Arithmetic</span> <span class="comment">Shifting</span>
+334                 <span class="comment">//</span> <span class="comment">Check</span> <span class="comment">Answer</span>
+335                 <span class="literal">if</span> (correctAnswer((<span class="literal">signed</span> <span class="literal">short</span>)userResult, (<span class="literal">signed</span> <span class="literal">short</span>)data.<span class="ST2">Result</span>)) {
+336                         count++;
+337                 } <span class="literal">else</span> {
+338                         count = 0;
+339                 }
+340         }
+341 }
+342 
+343 <span class="literal">int</span> <span class="ST4">main</span>(<span class="literal">int</span> argc, <span class="literal">const</span> <span class="literal">char</span> * argv[]) {
+344         
+345         printf(<span class="ST5">&quot;</span><span class="string">Bitwise Operations</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+346         runTestBitwise();
+347         
+348         printf(<span class="ST5">&quot;</span><span class="string">Logical Shift Operations</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+349         runTestShiftLogical();
+350         
+351         printf(<span class="ST5">&quot;</span><span class="string">Arithmetic Shift Operations</span><span class="ST5">\n</span><span class="ST5">&quot;</span>);
+352         runTestShiftArithmetic();
+353         
+354         <span class="literal">return</span> 0;
+355 }
+356 
+</pre></body>
+</html>
