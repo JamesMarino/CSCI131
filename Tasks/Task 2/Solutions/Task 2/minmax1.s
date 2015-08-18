@@ -25,7 +25,6 @@ notsmall: add #2,r0
   ; subtact one and branch if not 0, taking away one from r2 (len) and loop if not 0
   sob r2,loop
   halt
-
 ; Data
 max: .word 0
 min: .word 0
