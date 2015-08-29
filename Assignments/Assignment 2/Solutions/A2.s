@@ -249,9 +249,11 @@ putintdone:  mov (sp)+,r3
 br osreturn
 .origin 2000
 ; ------------------ Place Application in here ------------------
+;
+; Function: Calculate the mean
 meanc:
 	;
-	; Clear registers before start
+	; Clear registers before use
 	clr r0
 	clr r1
 	clr r2
@@ -291,6 +293,8 @@ meanc:
 	; Into mean variable
 	mov r0, meanv
 	return
+;
+; Function: Print the mean
 mean:
 	; Process data
 	call meanc
@@ -303,9 +307,127 @@ mean:
 	writeline
 	numbuf
 	return
+;
+; Function: Calculate the mode
+modec:
+	; Set highest value in memory
+	highestvalue=0
+	;
+	; Clear registers before use
+	clr r0
+	clr r1
+	clr r2
+	clr r3
+	clr r4
+	clr r5
+	;
+	; ----- Register Layout -----
+	; r0 and r1: Load the address of the array
+	mov #dataset, r0
+	mov #dataset, r1
+	;
+	; r2 and r3: Load size of array (as counters)
+	mov #datasize, r2
+	mov #datasize, r3
+	;
+	; r4: Current count of equal values in array
+	; r5: Highest count of values
+	; highestvalue: Highest Value so far --> stored in ram
+	;
+	; Loop 1 (All numbers in array)
+	loop1:
+		;
+		; Clear the previous loops equal counter r4
+		clr r4
+		;
+		; Loop 2: Again (All numbers in array)
+		loop2:
+			;
+			; ---------- Loop 2 Contents ------------------
+			;
+			; Branch if current loop 1 array value is equal
+			; to current list in loop 2 is traversing
+			cmp @r0, @r1
+				; Branch of equal
+				beq equalinc
+				bne continueequalinc
+			; Function if equal
+			equalinc:
+				; Add to the current count
+				inc r4
+			; Not Equal
+			continueequalinc:
+			;
+			; ---------- Loop 2 Contents ------------------
+			;
+			; Add 2 bytes to the array pointer
+			add #2, r1
+			; subtract and branch if counter is equal to 0
+			; i.e. go back to the loop statement if not done
+			sob r3, loop2
+		;
+		; ---------- Loop 1 Contents ------------------
+		;
+		; Compare r4 (current count) with highest value
+		cmp r4, r5
+			bgt storehigh
+			blt continuestorehigh
+		;
+		; Function if greater than
+		storehigh:
+			; Move value of r4 into r5
+			mov r4, r5
+			; Update actual value
+			mov @r0, highestvalue
+		; Continue function
+		continuestorehigh:
+		;
+		;
+		; ---------- Loop 1 Contents ------------------
+		;
+		;
+		; Reset r3
+		mov #datasize, r3
+		; Reset r1 array to begining
+		mov #dataset, r1
+		;
+		; Add 2 bytes to the array pointer
+		add #2, r0
+		; subtract and branch if counter is equal to 0
+		; i.e. go back to the loop statement if not done
+		sob r2, loop1
+	;
+	; Move highestvalue into buffer
+	mov highestvalue, modev
+	;
+	return
+;
+; Function: Print the mode
+mode:
+	; Process data
+	call modec
+	; Print out values
+	writeline
+	msgmode
+	itoa
+	modev
+	numbuf
+	writeline
+	numbuf
+	return
+; Function: int main()
 application:
 	; Main Code
 	call mean
+	;
+	writeline
+	newline
+	;
+	call mode
+	;
+	;writeline
+	;newline
+	;
 	exit
 .origin 3000
 ;
@@ -318,8 +440,8 @@ meanv: .blkw 1
 modev: .blkw 1
 ;
 ; Data
-dataset: .word 2626, 2424, 2323, 232321, 3244, 2632
-datasize=6
+dataset: .word 4, 5, 3, 1, 6, 6, 6, 2, 3
+datasize=11
 ;
 ; IO Data
 newline: .word 15
