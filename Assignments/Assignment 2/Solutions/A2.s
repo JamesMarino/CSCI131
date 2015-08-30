@@ -419,7 +419,7 @@ mode:
 ; Function: Calculate the max and min
 maxandminc:
 	;
-	; Clear registers before use 😉
+	; Clear registers before use
 	clr r0
 	clr r1
 	clr r2
