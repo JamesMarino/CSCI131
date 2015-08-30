@@ -415,6 +415,119 @@ mode:
 	writeline
 	numbuf
 	return
+;
+; Function: Calculate the max and min
+maxandminc:
+	;
+	; Clear registers before use 😉
+	clr r0
+	clr r1
+	clr r2
+	clr r3
+	clr r4
+	clr r5
+	;
+	; ----- Register Layout -----
+	; r0: Load the address of the array
+	mov #dataset, r0
+	;
+	; r1: Load size of array (as counters)
+	mov #datasize, r1
+	;
+	; r2: Current array value
+	; r3: Current smallest value
+	; r4: Current largest value
+	;
+	; Store pre loop max and min values (opposites)
+	; for initial compare
+	mov #77777, r3
+	mov #00000, r4
+	;
+	; Loop 1 (All numbers in array)
+	loopmaxmin:
+		;
+		; ---------- Loop Contents ------------------
+		;
+		; Get current array value
+		mov @r0, r2
+		;
+		; Compare the min value
+		cmp r2, r3
+			; Branch if less than
+			blt minstore
+			;
+		; Compare max value
+		cmp r2, r4
+			; Branch greater than
+			bgt maxstore
+			;
+		; Compare equal to
+		cmp r2, r3
+			beq continue
+		cmp r2, r4
+			beq continue
+			;
+		; Compare in between
+		cmp r2, r3
+			bgt continue
+		cmp r2, r4
+			blt continue
+			;
+		; Store min value
+		minstore:
+			mov r2, r3
+			jmp continue
+		;
+		; Store max value
+		maxstore:
+			mov r2, r4
+		;
+		; Continue
+		continue:
+		;
+		; ---------- Loop Contents ------------------
+		;
+		; Add 2 bytes to the array pointer
+		add #2, r0
+		; subtract and branch if counter is equal to 0
+		; i.e. go back to the loop statement if not done
+		sob r1, loopmaxmin
+	;
+	; Store values into buffer
+	mov r3, minv
+	mov r4, maxv
+	;
+	return
+;
+; Function: Print the max and min
+maxandmin:
+	; Process data
+	call maxandminc
+	; Print out values
+	; Max Values
+	writeline
+	msgmax
+	itoa
+	maxv
+	numbuf
+	writeline
+	numbuf
+	;
+	; Newline
+	writeline
+	newline
+	;
+	; Min Values
+	writeline
+	msgmin
+	itoa
+	minv
+	numbuf
+	writeline
+	numbuf
+	; Return
+	return
+;
 ; Function: int main()
 application:
 	; Main Code
@@ -425,8 +538,10 @@ application:
 	;
 	call mode
 	;
-	;writeline
-	;newline
+	writeline
+	newline
+	;
+	call maxandmin
 	;
 	exit
 .origin 3000
@@ -434,14 +549,18 @@ application:
 ; Strings
 msgmean: .string "Mean  : "
 msgmode: .string "Mode  : "
+msgmax: .string "Max  : "
+msgmin: .string "Min  : "
 ;
 ; Variables
 meanv: .blkw 1
 modev: .blkw 1
+maxv: .blkw 1
+minv: .blkw 1
 ;
 ; Data
-dataset: .word 4, 5, 3, 1, 6, 6, 6, 2, 3
-datasize=11
+dataset: .word 644, 4, 105, 6, 6, 644, 6, 644, 644, 2, 3, 105, 11, 1, 1
+datasize=17
 ;
 ; IO Data
 newline: .word 15
