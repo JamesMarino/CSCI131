@@ -248,7 +248,7 @@ putintdone:  mov (sp)+,r3
  mov #2,r0 
 br osreturn
 .origin 2000
-; ------------------ Place Application in here ------------------
+; ------------------ Start Application ------------------
 ;
 ; Function: Calculate the mean
 meanc:
