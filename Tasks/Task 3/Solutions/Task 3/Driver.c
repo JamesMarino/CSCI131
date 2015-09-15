@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "data.h"
 
-const char *fakefile = "";
+const char *fakefile = "/home/undergrad/j/jm617/File2.txt";
 const int versionid = 1;
 
 static key_t shmkey;
@@ -49,13 +49,26 @@ static void createsharedmemory()
 	thedata = (Sortdata*) where;
 }
 
+static void releasememory()
+{
+	void *where = (void*) thedata;
+	int res = shmdt(where);
+	if (res != 0) {
+		perror("Error detaching shared memepry\n");
+		exit(1);
+	}
+
+	shmctl(shmid, IPC_RMID, 0);
+};
+
 static void writedata()
 {
 	int i;
 	
 	for (i = 0; i < DATASIZE; i++)
 		thedata->data[i] = (double) rand();
-	
+	fprintf(stdout,"Some of the data\n");
+for(i=0;i<5;i++) fprintf(stdout,"%10.4lf\n", thedata->data[i]);
 	for (i = 0; i < 4; i++)
 		thedata->timers[i] = 0;
 		
@@ -136,5 +149,6 @@ int main(int argc, char ** argv)
 	waitforchildren();
 	reportruntimes();
 	
+	releasememory();
 	return (EXIT_SUCCESS);
 }

@@ -11,7 +11,7 @@
 struct sortdata
 {
 	long timers[4];
-	double data[DATASIZE]
+	double data[DATASIZE];
 };
 
 typedef struct sortdata Sortdata;
