@@ -9,6 +9,15 @@
 
 int main(int argc, const char **argv)
 {
+	// Format Disk
+	initialiseFileSystem();
+	
+	// Write something
+	writeBlock("doge.exe", 0, 511);
+	writeBlock("dog.png", 0, 2);
+	
+	// Print
+	displayDisk();
 	
 	// runSimulation(1);
 	

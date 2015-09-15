@@ -3,7 +3,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+/*
+ * Constants
+ */
 #define MAXFILES 64
 #define DISKBLOCKS 512
 #define NAMESIZE 8
@@ -31,6 +35,8 @@ struct DirEntry {
 	int Start;
 	// Number of blocks allocated to file
 	int Size;
+	// Symbol representation
+	char Symbol;
 };
 
 /*
@@ -42,6 +48,9 @@ typedef enum FileSystemErrors FileSysErrors;
 typedef struct DirEntry DirectoryEntry;
 // Bitmap
 typedef int BitMap;
+// Bool - 'cause we all wanna use C++
+typedef int bool;
+
 
 /*
  * Data
@@ -56,41 +65,23 @@ static BitMap Disk[DISKBLOCKS];
  */
 void initialiseFileSystem();
 
-// createFile returns DIRECTORY_FULL if maxfiles used
-// Returns DUPLICATE_NAME if there is already a file with the name
-// Returns ZERO_SIZE if size <= 0
-// Returns CREATE_FAIL if unable to find space for
-// the file FileSysErrors createFile(const char* filename, int size);
-// deleteFile returns NON_EXISTENT_FILE if filename is invalid
 FileSysErrors deleteFile(const char* filename);
 
-// readBlock and writeBlock will return NON_EXISTENT_FILE if
-// filename is invalid, and INVALID_BLOCK if requested block
-// is invalid (<0, or >= size of file)
-// blocks would have 512bytes but for simulation content of block represented by
-// single integer value
 FileSysErrors writeBlock(const char* filename, int block, int value);
 
-// Read block stores value read in integer whose address is passed as
-// the third argument
 FileSysErrors readBlock(const char* filename, int block, int* vp);
 
-// compactFiles returns number of free blocks - should be all in one large group
-// at end of disk after compaction
 int compactFiles();
 
-// Display disk – show directory contents and provide some form of map
-// identifying the mapping of files to disk blocks
 void displayDisk();
 
-// show history
-// number of files created, deleted, number of entries in directory,
-// number of blocks still free, number of compactions performed
 void showHistory();
 
 /*
  * Helper Functions
  */
+int findMemory(int fileSize);
 
+FileSysErrors checkErrors(const char *fileName, int block, int size);
 
 #endif
