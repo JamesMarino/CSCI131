@@ -120,7 +120,51 @@ FileSysErrors deleteFile(const char* filename)
 	
 	if (errors == NO_ERR) {
 		
+		// Temp vars
+		DirectoryEntry tempDirEntry;
 		
+		// Get File properties from directory
+		int counter = 0;
+		for (counter = 0; counter < MAXFILES; counter++) {
+			
+			// Check for correct record
+			if (strcmp(filename, Directory[counter].FileName) == 0) {
+				tempDirEntry = Directory[counter];
+				break;
+			}
+		}
+		
+		// Remove from Bit Map
+		for (counter = 0; counter < tempDirEntry.Size; counter++) {
+			
+			// Format Section
+			Disk[tempDirEntry.Start + counter] = 0;
+			
+		}
+		
+		// Remove from directory structure
+		for (counter = 0; counter < MAXFILES; counter++) {
+			
+			// Check for correct record
+			if (strcmp(filename, Directory[counter].FileName) == 0) {
+				// Set empty file name
+				int filenameCount = 0;
+				for (filenameCount = 0; filenameCount < NAMESIZE; filenameCount++) {
+					Directory[counter].FileName[filenameCount] = '\0';
+				}
+				
+				// Set empty size
+				Directory[counter].Size = 0;
+				
+				// Set empty record starting position
+				Directory[counter].Start = 0;
+				
+				// Set empty Symbol file representation (period)
+				Directory[counter].Symbol = '.';
+				
+				break;
+			}
+		}
 		
 		return errors;
 		
@@ -130,18 +174,57 @@ FileSysErrors deleteFile(const char* filename)
 }
 
 /**
- * Not to sure what this function does / where it is called from
+ * Writes a single block value to the disk represented as an int
  * @param const char* File name
  * @param int block - position at which the block is inserted
  * @param int value - the actual value of what needs to be inserted into the position
- * @return FileSysErrors Errors
+ * @return FileSysErrors Errors in execution
  */
 FileSysErrors writeBlock(const char* filename, int block, int value)
 {
 	FileSysErrors errors;
 	
-	return errors;
+	/* Error checking needed
+	 * • return NON_EXISTENT_FILE if filename is invalid
+	 * • return INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
+	 * • return DUPICATE_NAME if filename is a duplicate
+	 */
 	
+	errors = writeBlockErrorChecking(filename, block);
+	
+	if (errors == NO_ERR) {
+		
+		// 1. Insert into disk
+		if (Disk[block] == 0) {
+			
+			// Store into disk
+			Disk[block] = 0;
+			
+		} else {
+			errors = INVALID_BLOCK;
+			return errors;
+		}
+		
+		// 2. Insert into directory
+		int count = 0;
+		for (count = 0; count < MAXFILES; count++) {
+			if (Directory[count].Size == 0) {
+				
+				// Copy in data
+				strcpy(Directory[count].FileName, filename);
+				Directory[count].Start = block;
+				Directory[count].Size = 1;
+				
+				break;
+			}
+		}
+		
+		errors = NO_ERR;
+		return errors;
+		
+	} else {
+		return errors;
+	}
 }
 
 // Read block stores value read in integer whose address is passed as
@@ -307,6 +390,75 @@ int findMemory(int fileSize)
 	// Nothing found, error out
 	return -1;
 	
+}
+
+/**
+ * Check errors before writing block
+ * @param const char * File Name
+ * @param int block to be inserted
+ * @param int value to be inserted
+ * @return FileSysErrors
+ * • return DIRECTORY_FULL if maxfiles used
+ * • return NON_EXISTENT_FILE if filename is invalid
+ * • return INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
+ * • return DUPICATE_NAME if filename is a duplicate
+ */
+FileSysErrors writeBlockErrorChecking(const char *filename, int block)
+{
+	FileSysErrors error;
+	
+	int counter = 0;
+	
+	// 1. Check directory is full
+	{
+		bool freeSpaceFound = 0;
+		
+		for (counter = 0; counter < MAXFILES; counter++) {
+			if (Directory[counter].Size == 0) {
+				// There is free space
+				freeSpaceFound = 1;
+				break;
+			}
+		}
+		
+		if (freeSpaceFound == 0) {
+			error = DIRECTORY_FULL;
+			return error;
+		}
+	}
+	
+	// 2. Check duplicate file names
+	{
+		for (counter = 0; counter < MAXFILES; counter++) {
+			// Compare all filenames
+			if (strcmp(Directory[counter].FileName, filename) == 0) {
+				// Strings are equal
+				error = DUPLICATE_NAME;
+				return error;
+			}
+		}
+	}
+	
+	// 3. Invalid Filename
+	{
+		if (strlen(filename) <= 0) {
+			error = NON_EXISTENT_FILE;
+			return error;
+		}
+	}
+	
+	// 4. Invalid Blocks
+	{
+		// INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
+		if (block < 0 || block > DISKBLOCKS) {
+			error = INVALID_BLOCK;
+			return error;
+		}
+	}
+	
+	// Say no errors for now if nothing found
+	error = NO_ERR;
+	return error;
 }
 
 /**

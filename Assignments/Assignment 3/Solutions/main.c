@@ -13,16 +13,27 @@ int main(int argc, const char **argv)
 	initialiseFileSystem();
 	
 	// Write something
-	createFile("doge.png", 502);
+	createFile("doge.png", 26);
 	createFile("test.exe", 11);
 	createFile("snjs.sh", 1);
-	createFile("snjs.sh1", 1);
-	//createFile("doges.png2", 70);
-	//createFile("blah.osd", 430);
+	createFile("snjs.sh1", 100);
+	
+	deleteFile("doge.png");
+	
+	createFile("danielWest.exe", 10);
+	createFile("asjad.psd", 150);
+	
+	deleteFile("snjs.sh");
+	
+	createFile("wordflow.app", 1);
+	
+	createFile("doges.png2", 70);
+	createFile("blah.osd", 430);
+	
+	writeBlock("in.paris", 469, 420);
+	
 	printf("\n");
 	displayDisk();
-	
-	// runSimulation(1);
 	
     return 0;
 }

@@ -88,4 +88,6 @@ FileSysErrors createFileErrorChecking(const char *filename, int size);
 
 FileSysErrors deleteFileErrorChecking(const char *fileName);
 
+FileSysErrors writeBlockErrorChecking(const char *filename, int block);
+
 #endif
