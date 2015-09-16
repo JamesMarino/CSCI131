@@ -190,7 +190,7 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 	 * • return DUPICATE_NAME if filename is a duplicate
 	 */
 	
-	errors = writeBlockErrorChecking(filename, block);
+	errors = readWriteBlockErrorChecking(filename, block);
 	
 	if (errors == NO_ERR) {
 		
@@ -198,7 +198,7 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 		if (Disk[block] == 0) {
 			
 			// Store into disk
-			Disk[block] = 0;
+			Disk[block] = block;
 			
 		} else {
 			errors = INVALID_BLOCK;
@@ -227,12 +227,53 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 	}
 }
 
-// Read block stores value read in integer whose address is passed as
-// the third argument
-FileSysErrors readBlock(const char* filename, int block, int* vp)
+/**
+ * Read block - stores value read in integer address
+ * @param const char * File Name
+ * @param int block
+ * @param int* address to value
+ * @return FileSysErrors any errors
+ */
+FileSysErrors readBlock(const char* filename, int block, int *vp)
 {
-	FileSysErrors errors;
-	return errors;
+	FileSysErrors error;
+	
+	error = readWriteBlockErrorChecking(filename, block);
+	
+	if (error == NO_ERR || error == DUPLICATE_NAME) {
+		
+		bool flag = 0;
+		
+		// Find the filename block postition
+		int count = 0;
+		for (count = 0; count < MAXFILES; count++) {
+			
+			if ( // check if start is = passed in block and same for filename
+				(Directory[count].Start == block) &&
+				(strcmp(Directory[count].FileName, filename) == 0)
+				) {
+				
+				// Correct file found
+				flag = 1;
+				break;
+			}
+		}
+		
+		if (flag == 1) {
+			// Specify the address
+			vp = &Disk[block];
+			
+			error = NO_ERR;
+			return error;
+		} else {
+			
+			error = INVALID_BLOCK;
+			return error;
+		}
+		
+	} else {
+		return error;
+	}
 }
 
 // compactFiles returns number of free blocks - should be all in one large group
@@ -403,7 +444,7 @@ int findMemory(int fileSize)
  * • return INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
  * • return DUPICATE_NAME if filename is a duplicate
  */
-FileSysErrors writeBlockErrorChecking(const char *filename, int block)
+FileSysErrors readWriteBlockErrorChecking(const char *filename, int block)
 {
 	FileSysErrors error;
 	

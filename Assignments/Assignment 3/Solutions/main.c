@@ -32,7 +32,10 @@ int main(int argc, const char **argv)
 	
 	writeBlock("in.paris", 469, 420);
 	
-	printf("\n");
+	int *pointerToData = NULL;
+	
+	readBlock("in.paris", 469, pointerToData);
+	
 	displayDisk();
 	
     return 0;

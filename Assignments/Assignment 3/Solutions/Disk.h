@@ -71,7 +71,7 @@ FileSysErrors deleteFile(const char* filename);
 
 FileSysErrors writeBlock(const char* filename, int block, int value);
 
-FileSysErrors readBlock(const char* filename, int block, int* vp);
+FileSysErrors readBlock(const char* filename, int block, int * vp);
 
 int compactFiles();
 
@@ -88,6 +88,6 @@ FileSysErrors createFileErrorChecking(const char *filename, int size);
 
 FileSysErrors deleteFileErrorChecking(const char *fileName);
 
-FileSysErrors writeBlockErrorChecking(const char *filename, int block);
+FileSysErrors readWriteBlockErrorChecking(const char *filename, int block);
 
 #endif
