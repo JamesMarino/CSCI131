@@ -9,6 +9,7 @@
  * Initialises the file system
  * • Sets all blocks to 0 (ie empty)
  * • Set all Directory Entries
+ * @return void
  */
 void initialiseFileSystem()
 {
@@ -39,38 +40,25 @@ void initialiseFileSystem()
 	}
 }
 
-// createFile returns DIRECTORY_FULL if maxfiles used
-// Returns DUPLICATE_NAME if there is already a file with the name
-// Returns ZERO_SIZE if size <= 0
-// Returns CREATE_FAIL if unable to find space for
-// the file FileSysErrors createFile(const char* filename, int size);
-// deleteFile returns NON_EXISTENT_FILE if filename is invalid
-FileSysErrors deleteFile(const char* filename)
-{
-	FileSysErrors errors;
-	return errors;
-}
-
 /**
- * Write a file to the disk
- * @param const char* File name
- * @param int block - approx position to be inserted? need to ask neil
- * @param int value - the size of the file being inserted
- * @return FileSysErrors
+ * Inserting files into the disk
+ * @param const char* File Name
+ * @param int Size of file to be inserted
+ * @return FileSysErrors Errors for the function that have occurred
  */
-FileSysErrors writeBlock(const char* filename, int block, int value)
+FileSysErrors createFile(const char* filename, int size)
 {
 	FileSysErrors errors;
 	
 	/* Error Checking Needed:
-	 * readBlock and writeBlock will return NON_EXISTENT_FILE if filename is invalid
-	 * INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
-	 * blocks would have 512bytes but for simulation content of block represented by
-	 *  single integer value
+	 * • Returns DIRECTORY_FULL if maxfiles used
+	 * • Returns DUPLICATE_NAME if there is already a file with the name
+	 * • Returns ZERO_SIZE if size <= 0
+	 * • Returns CREATE_FAIL if unable to find space for the file
 	 */
 	
 	// 1. Check for simple errors before inserting
-	errors = checkErrors(filename, block, value);
+	errors = createFileErrorChecking(filename, size);
 	
 	if (errors != NO_ERR) {
 		// Exit out
@@ -78,14 +66,14 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 	} else {
 		
 		// 2. Check for space and position to insert into HDD
-		int position = findMemory(value);
+		int position = findMemory(size);
 		
 		if (position < 0) {
 			errors = CREATE_FAIL;
 			return errors;
 		} else {
 			
-			// Insert into directory
+			// 3. Insert into directory
 			int count = 0;
 			for (count = 0; count < MAXFILES; count++) {
 				if (Directory[count].Size == 0) {
@@ -93,14 +81,14 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 					// Copy in data
 					strcpy(Directory[count].FileName, filename);
 					Directory[count].Start = position;
-					Directory[count].Size = value;
+					Directory[count].Size = size;
 					
 					break;
 				}
 			}
 			
-			// Insert into Disk
-			for (count = 0; count < value; count++) {
+			// 4. Insert into Disk
+			for (count = 0; count < size; count++) {
 				// Mark positions as read
 				Disk[position] = 1;
 				
@@ -108,12 +96,51 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 				position++;
 			}
 			
-			// All is good
+			// All is good, return no error
 			errors = NO_ERR;
 			return errors;
 		}
 		
 	}
+}
+
+/**
+ * Deletes file from disk if available
+ * @param const char* File Name
+ * @return FileSysErrors appropriate errors
+ */
+FileSysErrors deleteFile(const char* filename)
+{
+	FileSysErrors errors;
+	
+	/* Error checking needed
+	 * returns NON_EXISTENT_FILE if filename is invalid
+	 */
+	errors = deleteFileErrorChecking(filename);
+	
+	if (errors == NO_ERR) {
+		
+		
+		
+		return errors;
+		
+	} else {
+		return errors;
+	}
+}
+
+/**
+ * Not to sure what this function does / where it is called from
+ * @param const char* File name
+ * @param int block - position at which the block is inserted
+ * @param int value - the actual value of what needs to be inserted into the position
+ * @return FileSysErrors Errors
+ */
+FileSysErrors writeBlock(const char* filename, int block, int value)
+{
+	FileSysErrors errors;
+	
+	return errors;
 	
 }
 
@@ -219,7 +246,7 @@ void displayDisk()
 // number of blocks still free, number of compactions performed
 void showHistory()
 {
-	
+	// use static vars for this
 }
 
 /*
@@ -229,7 +256,7 @@ void showHistory()
 /**
  * First Fit - Find Memory:
  * Start at begginig of HDD and search through for
- * an appropriate sequence of fee blocks >= the requested size
+ * an appropriate sequence of fee blocks = to the requested size
  * @param int File size
  * @return int Block starting location (-1 if error)
  */
@@ -240,67 +267,58 @@ int findMemory(int fileSize)
 	int diskPosition = 0;
 	int sequencePosition = 0;
 	
-	// Flag
-	// Flag if not one bit of free space for the file is found
-	// Assume that there is no free space
-	bool freeSpace = 0;
-	
 	// Cycle through the whole disk
 	for (diskPosition = 0; diskPosition < DISKBLOCKS; diskPosition++) {
 		
-		// Flag if sequence is interupted
-		// Assume false
-		bool continuosSequence = 0;
-		
 		// Check at postion _diskPosition for a valid sequence
-		for (sequencePosition = 0; sequencePosition < fileSize; sequencePosition++) {
+		for (sequencePosition = 0; sequencePosition <= fileSize; sequencePosition++) {
 			
-			// Check if any interupts along the disk are found
-			if (Disk[diskPosition + sequencePosition] == 1) {
+			// Get the current position of array while in the loop
+			// Check the next element in the array
+			int currentPositition = diskPosition + sequencePosition;
+			
+			// Check if we are outside the range of position
+			if (currentPositition > DISKBLOCKS) {
 				
-				// Update the position to start looking at the start of the interupt
-				// (some sense of effeciency)
-				//diskPosition = diskPosition + sequencePosition;
-				
-				// Exit out and try
-				break;
-			} else {
-				continuosSequence = 1;
+				// return error
+				return -1;
 			}
-		}
-		
-		// Exit out if continuous sequence is found
-		if (continuosSequence == 1) {
 			
-			// A valid position has been found, there is free space
-			freeSpace = 1;
-			break;
+			if (Disk[currentPositition] == 1) {
+				// Non empty block found, sequence is interuppted
+				// fast forward main position
+				diskPosition = diskPosition + sequencePosition;
+				
+				// break out of loop, nothing else to find
+				break;
+			}
+			
+			// Only when gone though loop with no break set the flag
+			if (sequencePosition == fileSize) {
+				
+				return diskPosition;
+				
+			}
+			
 		}
 		
 	}
 	
-	// Check if not one continuous sequence for the size is avaliable
-	// Signal local error if there is error
-	if (freeSpace == 1) {
-		return diskPosition;
-	} else {
-		return -1;
-	}
+	// Nothing found, error out
+	return -1;
 	
 }
 
 /**
- * Check simple errors before performing directory operations IO
- * Relating To:
- * 	• DIRECTORY_FULL
- * 	• DUPLICATE_NAME
- * 	• ZERO_SIZE
- * 	• NON_EXISTENT_FILE
- *	• INVALID_BLOCK
- * @param const char * File Name
- * @return FileSysErrors File system errors
+ * Check simple errors before creating a file
+ * @param const char* File Name
+ * @param int Size of the file
+ * @return FileSysErrors Errors found so far
+ * 	• Returns DIRECTORY_FULL if maxfiles used
+ * 	• Returns DUPLICATE_NAME if there is already a file with the name
+ * 	• Returns ZERO_SIZE if size <= 0
  */
-FileSysErrors checkErrors(const char *fileName, int block, int size)
+FileSysErrors createFileErrorChecking(const char *filename, int size)
 {
 	// Local Vars
 	FileSysErrors error;
@@ -314,6 +332,7 @@ FileSysErrors checkErrors(const char *fileName, int block, int size)
 			if (Directory[counter].Size == 0) {
 				// There is free space
 				freeSpaceFound = 1;
+				break;
 			}
 		}
 		
@@ -327,7 +346,7 @@ FileSysErrors checkErrors(const char *fileName, int block, int size)
 	{
 		for (counter = 0; counter < MAXFILES; counter++) {
 			// Compare all filenames
-			if (strcmp(Directory[counter].FileName, fileName) == 0) {
+			if (strcmp(Directory[counter].FileName, filename) == 0) {
 				// Strings are equal
 				error = DUPLICATE_NAME;
 				return error;
@@ -337,25 +356,61 @@ FileSysErrors checkErrors(const char *fileName, int block, int size)
 	
 	// 3. Check for 0 Size
 	{
-		if (size == 0) {
+		if (size <= 0) {
 			error = ZERO_SIZE;
 			return error;
 		}
 	}
 	
-	// 4. Check Invalid filename
+	// Say no errors for now if nothing found
+	error = NO_ERR;
+	return error;
+}
+
+/**
+ * Check simple errors before performing directory operations IO
+ * Relating To:
+ * 	• DIRECTORY_FULL
+ * 	• DUPLICATE_NAME
+ * 	• ZERO_SIZE
+ * 	• NON_EXISTENT_FILE
+ *	• INVALID_BLOCK
+ * @param const char * File Name
+ * @return FileSysErrors File system errors
+ */
+FileSysErrors deleteFileErrorChecking(const char *fileName)
+{
+	// Local Vars
+	FileSysErrors error;
+	int counter = 0;
+	
+	// 1. Check if is not existing filename
 	{
-		if (strlen(fileName) <= 0) {
+		bool flag = 0;
+		
+		for (counter = 0; counter < MAXFILES; counter++) {
+			// Compare all filenames
+			if (strcmp(Directory[counter].FileName, fileName) == 0) {
+				// Strings are equal
+				// Set flag a match is found
+				flag = 1;
+				
+				// Exit out
+				break;
+			}
+		}
+		
+		// Test for non existance
+		if (flag != 1) {
 			error = NON_EXISTENT_FILE;
 			return error;
 		}
 	}
 	
-	// 5. Check invalid block
-	//    INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
+	// 2. Check Invalid filename
 	{
-		if ((block < 0) || (block >= size)) {
-			error = INVALID_BLOCK;
+		if (strlen(fileName) <= 0) {
+			error = NON_EXISTENT_FILE;
 			return error;
 		}
 	}
@@ -364,35 +419,3 @@ FileSysErrors checkErrors(const char *fileName, int block, int size)
 	error = NO_ERR;
 	return error;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

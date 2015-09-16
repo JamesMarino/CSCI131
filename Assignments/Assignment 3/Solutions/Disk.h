@@ -10,7 +10,7 @@
  */
 #define MAXFILES 64
 #define DISKBLOCKS 512
-#define NAMESIZE 8
+#define NAMESIZE 32
 
 
 /*
@@ -65,6 +65,8 @@ static BitMap Disk[DISKBLOCKS];
  */
 void initialiseFileSystem();
 
+FileSysErrors createFile(const char* filename, int size);
+
 FileSysErrors deleteFile(const char* filename);
 
 FileSysErrors writeBlock(const char* filename, int block, int value);
@@ -82,6 +84,8 @@ void showHistory();
  */
 int findMemory(int fileSize);
 
-FileSysErrors checkErrors(const char *fileName, int block, int size);
+FileSysErrors createFileErrorChecking(const char *filename, int size);
+
+FileSysErrors deleteFileErrorChecking(const char *fileName);
 
 #endif

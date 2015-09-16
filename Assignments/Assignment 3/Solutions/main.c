@@ -13,10 +13,13 @@ int main(int argc, const char **argv)
 	initialiseFileSystem();
 	
 	// Write something
-	writeBlock("doge.exe", 0, 511);
-	writeBlock("dog.png", 0, 2);
-	
-	// Print
+	createFile("doge.png", 502);
+	createFile("test.exe", 11);
+	createFile("snjs.sh", 1);
+	createFile("snjs.sh1", 1);
+	//createFile("doges.png2", 70);
+	//createFile("blah.osd", 430);
+	printf("\n");
 	displayDisk();
 	
 	// runSimulation(1);
