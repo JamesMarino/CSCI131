@@ -262,11 +262,71 @@ FileSysErrors readBlock(const char* filename, int block, int *vp)
 	}
 }
 
-// compactFiles returns number of free blocks - should be all in one large group
-// at end of disk after compaction
-// ??????? is this a defrag?
+/**
+ * Defrag - groups files and defrags the disk
+ * @return int the number of free blocks
+ */
 int compactFiles()
 {
+	// FUNCTION HELPER
+	// FileDir getlowestPositionDirEntry(int last)
+	
+		// int smallest = INT_MAX;
+	
+		// LOOP through all dir files
+	
+			// IF NOT currentDirLisiting.position < last
+				// WORK HERE
+	
+				// if smallest > currentDirLisiting.position
+					// replace the value with the smallest
+					// smallest = currentDirLisiting.position
+	
+			// ELSE
+				// Already used
+				// loop back
+	
+		// END LOOP
+	
+		// RETURN -1 if there is nothing lower !important
+	
+	// END FUNCTION
+	
+	// FUNCTION THIS
+	// get current directory listing (start with lowest)
+		// = getlowestPositionDirEntry(0)
+	// get the next lowest directory listing (next postition above current dir listing)
+		// = getlowestPositionDirEntry(next dir listing.position)
+	
+	
+		// LOOP until all records are done IE IF next dir.position == -1
+	
+	
+			// IF the current dir (size + position) is equal to next dir (position)
+				// nothing we can do; loop again
+			// ELSE
+				// get gap = (current dir (size + position) - next dir (position))
+		
+				// Work on next cause thats what we are bringing closer
+				// 1. File Listing related fix up
+				// next file position = next file position - gap
+		
+				// 2. Update bit map
+				// loop over (next dir listing file size) {
+	
+						// bitmap[next-file.position - gap] = bitmap[next-file.position]
+						// bitmap[next-file.position] = 0
+		
+		
+			// current dir listing = next directory listing
+			// next dir = (next postition above current dir listing
+					//  = getlowestPositionDirEntry(current dir listing.position)
+	
+		// END LOOP
+	
+	// END FUNCTION
+	
+	
 	return 0;
 }
 
