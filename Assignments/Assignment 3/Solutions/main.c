@@ -30,11 +30,11 @@ int main(int argc, const char **argv)
 	createFile("doges.png2", 70);
 	createFile("blah.osd", 430);
 	
-	writeBlock("in.paris", 469, 420);
+	writeBlock("doges.png2", 1, 420);
 	
-	int *pointerToData = NULL;
+	int pointerToData;
 	
-	readBlock("in.paris", 469, pointerToData);
+	readBlock("doges.png2", 1, &pointerToData);
 	
 	displayDisk();
 	

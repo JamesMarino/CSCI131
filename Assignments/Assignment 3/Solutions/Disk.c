@@ -185,39 +185,32 @@ FileSysErrors writeBlock(const char* filename, int block, int value)
 	FileSysErrors errors;
 	
 	/* Error checking needed
-	 * • return NON_EXISTENT_FILE if filename is invalid
+	 * • return NON_EXISTENT_FILE if filename is invalid / not found
 	 * • return INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
-	 * • return DUPICATE_NAME if filename is a duplicate
 	 */
 	
 	errors = readWriteBlockErrorChecking(filename, block);
 	
 	if (errors == NO_ERR) {
 		
-		// 1. Insert into disk
-		if (Disk[block] == 0) {
-			
-			// Store into disk
-			Disk[block] = block;
-			
-		} else {
-			errors = INVALID_BLOCK;
-			return errors;
-		}
+		// Temps
+		int counter = 0;
+		DirectoryEntry tempDirEntry;
 		
-		// 2. Insert into directory
-		int count = 0;
-		for (count = 0; count < MAXFILES; count++) {
-			if (Directory[count].Size == 0) {
+		// Update block in file
+		for (counter = 0; counter < MAXFILES; counter++) {
+			// Compare all filenames
+			if (strcmp(Directory[counter].FileName, filename) == 0) {
 				
-				// Copy in data
-				strcpy(Directory[count].FileName, filename);
-				Directory[count].Start = block;
-				Directory[count].Size = 1;
+				// Get the size of record
+				tempDirEntry = Directory[counter];
 				
 				break;
 			}
 		}
+		
+		// Get the block location and store
+		Disk[block + tempDirEntry.Start] = value;
 		
 		errors = NO_ERR;
 		return errors;
@@ -240,36 +233,29 @@ FileSysErrors readBlock(const char* filename, int block, int *vp)
 	
 	error = readWriteBlockErrorChecking(filename, block);
 	
-	if (error == NO_ERR || error == DUPLICATE_NAME) {
+	if (error == NO_ERR) {
 		
-		bool flag = 0;
+		// Temps
+		int counter = 0;
+		DirectoryEntry tempDirEntry;
 		
-		// Find the filename block postition
-		int count = 0;
-		for (count = 0; count < MAXFILES; count++) {
-			
-			if ( // check if start is = passed in block and same for filename
-				(Directory[count].Start == block) &&
-				(strcmp(Directory[count].FileName, filename) == 0)
-				) {
+		// Update block in file
+		for (counter = 0; counter < MAXFILES; counter++) {
+			// Compare all filenames
+			if (strcmp(Directory[counter].FileName, filename) == 0) {
 				
-				// Correct file found
-				flag = 1;
+				// Get the size of record
+				tempDirEntry = Directory[counter];
+				
 				break;
 			}
 		}
 		
-		if (flag == 1) {
-			// Specify the address
-			vp = &Disk[block];
-			
-			error = NO_ERR;
-			return error;
-		} else {
-			
-			error = INVALID_BLOCK;
-			return error;
-		}
+		// Specify the address
+		*vp = Disk[block + tempDirEntry.Start];
+		
+		error = NO_ERR;
+		return error;
 		
 	} else {
 		return error;
@@ -439,48 +425,40 @@ int findMemory(int fileSize)
  * @param int block to be inserted
  * @param int value to be inserted
  * @return FileSysErrors
- * • return DIRECTORY_FULL if maxfiles used
- * • return NON_EXISTENT_FILE if filename is invalid
+ * • return NON_EXISTENT_FILE if filename is invalid / not found
  * • return INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
- * • return DUPICATE_NAME if filename is a duplicate
  */
 FileSysErrors readWriteBlockErrorChecking(const char *filename, int block)
 {
 	FileSysErrors error;
 	
 	int counter = 0;
+	int tempSize = 0;
 	
-	// 1. Check directory is full
+	// 1. Check if filename is found
 	{
-		bool freeSpaceFound = 0;
+		bool nameFound = 0;
 		
 		for (counter = 0; counter < MAXFILES; counter++) {
-			if (Directory[counter].Size == 0) {
-				// There is free space
-				freeSpaceFound = 1;
+			// Compare all filenames
+			if (strcmp(Directory[counter].FileName, filename) == 0) {
+				
+				// Get the size of record
+				tempSize = Directory[counter].Size;
+				
+				// Strings are equal
+				nameFound = 1;
 				break;
 			}
 		}
 		
-		if (freeSpaceFound == 0) {
-			error = DIRECTORY_FULL;
+		if (nameFound == 0) {
+			error = NON_EXISTENT_FILE;
 			return error;
 		}
 	}
 	
-	// 2. Check duplicate file names
-	{
-		for (counter = 0; counter < MAXFILES; counter++) {
-			// Compare all filenames
-			if (strcmp(Directory[counter].FileName, filename) == 0) {
-				// Strings are equal
-				error = DUPLICATE_NAME;
-				return error;
-			}
-		}
-	}
-	
-	// 3. Invalid Filename
+	// 2. Invalid Filename
 	{
 		if (strlen(filename) <= 0) {
 			error = NON_EXISTENT_FILE;
@@ -488,10 +466,10 @@ FileSysErrors readWriteBlockErrorChecking(const char *filename, int block)
 		}
 	}
 	
-	// 4. Invalid Blocks
+	// 3. Invalid Blocks
 	{
 		// INVALID_BLOCK if requested block is invalid (<0, or >= size of file)
-		if (block < 0 || block > DISKBLOCKS) {
+		if ((block < 0) || (block >= tempSize)) {
 			error = INVALID_BLOCK;
 			return error;
 		}
