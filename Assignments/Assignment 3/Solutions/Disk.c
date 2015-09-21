@@ -1,4 +1,5 @@
 #include "Disk.h"
+#include <limits.h>
 
 /*
  * ===================== Main Functions =====================
@@ -422,6 +423,49 @@ void showHistory()
 /*
  * ===================== Helper Functions =====================
  */
+
+/**
+ * Gets the next lowest directory position
+ * @param int Last position to be used
+ * @return Directory Entry details
+ */
+DirectoryEntry getLowestDirPositionEntry(int last)
+{
+	// FUNCTION HELPER
+	// FileDir getlowestPositionDirEntry(int last)
+	
+	DirectoryEntry temp;
+	int smallest = INT_MAX;
+	int counter = 0;
+	
+	for (counter = 0; counter < MAXFILES; counter++) {
+		
+		if (!Directory[counter].Start < last) {
+			
+			if (smallest > Directory[counter].Start) {
+				
+				// Replace the value with the smallest
+				smallest = Directory[counter].Start;
+				
+				// Loop back and keep trying to find smallest
+				
+			} else {
+				// Smallest value found
+				return Directory[counter];
+			}
+			
+		} else {
+			// Already used
+			// loop back
+		}
+
+	}
+	
+	// If we get to end of cycling through directory return -1 if no lower
+	temp.Start = -1;
+	return temp;
+	
+}
 
 /**
  * First Fit - Find Memory:
