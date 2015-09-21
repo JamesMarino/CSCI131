@@ -82,6 +82,8 @@ void showHistory();
 /*
  * Helper Functions
  */
+DirectoryEntry* getLowestDirPositionEntry(int last, bool zeroPosition);
+
 int findMemory(int fileSize);
 
 FileSysErrors createFileErrorChecking(const char *filename, int size);

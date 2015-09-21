@@ -269,66 +269,61 @@ FileSysErrors readBlock(const char* filename, int block, int *vp)
  */
 int compactFiles()
 {
-	// FUNCTION HELPER
-	// FileDir getlowestPositionDirEntry(int last)
 	
-		// int smallest = INT_MAX;
+	// Global Counter
+	int counter = 0;
 	
-		// LOOP through all dir files
+	// Get current directory listing (start with lowest)
+	DirectoryEntry *current = getLowestDirPositionEntry(0, 1);
+
+	// Get the next lowest directory listing (next postition above current dir listing)
+	DirectoryEntry *next = getLowestDirPositionEntry(current->Start, 0);
 	
-			// IF NOT currentDirLisiting.position < last
-				// WORK HERE
-	
-				// if smallest > currentDirLisiting.position
-					// replace the value with the smallest
-					// smallest = currentDirLisiting.position
-	
-			// ELSE
-				// Already used
-				// loop back
-	
-		// END LOOP
-	
-		// RETURN -1 if there is nothing lower !important
-	
-	// END FUNCTION
-	
-	// FUNCTION THIS
-	// get current directory listing (start with lowest)
-		// = getlowestPositionDirEntry(0)
-	// get the next lowest directory listing (next postition above current dir listing)
-		// = getlowestPositionDirEntry(next dir listing.position)
-	
-	
-		// LOOP until all records are done IE IF next dir.position == -1
-	
-	
-			// IF the current dir (size + position) is equal to next dir (position)
-				// nothing we can do; loop again
-			// ELSE
-				// get gap = (current dir (size + position) - next dir (position))
+	// Loop until all records are done, there is nothing smaller
+	while (next != NULL) {
 		
-				// Work on next cause thats what we are bringing closer
-				// 1. File Listing related fix up
-				// next file position = next file position - gap
+		if ((current->Size + current->Start) == next->Start) {
+			// Already compact, nothing we can do
+		} else {
+			
+			// Get gap = (current dir (size + position) - next dir (position))
+			int gap = next->Start - (current->Size + current->Start);
+			int appart = gap;
+			
+			// 2. Update bit map
+			
+			for (counter = 0; counter < next->Size; counter++) {
+				Disk[next->Start - appart] = Disk[next->Start + counter];
+				Disk[next->Start + counter] = 0;
+				appart--;
+			}
+			
+			// Work on next cause thats what we are bringing closer
+			// 1. File Listing related fix up
+			next->Start = next->Start - gap;
+			
+			// loop over (next dir listing file size) {
+			
+			// bitmap[next-file.position - gap] = bitmap[next-file.position]
+			// bitmap[next-file.position] = 0
+			
+		}
 		
-				// 2. Update bit map
-				// loop over (next dir listing file size) {
-	
-						// bitmap[next-file.position - gap] = bitmap[next-file.position]
-						// bitmap[next-file.position] = 0
+		current = next;
+		next = getLowestDirPositionEntry(current->Start, 0);
 		
+	}
+	
+	// Get number of free blocks
+	int freeBlocks = 0;
+	for (counter = 0; counter < DISKBLOCKS; counter++) {
 		
-			// current dir listing = next directory listing
-			// next dir = (next postition above current dir listing
-					//  = getlowestPositionDirEntry(current dir listing.position)
+		if (Disk[counter] == 0) {
+			freeBlocks++;
+		}
+	}
 	
-		// END LOOP
-	
-	// END FUNCTION
-	
-	
-	return 0;
+	return freeBlocks;
 }
 
 /**
@@ -410,6 +405,8 @@ void displayDisk()
 		printf("%c", ASCIIDisk[counter]);
 	}
 	
+	printf("\n\n");
+	
 }
 
 // show history
@@ -425,45 +422,62 @@ void showHistory()
  */
 
 /**
- * Gets the next lowest directory position
+ * Gets the next lowest directory position above the last position
  * @param int Last position to be used
  * @return Directory Entry details
  */
-DirectoryEntry getLowestDirPositionEntry(int last)
+DirectoryEntry* getLowestDirPositionEntry(int last, bool zeroPosition)
 {
-	// FUNCTION HELPER
-	// FileDir getlowestPositionDirEntry(int last)
-	
-	DirectoryEntry temp;
 	int smallest = INT_MAX;
+	DirectoryEntry* lowest = NULL;
 	int counter = 0;
+	
+	// Initial
+	if ((last == 0) && (zeroPosition == 1)) {
+		
+		// Check if lowest is 0
+		for (counter = 0; counter < MAXFILES; counter++) {
+			
+			if (Directory[counter].Start == last) {
+				
+				// It is found, return the directory listing
+				return &Directory[counter];
+				
+			}
+		}
+	}
+	
+	bool nothingGreaterThanLast = 0;
 	
 	for (counter = 0; counter < MAXFILES; counter++) {
 		
-		if (!Directory[counter].Start < last) {
+		
+		
+		if (Directory[counter].Start > last) {
 			
-			if (smallest > Directory[counter].Start) {
+			// Set flag that there is something greater
+			nothingGreaterThanLast = 1;
+			
+			// if the value we are testing is smaller than the smallest
+			if (Directory[counter].Start < smallest) {
 				
-				// Replace the value with the smallest
+				// Set that value as the smallest
 				smallest = Directory[counter].Start;
-				
-				// Loop back and keep trying to find smallest
-				
-			} else {
-				// Smallest value found
-				return Directory[counter];
+				// Set the pointer
+				lowest = &Directory[counter];
 			}
 			
-		} else {
-			// Already used
-			// loop back
 		}
-
+		
 	}
 	
-	// If we get to end of cycling through directory return -1 if no lower
-	temp.Start = -1;
-	return temp;
+	if (nothingGreaterThanLast == 0) {
+		
+		// Nothing more to be found
+		return NULL;
+	} else {
+		return lowest;
+	}
 	
 }
 

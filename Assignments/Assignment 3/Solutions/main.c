@@ -29,12 +29,19 @@ int main(int argc, const char **argv)
 	
 	createFile("doges.png2", 70);
 	createFile("blah.osd", 430);
+	createFile("4chan.biz", 154);
 	
 	writeBlock("doges.png2", 1, 420);
+	
+	displayDisk();
+	
+	compactFiles();
 	
 	int pointerToData;
 	
 	readBlock("doges.png2", 1, &pointerToData);
+	
+	printf("\n%d\n", pointerToData);
 	
 	displayDisk();
 	
