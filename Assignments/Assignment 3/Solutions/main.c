@@ -44,6 +44,7 @@ int main(int argc, const char **argv)
 	printf("\n%d\n", pointerToData);
 	
 	displayDisk();
+	showHistory();
 	
     return 0;
 }

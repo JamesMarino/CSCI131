@@ -60,6 +60,15 @@ static DirectoryEntry Directory[MAXFILES];
 // Disk Bitmap - The actual HardDisk representation
 static BitMap Disk[DISKBLOCKS];
 
+// Stats
+static int FilesCreated;
+static int FilesDeleted;
+static int FilesCompacted;
+
+static int DirectoryEntries;
+static int BlocksAllocated;
+static int BlocksFree;
+
 /*
  * Main Functions
  */

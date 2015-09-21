@@ -39,6 +39,15 @@ void initialiseFileSystem()
 		// Set empty Symbol file representation (period)
 		Directory[count].Symbol = '.';
 	}
+	
+	// Stats
+	FilesCreated = 0;
+	FilesDeleted = 0;
+	FilesCompacted = 0;
+	
+	DirectoryEntries = 0;
+	BlocksAllocated = 0;
+	BlocksFree = 0;
 }
 
 /**
@@ -96,6 +105,9 @@ FileSysErrors createFile(const char* filename, int size)
 				// Increment the position
 				position++;
 			}
+			
+			// Update stats
+			FilesCreated++;
 			
 			// All is good, return no error
 			errors = NO_ERR;
@@ -166,6 +178,9 @@ FileSysErrors deleteFile(const char* filename)
 				break;
 			}
 		}
+		
+		// Update stats
+		FilesDeleted++;
 		
 		return errors;
 		
@@ -323,6 +338,9 @@ int compactFiles()
 		}
 	}
 	
+	// Stats
+	FilesCompacted++;
+	
 	return freeBlocks;
 }
 
@@ -414,7 +432,34 @@ void displayDisk()
 // number of blocks still free, number of compactions performed
 void showHistory()
 {
-	// use static vars for this
+	
+	int counter = 0;
+	for (counter = 0; counter < DISKBLOCKS; counter++) {
+		
+		if (Disk[counter] == 0) {
+			BlocksFree++;
+		}
+	}
+	
+	BlocksAllocated = DISKBLOCKS - BlocksFree;
+	
+	for (counter = 0; counter < MAXFILES; counter++) {
+		
+		if (Directory[counter].Size != 0) {
+			DirectoryEntries++;
+		}
+		
+	}
+	
+	printf("\n");
+	printf("Number of file create operations        : %d\n", FilesCreated);
+	printf("Number of file delete operations        : %d\n", FilesDeleted);
+	printf("Number of file compaction operations    : %d\n", FilesCompacted);
+	printf("\n\n");
+	printf("Current number of directory entries     : %d\n", DirectoryEntries);
+	printf("Current number of disk blocks allocated : %d\n", BlocksAllocated);
+	printf("Current number of disk blocks free      : %d\n", BlocksFree);
+	printf("\n");
 }
 
 /*
