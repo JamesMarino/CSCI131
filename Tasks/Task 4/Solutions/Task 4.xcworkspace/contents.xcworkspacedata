@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Task1/Task1.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Task2/Task2.xcodeproj">
+   </FileRef>
 </Workspace>
