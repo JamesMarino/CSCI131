@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 #include <hiredis/hiredis.h>
 
 static char* hostname="127.0.0.1";
@@ -272,6 +273,7 @@ static void handleGroupCommands(){
             if (0==strcmp(command, "Delete")) deleteGroup();
         else
             if (0==strcmp(command, "List")) listGroups();
+		
         else
             if (0==strcmp(command, "Member")) addMember();
         else
