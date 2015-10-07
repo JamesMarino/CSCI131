@@ -262,7 +262,8 @@ void addBackground()
 	printf("Enter full pathname of background image:\n");
 	printf("Path: ");
 	fflush(stdin);
-	scanf("%s", absoluteAddress);
+	scanf("%128s", absoluteAddress);
+	fflush(stdout);
 	printf("'%s'", absoluteAddress);
 	
 	//char *absoluteAddressCopy;
