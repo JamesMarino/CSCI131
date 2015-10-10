@@ -16,7 +16,7 @@ static const char *HostName = "127.0.0.1";
 static redisContext *Context;
 static const int Port = 6379;
 static const char *BackgroundDIR = "background";
-static const char *TargerDIR = "target";
+static const char *TargetDIR = "target";
 
 // Images
 static const int IMAGE_TYPES = 5;
@@ -25,6 +25,7 @@ static const double BACKGROUND_WIDTH = 700.0;
 
 // Redis groups
 static const char *GRP_BACKGROUND_NAME = "bkgrdimgs";
+static const char *GRP_TARGET_COUNTER = "targetcnt";
 
 /*
  * Definitions
@@ -38,8 +39,8 @@ void addTarget();
 void generatePuzzle();
 gdImagePtr loadImage(char* fileName, char* fileType);
 unsigned char* convertToBase64(gdImagePtr im);
-
-void storeImage(gdImagePtr image, const char *fileExtension, const char *group, const char *fileName);
+void storeImageBackground(gdImagePtr image, const char *fileExtension,
+				const char *dir, const char *fileName, const char *groupName);
 void setImage(unsigned char *image);
 char* getImage(char *group);
 void createDirectory(const char *directory);
@@ -57,7 +58,7 @@ int main(int argc, const char * argv[])
 	
 	// Create dirs
 	createDirectory(BackgroundDIR);
-	createDirectory(TargerDIR);
+	createDirectory(TargetDIR);
 	
 	// Run Menu
 	menuSelect();
@@ -88,38 +89,32 @@ void createDirectory(const char *directory)
 	}
 }
 
-void storeImage(gdImagePtr image, const char *fileExtension, const char *group, const char *fileName)
+void storeImageBackground(gdImagePtr image, const char *fileExtension,
+				const char *dir, const char *fileName, const char *groupName)
 {
 	char directoryFinal[64];
 	char redisIndex[4];
-	int index;
+	long long index;
 	
 	strcpy(directoryFinal, "");
-	strcat(directoryFinal, group);
+	strcat(directoryFinal, dir);
 	strcat(directoryFinal, "/");
-	strcat(directoryFinal, BackgroundDIR);
+	strcat(directoryFinal, dir);
 	
 	// Get current image count in database
-	redisReply *getReply = redisCommand(Context, "SCARD %s", GRP_BACKGROUND_NAME);
+	redisReply *getReply = redisCommand(Context, "SCARD %s", groupName);
 	
-	if (getReply->str == NULL) {
-		// Start at beginging
-		strcpy(redisIndex, "0");
-	} else {
-		// Get Value
-		strcpy(redisIndex, getReply->str);
-	}
+	index = getReply->integer;
 	
 	// Get the next
-	index = atoi(redisIndex);
 	index++;
 	
-	snprintf(redisIndex, 4, "%d", index);
+	snprintf(redisIndex, 4, "%lld", index);
 	
 	freeReplyObject(getReply);
 	
 	// Regardless store the filename
-	redisReply *setReply = redisCommand(Context, "SADD %s %s", GRP_BACKGROUND_NAME, fileName);
+	redisReply *setReply = redisCommand(Context, "SADD %s %s", groupName, fileName);
 	freeReplyObject(setReply);
 	
 	strcat(directoryFinal, redisIndex);
@@ -135,25 +130,47 @@ void storeImage(gdImagePtr image, const char *fileExtension, const char *group, 
 	fclose(output);
 }
 
-char* getImage(char *group)
+void storeImageTarget(gdImagePtr image, const char *fileExtension,
+				const char *dir, const char *fileName, const char *groupName)
 {
-	// Get size of the set
-	redisReply *reply;
-	reply = redisCommand(Context, "SCARD %s", group);
+	char directoryFinal[64];
+	char fileNameFinal[64];
+	char redisIndex[4];
+	long long index;
 	
-	int count = (int)reply->integer;
-	freeReplyObject(reply);
+	strcpy(directoryFinal, "");
+	strcat(directoryFinal, dir);
+	strcat(directoryFinal, "/");
+	strcat(directoryFinal, dir);
 	
-	reply = redisCommand(Context, "SMEMBERS %s", group);
+	// Get current image count in database
+	redisReply *setIncrement = redisCommand(Context, "INCR %s", GRP_TARGET_COUNTER);
 	
-	int j;
-	//for (j=0; j < reply->elements; j++) {
-		//return reply->element[j]->str;
-	//}
+	index = setIncrement->integer;
 	
-	freeReplyObject(reply);
+	snprintf(redisIndex, 4, "%lld", index);
 	
-	return reply->element[0]->str;
+	freeReplyObject(setIncrement);
+	
+	strcpy(fileNameFinal, "");
+	strcat(fileNameFinal, dir);
+	strcat(fileNameFinal, redisIndex);
+	
+	// Regardless store the filename
+	redisReply *setReply = redisCommand(Context, "SADD %s %s", groupName, fileNameFinal);
+	freeReplyObject(setReply);
+	
+	strcat(directoryFinal, redisIndex);
+	strcat(directoryFinal, fileExtension);
+	
+	// Scale the image
+	double imageHeight = BACKGROUND_WIDTH*((double)image->sx/(double)image->sy);
+	int imageHeightRounded = (int)imageHeight;
+	image = gdImageScale(image, imageHeightRounded, BACKGROUND_WIDTH);
+	
+	FILE *output = fopen(directoryFinal, "w");
+	gdImageJpeg(image, output, 10);
+	fclose(output);
 }
 
 unsigned char* convertToBase64(gdImagePtr im) {
@@ -263,7 +280,7 @@ void addBackground()
 	if (background != NULL) {
 		
 		// Store data in directory
-		storeImage(background, ".jpg", BackgroundDIR, fileName);
+		storeImageBackground(background, ".jpg", BackgroundDIR, fileName, GRP_BACKGROUND_NAME);
 		
 		// Successful
 		printf("\nAdded to collection of background images\n");
@@ -279,7 +296,9 @@ void addTarget()
 {
 	// Setup
 	static char absoluteAddress[64];
+	static char targetTag[64];
 	static char *extension;
+	static char *fileName;
 	
 	// Clear array, avaoid issues
 	int i;
@@ -299,27 +318,42 @@ void addTarget()
 	printf("Reading File: '%s' ", absoluteAddress);
 	
 	// Copy the string
-	char absoluteAddressCopy[64];
-	strcpy(absoluteAddressCopy, absoluteAddress);
+	char absoluteAddressFileName[64];
+	char absoluteAddressExtension[64];
+	strcpy(absoluteAddressFileName, absoluteAddress);
+	strcpy(absoluteAddressExtension, absoluteAddress);
 	
 	// Get the extension
-	extension = strrchr(absoluteAddressCopy, '.');
+	extension = strrchr(absoluteAddressExtension, '.');
+	
+	// Get the filename
+	fileName = strrchr(absoluteAddressFileName, '/');
+	fileName[strlen(fileName)-strlen(extension)] = '\0';
+	for (i = 0; i < strlen(fileName); i++)
+		fileName[i] = fileName[i+1];
 	
 	gdImagePtr background = loadImage(absoluteAddress, extension);
 	
 	if (background != NULL) {
 		
+		// Get Tag
+		printf("\nEnter a tag for this target: ");
+		fflush(stdin);
+		fgets(targetTag, sizeof(targetTag), stdin);
+		targetTag[strcspn(targetTag, "\n")] = '\0';
+		
 		// Store data in directory
-		storeImage(background, extension, BackgroundDIR, "traget.png.exe.test");
+		storeImageTarget(background, ".png", TargetDIR, fileName, targetTag);
 		
 		// Successful
-		printf("\nAdded to collection of background images\n");
+		printf("Added to collection of background images\n");
 		
 	} else {
 		printf("Cannot Find Image.\n");
 	}
 	
 	free(background);
+	
 }
 
 void generatePuzzle()
