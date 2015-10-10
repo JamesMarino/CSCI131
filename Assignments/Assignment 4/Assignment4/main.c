@@ -22,6 +22,7 @@ static const char *TargetDIR = "target";
 static const int IMAGE_TYPES = 5;
 static const int MIN_AMOUNT_EACH_TYPE = 3;
 static const double BACKGROUND_WIDTH = 700.0;
+static const double TARGET_WIDTH = 100.0;
 
 // Redis groups
 static const char *GRP_BACKGROUND_NAME = "bkgrdimgs";
@@ -89,6 +90,43 @@ void createDirectory(const char *directory)
 	}
 }
 
+gdImagePtr blendTransparency(gdImagePtr image, int height)
+{
+	gdImageAlphaBlending(image, 0);
+	
+	int w = 100;
+	int h = height;
+	int h1 = h / 6;
+	int h2 = 5 * h1;
+	int l1 = w / 6;
+	int l2 = 5 * 11;
+	int row, col;
+	
+	for (row = 0; row < h; row++) {
+		for (col = 0; col < w; col++) {
+			int aval = 40;
+			
+			if ((row < h1) || (row > h2))
+				aval = 80;
+			else
+				if ((col < l1) || (col > l2))
+					aval = 80;
+			
+			int c = gdImageGetPixel(image, col, row);
+			int r = gdImageRed(image, c);
+			int g = gdImageGreen(image, c);
+			int b = gdImageBlue(image, c);
+			int c1 = gdImageColorAllocateAlpha(image, r, g, b, aval);
+			
+			gdImageSetPixel(image, col, row, c1);
+		}
+	}
+	
+	gdImageSaveAlpha(image, 1);
+	
+	return image;
+}
+
 void storeImageBackground(gdImagePtr image, const char *fileExtension,
 				const char *dir, const char *fileName, const char *groupName)
 {
@@ -123,7 +161,7 @@ void storeImageBackground(gdImagePtr image, const char *fileExtension,
 	// Scale the image
 	double imageHeight = BACKGROUND_WIDTH*((double)image->sx/(double)image->sy);
 	int imageHeightRounded = (int)imageHeight;
-	image = gdImageScale(image, imageHeightRounded, BACKGROUND_WIDTH);
+	image = gdImageScale(image, BACKGROUND_WIDTH, imageHeightRounded);
 	
 	FILE *output = fopen(directoryFinal, "w");
 	gdImageJpeg(image, output, 10);
@@ -164,12 +202,15 @@ void storeImageTarget(gdImagePtr image, const char *fileExtension,
 	strcat(directoryFinal, fileExtension);
 	
 	// Scale the image
-	double imageHeight = BACKGROUND_WIDTH*((double)image->sx/(double)image->sy);
+	double imageHeight = TARGET_WIDTH*((double)image->sx/(double)image->sy);
 	int imageHeightRounded = (int)imageHeight;
-	image = gdImageScale(image, imageHeightRounded, BACKGROUND_WIDTH);
+	image = gdImageScale(image, TARGET_WIDTH, imageHeightRounded);
+	
+	// Add transparency
+	image = blendTransparency(image, image->sy);
 	
 	FILE *output = fopen(directoryFinal, "w");
-	gdImageJpeg(image, output, 10);
+	gdImagePng(image, output);
 	fclose(output);
 }
 
@@ -332,9 +373,9 @@ void addTarget()
 	for (i = 0; i < strlen(fileName); i++)
 		fileName[i] = fileName[i+1];
 	
-	gdImagePtr background = loadImage(absoluteAddress, extension);
+	gdImagePtr target = loadImage(absoluteAddress, extension);
 	
-	if (background != NULL) {
+	if (target != NULL) {
 		
 		// Get Tag
 		printf("\nEnter a tag for this target: ");
@@ -343,7 +384,7 @@ void addTarget()
 		targetTag[strcspn(targetTag, "\n")] = '\0';
 		
 		// Store data in directory
-		storeImageTarget(background, ".png", TargetDIR, fileName, targetTag);
+		storeImageTarget(target, ".png", TargetDIR, fileName, targetTag);
 		
 		// Successful
 		printf("Added to collection of background images\n");
@@ -352,7 +393,7 @@ void addTarget()
 		printf("Cannot Find Image.\n");
 	}
 	
-	free(background);
+	free(target);
 	
 }
 
