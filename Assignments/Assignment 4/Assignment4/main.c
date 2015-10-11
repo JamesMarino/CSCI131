@@ -19,13 +19,15 @@ static const char *BackgroundDIR = "background";
 static const char *TargetDIR = "target";
 
 // Images
-static const int IMAGE_TYPES = 5;
-static const int MIN_AMOUNT_EACH_TYPE = 3;
+static const int MIN_IMAGE_TYPES = 5;
+static const int MIN_EACH_TYPE = 3;
+
 static const double BACKGROUND_WIDTH = 700.0;
 static const double TARGET_WIDTH = 100.0;
 
 // Redis groups
 static const char *GRP_BACKGROUND_NAME = "bkgrdimgs";
+static const char *GRP_TARGET_NAME = "targetname";
 static const char *GRP_TARGET_COUNTER = "targetcnt";
 
 /*
@@ -76,6 +78,71 @@ int main(int argc, const char * argv[])
 /*
  * Utilities
  */
+int generateRandomNumber(int minNum, int maxNum)
+{
+	int result = 0, low = 0, high = 0;
+	
+	if (minNum < maxNum) {
+		low = minNum;
+		high = maxNum + 1;
+	} else {
+		low = maxNum + 1;
+		high = minNum;
+	}
+	
+	struct timeval t1;
+	gettimeofday(&t1, NULL);
+	srand((int)t1.tv_usec * (int)t1.tv_sec);
+	
+	// srand((unsigned int)time(NULL));
+	result = (rand()%(high-low)) + low;
+	
+	return result;
+}
+
+void generateRandomTargetGroups(int minNum, int maxNum, int *randomArray)
+{
+	int result = 0, low = 0, high = 0, foundSpots = 1;
+	int isDuplicate = 0, i = 0, j = 0;
+	
+	while (foundSpots == 1) {
+	
+		// Reset
+		foundSpots = 0;
+		isDuplicate = 0;
+		
+		if (minNum < maxNum) {
+			low = minNum;
+			high = maxNum + 1;
+		} else {
+			low = maxNum + 1;
+			high = minNum;
+		}
+		
+		srand((unsigned int)time(NULL));
+		result = (rand()%(high-low)) + low;
+		
+		for (i = 0; i < maxNum; i++) {
+			if (randomArray[i] == 0) {
+				foundSpots = 1;
+				break;
+			}
+		}
+		
+		for (j = 0; j < maxNum; j++) {
+			// Check if random value already in list
+			if (randomArray[j] == result) {
+				isDuplicate = 1;
+				break;
+			}
+		}
+		
+		if (foundSpots && !isDuplicate) {
+			randomArray[i] = result;
+		}
+	}
+}
+
 char* getFileName(char *absoluteAddress)
 {
 	return strrchr(absoluteAddress, '/');
@@ -94,7 +161,7 @@ gdImagePtr blendTransparency(gdImagePtr image, int height)
 {
 	gdImageAlphaBlending(image, 0);
 	
-	int w = 100;
+	int w = TARGET_WIDTH;
 	int h = height;
 	int h1 = h / 6;
 	int h2 = 5 * h1;
@@ -164,7 +231,7 @@ void storeImageBackground(gdImagePtr image, const char *fileExtension,
 	image = gdImageScale(image, BACKGROUND_WIDTH, imageHeightRounded);
 	
 	FILE *output = fopen(directoryFinal, "w");
-	gdImageJpeg(image, output, 10);
+	gdImageJpeg(image, output, 100);
 	fclose(output);
 }
 
@@ -386,6 +453,10 @@ void addTarget()
 		// Store data in directory
 		storeImageTarget(target, ".png", TargetDIR, fileName, targetTag);
 		
+		// Store Tag
+		redisReply *setReply = redisCommand(Context, "SADD %s %s", GRP_TARGET_NAME, targetTag);
+		freeReplyObject(setReply);
+		
 		// Successful
 		printf("Added to collection of background images\n");
 		
@@ -399,6 +470,123 @@ void addTarget()
 
 void generatePuzzle()
 {
+	size_t keyCount = 0;
+	size_t targetCount = 0;
+	int i = 0;
+	
+	// Get current image count in database
+	redisReply *getReply = redisCommand(Context, "SCARD %s", GRP_TARGET_NAME);
+	keyCount = getReply->integer;
+	freeReplyObject(getReply);
+	
+	// Check if there is right amount of images
+	// DELETE
+	//keyCount = 5;
+	// DELETE
+	if (keyCount >= MIN_IMAGE_TYPES) {
+		
+		/*
+		 * Get background
+		 */
+		// Get background size
+		redisReply *backgroundSize = redisCommand(Context, "SCARD %s", GRP_BACKGROUND_NAME);
+		
+		char backgroundNumber[4];
+		char backgroundFileName[64];
+		int randomBackgroundNumber = 1;
+		
+		targetCount = backgroundSize->integer;
+		
+		if (randomBackgroundNumber != (int)targetCount) {
+			randomBackgroundNumber = generateRandomNumber(1, (int)backgroundSize->integer);
+		}
+		
+		snprintf(backgroundNumber, 4, "%d", randomBackgroundNumber);
+		strcpy(backgroundFileName, "");
+		strcat(backgroundFileName, BackgroundDIR);
+		strcat(backgroundFileName, "/");
+		strcat(backgroundFileName, BackgroundDIR);
+		strcat(backgroundFileName, backgroundNumber);
+		strcat(backgroundFileName, ".jpg");
+		
+		freeReplyObject(backgroundSize);
+		
+		// Get a background image
+		gdImagePtr background = loadImage(backgroundFileName, ".jpg");
+		
+		if (background == NULL) {
+			// Exit out
+			printf("Error opening background image\n");
+			return;
+		}
+		
+		int randomArray[MIN_IMAGE_TYPES] = {0, 0, 0, 0, 0};
+		generateRandomTargetGroups(1, MIN_IMAGE_TYPES, randomArray);
+		
+		redisReply *targetList = redisCommand(Context, "SMEMBERS %s", GRP_TARGET_NAME);
+		
+		for (i = 0; i < MIN_IMAGE_TYPES; i++) {
+			
+			// Check if there is min amount of images
+			redisReply *minImages = redisCommand(Context, "SCARD %s", targetList->element[i]->str);
+			
+			if (minImages->integer >= MIN_EACH_TYPE) {
+				
+				redisReply *currentTarget = redisCommand(Context, "SMEMBERS %s", targetList->element[i]->str);
+				
+				int randomTargetArray[MIN_EACH_TYPE] = {0, 0, 0};
+				generateRandomTargetGroups(1, MIN_EACH_TYPE, randomTargetArray);
+				
+				int j = 0;
+				
+				for (j = 0; j < MIN_EACH_TYPE; j++) {
+					
+					/*
+					 * Get Each Target
+					 */
+					char targetFileName[64];
+					
+					strcpy(targetFileName, "");
+					strcat(targetFileName, TargetDIR);
+					strcat(targetFileName, "/");
+					strcat(targetFileName, currentTarget->element[j]->str);
+					strcat(targetFileName, ".png");
+					
+					// Get a background image
+					gdImagePtr targetImage = loadImage(targetFileName, ".png");
+					
+					gdImageCopy(background, targetImage,
+								generateRandomNumber(100, (background->sx - 100)),
+								generateRandomNumber(100, (background->sy - 100)),
+								0, 0, 100, targetImage->sy);
+					
+					gdImageDestroy(targetImage);
+				}
+				
+				// Free
+				freeReplyObject(currentTarget);
+				
+				
+			} else {
+				printf("Add %lld more target groups to %s\n", (MIN_EACH_TYPE - minImages->integer),
+					   targetList->element[0]->str);
+				break;
+			}
+			
+			FILE *output = fopen("/Users/james/Desktop/tomOut.png", "w");
+			gdImagePng(background, output);
+			fclose(output);
+			
+			freeReplyObject(minImages);
+			
+		}
+		
+		gdImageDestroy(background);
+		freeReplyObject(targetList);
+		
+	} else {
+		printf("Add %lu more target groups\n", (MIN_IMAGE_TYPES - keyCount));
+	}
 	
 }
 
@@ -437,7 +625,6 @@ void menuSelect()
 		printf("> ");
 		
 		char command[32];
-		// scanf("%s *[^\n]", command);
 		fgets(command, 32*sizeof(char), stdin);
 		command[strcspn(command, "\n")] = 0;
 		
