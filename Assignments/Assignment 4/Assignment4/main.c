@@ -47,9 +47,7 @@ void storeImageBackground(gdImagePtr image, const char *fileExtension,
 void setImage(unsigned char *image);
 char* getImage(char *group);
 void createDirectory(const char *directory);
-
-
-
+void generateHTML(gdImagePtr imageMain, gdImagePtr looking);
 
 int main(int argc, const char * argv[])
 {
@@ -94,7 +92,6 @@ int generateRandomNumber(int minNum, int maxNum)
 	gettimeofday(&t1, NULL);
 	srand((int)t1.tv_usec * (int)t1.tv_sec);
 	
-	// srand((unsigned int)time(NULL));
 	result = (rand()%(high-low)) + low;
 	
 	return result;
@@ -470,6 +467,8 @@ void addTarget()
 
 void generatePuzzle()
 {
+	printf("Generating Puzzle:\n");
+	
 	size_t keyCount = 0;
 	size_t targetCount = 0;
 	int i = 0;
@@ -480,9 +479,6 @@ void generatePuzzle()
 	freeReplyObject(getReply);
 	
 	// Check if there is right amount of images
-	// DELETE
-	//keyCount = 5;
-	// DELETE
 	if (keyCount >= MIN_IMAGE_TYPES) {
 		
 		/*
@@ -509,6 +505,8 @@ void generatePuzzle()
 		strcat(backgroundFileName, backgroundNumber);
 		strcat(backgroundFileName, ".jpg");
 		
+		printf("\nPicked %s%s as background\n", BackgroundDIR, backgroundNumber);
+		
 		freeReplyObject(backgroundSize);
 		
 		// Get a background image
@@ -525,6 +523,8 @@ void generatePuzzle()
 		
 		redisReply *targetList = redisCommand(Context, "SMEMBERS %s", GRP_TARGET_NAME);
 		
+		printf("\nPicked targets Below:\n");
+		
 		for (i = 0; i < MIN_IMAGE_TYPES; i++) {
 			
 			// Check if there is min amount of images
@@ -536,6 +536,8 @@ void generatePuzzle()
 				
 				int randomTargetArray[MIN_EACH_TYPE] = {0, 0, 0};
 				generateRandomTargetGroups(1, MIN_EACH_TYPE, randomTargetArray);
+				
+				printf("\nFor %s we are using:\n", targetList->element[i]->str);
 				
 				int j = 0;
 				
@@ -552,12 +554,24 @@ void generatePuzzle()
 					strcat(targetFileName, currentTarget->element[j]->str);
 					strcat(targetFileName, ".png");
 					
+					printf("\t%s\n", currentTarget->element[j]->str);
+					
 					// Get a background image
 					gdImagePtr targetImage = loadImage(targetFileName, ".png");
 					
+					int top = generateRandomNumber(100, (background->sx - 100));
+					int bottom = top + targetImage->sy;
+					int left = generateRandomNumber(100, (background->sy - 100));
+					int right = left + targetImage->sx;
+					
+					// Write out info to file
+					FILE *coords = fopen("puzzle.txt", "a");
+					fprintf(coords, "%d, %d, %d, %d\n", top, bottom, left, right);
+					fclose(coords);
+					
 					gdImageCopy(background, targetImage,
-								generateRandomNumber(100, (background->sx - 100)),
-								generateRandomNumber(100, (background->sy - 100)),
+								top,
+								left,
 								0, 0, 100, targetImage->sy);
 					
 					gdImageDestroy(targetImage);
@@ -573,10 +587,28 @@ void generatePuzzle()
 				break;
 			}
 			
-			FILE *output = fopen("/Users/james/Desktop/tomOut.png", "w");
-			gdImagePng(background, output);
-			fclose(output);
+			// Get random image category for user to chose
+			redisReply *targetListCount = redisCommand(Context, "SCARD %s", GRP_TARGET_NAME);
+			int randomTargetGroup = generateRandomNumber(1, (int)targetListCount->integer);
+			freeReplyObject(targetListCount);
 			
+			redisReply *currentTarget = redisCommand(Context, "SMEMBERS %s", targetList->element[randomTargetGroup-1]->str);
+			char *fileName = currentTarget->element[0]->str;
+			
+			char fileNameFinal[64];
+			strcpy(fileNameFinal, "");
+			strcat(fileNameFinal, TargetDIR);
+			strcat(fileNameFinal, "/");
+			strcat(fileNameFinal, fileName);
+			strcat(fileNameFinal, ".png");
+			
+			// Get image of random target
+			gdImagePtr lookingFor = loadImage(fileNameFinal, ".png");
+			
+			// Make HTML page
+			generateHTML(background, lookingFor);
+			
+			freeReplyObject(currentTarget);
 			freeReplyObject(minImages);
 			
 		}
@@ -588,6 +620,29 @@ void generatePuzzle()
 		printf("Add %lu more target groups\n", (MIN_IMAGE_TYPES - keyCount));
 	}
 	
+}
+
+void generateHTML(gdImagePtr imageMain, gdImagePtr lookingFor)
+{
+	unsigned char *imageMain64 = convertToBase64(imageMain);
+	unsigned char *lookingFor64 = convertToBase64(lookingFor);
+	
+	FILE *output = fopen("index.html", "w");
+	
+	fprintf(output, "<html><head></head><body>");
+	fprintf(output, "<h1>Prove You Are Not A Bot</h1>");
+	fprintf(output, "<p>Look at this image</p>");
+	fprintf(output, "<img width='100px' src='data:image/png;base64,");
+	fprintf(output, "%s", lookingFor64);
+	fprintf(output, "' />");
+	fprintf(output, "<p>The large picture below has three similar images embedded in it.</p>");
+	fprintf(output, "<p>Click on all three embedded images</p>");
+	fprintf(output, "<img height='800px' src='data:image/png;base64,");
+	fprintf(output, "%s", imageMain64);
+	fprintf(output, "' />");
+	fprintf(output, "</body></html>");
+	
+	fclose(output);
 }
 
 void closeConnection()
