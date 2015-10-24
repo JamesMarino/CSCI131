@@ -1,0 +1,5 @@
+PROGRAM one;
+  VAR a,b,c;
+  MSG "hello world"; 
+  NEWL;
+END
