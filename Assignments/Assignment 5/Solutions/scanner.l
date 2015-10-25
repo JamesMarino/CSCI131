@@ -1,10 +1,11 @@
 %option noyywrap
 
 %{
-#include "parser.h"
-#include <stdio.h>
-#include <string.h>
+	#include "parser.h"
+	#include <stdio.h>
+	#include <string.h>
 %}
+
 
 WHITE [ \t]+
 NAME [a-z]+
@@ -12,6 +13,7 @@ INTNUM [0-9]+
 QUOTESTRING \"(\\.|[^"])*\"
 
 %%
+
 
 PROGRAM         return PROGRAM;
 END             return END;
@@ -27,41 +29,34 @@ VAR             return DECLARE;
 "="             return ASSIGN;
 "<"             return LESS;
 ">="            return GE;
+
+"<="            return LE;
+">"             return GT;
+"=="            return EQ;
+"!="            return NEQ;
+
 WHILE           return WHILE;
 DO              return DO;
 ENDWHILE        return ENDWHILE;
 
-{QUOTESTRING}   {
-                yylval.str_val = strdup(yytext);
-                return QSTRING;
-                }
+IF              return IF;
+THEN            return THEN;
+ENDIF           return ENDIF;
 
+{QUOTESTRING}   {
+	yylval.str_val = strdup(yytext);
+	return QSTRING;
+}
 READ            return READ;
 READOCT         return READOCT;
 PRINT           return PRINT;
 PRINTOCT        return PRINTOCT;
 MSG             return MSG;
 NEWL            return NEWL;
-
-{NAME}          {
-				yylval.str_val = strdup(yytext);
-				return IDENTIFIER;
-				}
-
-{INTNUM}        {
-				yylval.ival = atoi(yytext);
-				return NUMBER;
-				}
-
+{NAME}          { yylval.str_val = strdup(yytext);  return IDENTIFIER; }
+{INTNUM}       { yylval.ival = atoi(yytext); return NUMBER; }
 {WHITE}         ;
-
-\n              {
-				yylineno++;
-				}
-
-.               {
-				printf("Unrecognized token%s!\n", yytext);
-				exit(1);
-				}
+\n              { yylineno++; }
+.               { printf("Unrecognized token%s!\n", yytext); exit(1);  }
 
 %%

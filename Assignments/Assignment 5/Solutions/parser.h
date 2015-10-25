@@ -59,12 +59,19 @@
      DIVIDE = 275,
      LESS = 276,
      GE = 277,
-     WHILE = 278,
-     DO = 279,
-     ENDWHILE = 280,
-     IDENTIFIER = 281,
-     QSTRING = 282,
-     NUMBER = 283
+     LE = 278,
+     GT = 279,
+     EQ = 280,
+     NEQ = 281,
+     WHILE = 282,
+     DO = 283,
+     ENDWHILE = 284,
+     IF = 285,
+     THEN = 286,
+     ENDIF = 287,
+     IDENTIFIER = 288,
+     QSTRING = 289,
+     NUMBER = 290
    };
 #endif
 /* Tokens.  */
@@ -88,25 +95,32 @@
 #define DIVIDE 275
 #define LESS 276
 #define GE 277
-#define WHILE 278
-#define DO 279
-#define ENDWHILE 280
-#define IDENTIFIER 281
-#define QSTRING 282
-#define NUMBER 283
+#define LE 278
+#define GT 279
+#define EQ 280
+#define NEQ 281
+#define WHILE 282
+#define DO 283
+#define ENDWHILE 284
+#define IF 285
+#define THEN 286
+#define ENDIF 287
+#define IDENTIFIER 288
+#define QSTRING 289
+#define NUMBER 290
 
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 41 "parser.y"
+#line 30 "parser.y"
 {
-  int ival; 
-  char* str_val;
+	int ival;
+	char* str_val;
 }
 /* Line 1529 of yacc.c.  */
-#line 110 "parser.h"
+#line 124 "parser.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
