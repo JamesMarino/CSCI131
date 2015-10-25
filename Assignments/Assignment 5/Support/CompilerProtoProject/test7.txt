@@ -1,0 +1,16 @@
+PROGRAM testg;
+  VAR i,j;
+  i = 0;
+  WHILE (i<5) DO
+   MSG "i = ";
+   PRINT i;
+   MSG " : ";
+   j = 0;
+   WHILE (j<i) DO
+     PRINT j;
+     j = j + 1;
+   ENDWHILE;
+   NEWL;
+   i=i+1;
+  ENDWHILE;
+END

@@ -1,0 +1,25 @@
+PROGRAM democ;
+    VAR x,y,z;
+    x = 7;
+    y = 9;
+    z = x - y;
+    MSG "x, y, and z = (x-y)";
+    NEWL;
+    PRINT x;
+    PRINT y;
+    PRINT z;
+    z = y / x;
+    MSG "z = y / x";
+    NEWL;
+    PRINT z;
+    z = 33;
+    z = z -x -y;
+    MSG "33 -x -y";
+    NEWL;
+    PRINT z;
+    z = 33;
+    z = z - (x - y);
+    MSG "33 - (x - y)";
+    PRINT z;
+END
+

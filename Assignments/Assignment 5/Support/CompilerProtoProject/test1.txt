@@ -1,0 +1,14 @@
+PROGRAM demoa;
+    VAR v,u,alpha,t;
+    MSG "Newton's equations of motion";
+    NEWL;
+    MSG "Initial velocity u = ";
+    READ u;
+    MSG "Acceleration alpha = ";
+    READ alpha;
+    MSG "Time t = ";
+    READ t;
+    v = u + alpha*t;
+    MSG "Velocity v = ";
+    PRINT v;
+END

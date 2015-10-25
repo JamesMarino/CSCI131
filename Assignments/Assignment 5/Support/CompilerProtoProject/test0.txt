@@ -1,0 +1,4 @@
+PROGRAM demo;
+  MSG "It works - and about time too!";
+  NEWL;
+END

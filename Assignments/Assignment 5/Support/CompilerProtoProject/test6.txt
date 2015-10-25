@@ -1,0 +1,10 @@
+PROGRAM testf;
+  VAR i;
+  i = 0;
+  WHILE (i<5) DO
+   PRINT i;
+   MSG ",";
+   i=i+1;
+  ENDWHILE;
+ NEWL;
+END

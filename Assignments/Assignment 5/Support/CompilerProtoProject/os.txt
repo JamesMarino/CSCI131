@@ -1,0 +1,167 @@
+; demo operating system
+;
+;  system calls
+;     exit = os executes halt instruction!
+;     read = os will under interrupts read a line from keyboard
+;        returning when a newline character read
+;     write = os will under interrupts write a line to teletype
+;        returning when line all written (nul character at end)
+;   os will use "wait" when it cannot return
+;
+; define the operating system calls as trap instructions
+exit=104400
+readline=104401
+writeline=104402
+; 
+; data for the trap instruction
+trapaddr=34 ; "interrupt entry point" - start address of request handler
+trapsw=36 ; location for status word
+opsyssw=40 ; value of status word - priority 1
+;
+; data for the teleprinter
+ttyaddr=64 ; interrupt entry point for tty - set to address of handler routine
+ttysw=66 ; holds status word to load when start handling tty event
+tpsw=200 ; value to put in status word - priority 4
+tps=177564 ; control register for console output
+tpb=177566 ; data register for console output
+;
+; data for the keyboard
+kbdaddr=60 ; interrupt entry point for kbd - set to address of handler routine
+kbdsw=62 ; holds status word to load when start handling kbd event
+kbsw=200 ; value to put in status word 
+kbdc=177560 ; control register for console input
+kbdb=177562 ; data register for console input
+;
+; now get code for os
+.origin 1000
+osstart: mov #os,@#trapaddr
+  mov #opsyssw, @#trapsw
+  mov #tput,@#ttyaddr
+  mov #tpsw,@#ttysw
+  mov #kget,@#kbdaddr
+  mov #kbsw,@#kbdsw
+;
+; need to enable interrupts from keyboard and teletype
+; set 'enable' and 'done' in tty
+; enable only in kbd
+ mov #300,@#tps
+ mov #100,@#kbdc
+;
+; hopefully all is ready
+; start the application
+  jmp application
+; ----------------------------------------------------------------------------------------
+; teletype output 
+;   two parts
+;     1) interrupt handling - each byte gets sent until find a null
+;     2) the os call writeline
+tput:tstb @obufptr
+  beq msgdone
+; There is another character to go
+  movb @obufptr,@#tpb
+  inc obufptr
+  rti
+msgdone:inc printdoneflag
+  rti
+;
+; os variables
+obufptr: .blkw 1
+printdoneflag: .blkw 1
+;
+; write - called by os code handling 'writeline'
+;   on entry r1 contains address of the request in user code
+;   the address of buffer is next word
+write:inc r1
+  inc r1
+  mov (r1),obufptr
+  clr printdoneflag
+; send the first character
+  movb @obufptr,@#tpb
+  inc obufptr
+; now wait in os until printdoneflag is set
+wrtwait:tst printdoneflag
+  bgt olinedone
+; nothing to do - it's kind of wait loop
+  wait
+  br wrtwait
+olinedone:mov #1,r0
+  jmp osreturn
+; ----------------------------------------------------------------------------------------
+; keyboard handling
+;  two parts
+;    1) interrupt handling - store bytes until get \n (add a nul)
+;    2) the os call readline
+kget:movb @#kbdb,ch
+   movb ch, @ibufptr
+   inc ibufptr
+   cmpb #15,ch
+   beq ilinedone
+   rti
+; ilinedone - add the nul byte, set flag saying input ready
+ilinedone: clrb @ibufptr
+  inc kbdoneflag
+  rti
+;
+; os variables
+ibufptr:.blkw 1
+kbdoneflag:.blkw 1
+ch:.blkw 1
+;
+; read - called by os code handling 'readline'
+;   on entry r1 contains address of the request in user code
+;   the address of buffer is next word
+read:inc r1
+  inc r1
+  mov (r1),ibufptr
+  clr kbdoneflag
+; and enable input
+  inc @#kbdc
+; now wait in os until kbdoneflag is set
+kbwait:tst kbdoneflag
+  bgt kblinedone
+; nothing to do - it's kind of wait loop
+  wait
+  br kbwait
+kblinedone:mov #1,r0
+  jmp osreturn
+;
+;--------------------------------------------------------------------
+; my micro operating system
+os:mov r0,-(sp)
+  mov r1,-(sp)
+  mov 4(sp),r1
+; program counter has been incremented - take off 2
+  dec r1
+  dec r1
+; r1 should hold the address of the trap instruction
+  mov (r1),r0
+; bottom 8 bits contain request id - (though typically far fewer calls defined)
+; clear the top byte
+  bic #177400,r0
+; all that this demo does is maintain counts of trap requests 0-7
+; convert index to byte offset
+  rol r0
+  jmp @osfns(r0)
+;
+; handle return from os call
+; when reach here r0 should hold number of arguments used
+; by last os call; need to adjust return address that is on stack
+osreturn:rol r0
+  add r0,4(sp)
+; and put back registers
+  mov (sp)+,r1
+  mov (sp)+,r0
+  rtt
+;
+; function table for my os
+osfns: exitos
+  read
+  write
+;
+; exit from os
+exitos: nop
+  nop
+  halt
+  br exitos ; no escape
+;
+;---------------------------------------------------------------------------

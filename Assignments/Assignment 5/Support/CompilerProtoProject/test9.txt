@@ -1,0 +1,15 @@
+PROGRAM octals;
+  VAR x;
+  MSG "Enter a number : ";
+  READ x;
+  MSG "Value entered is : ";
+  PRINT x;
+  NEWL;
+  MSG "It's octal representation is : ";
+  PRINTOCT x;
+  NEWL;
+  MSG "Enter an octal number : ";
+  READOCT x;
+  MSG "It's decimal value is : ";
+  PRINT x;
+END

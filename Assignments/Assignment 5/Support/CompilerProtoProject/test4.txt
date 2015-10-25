@@ -1,0 +1,16 @@
+PROGRAM testd;
+  VAR x, y, z;
+  x = 4;
+  y = 5;
+  MSG "5/4 : ";
+  z = y / x;
+  PRINT z;
+  NEWL;
+  y = 123;
+  x = 19;
+  MSG "123/19 : ";
+  z = y / x;
+  PRINT z;
+  NEWL;
+END
+
