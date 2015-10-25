@@ -1,0 +1,15 @@
+PROGRAM demob;
+    VAR x,y,z;
+    MSG "Polynomial y = 3 + 4*x + 5*x*x + 6*x*x*x";
+    NEWL;
+    MSG "x = ";
+    READ x;
+    y = 3 + 4*x + 5*x*x + 6*x*x*x;
+    MSG "y = ";
+    PRINT y;
+    z = 3 + x*(4 + x*(5 + x*6));
+    MSG "z = ";
+    PRINT z;
+END
+
+

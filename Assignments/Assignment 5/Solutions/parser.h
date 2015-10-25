@@ -44,10 +44,27 @@
      END = 260,
      SEMICOLON = 261,
      COMMA = 262,
-     MSG = 263,
-     NEWL = 264,
-     IDENTIFIER = 265,
-     QSTRING = 266
+     LPAR = 263,
+     RPAR = 264,
+     ASSIGN = 265,
+     PRINT = 266,
+     READ = 267,
+     MSG = 268,
+     NEWL = 269,
+     READOCT = 270,
+     PRINTOCT = 271,
+     PLUS = 272,
+     MINUS = 273,
+     MULTIPLY = 274,
+     DIVIDE = 275,
+     LESS = 276,
+     GE = 277,
+     WHILE = 278,
+     DO = 279,
+     ENDWHILE = 280,
+     IDENTIFIER = 281,
+     QSTRING = 282,
+     NUMBER = 283
    };
 #endif
 /* Tokens.  */
@@ -56,23 +73,40 @@
 #define END 260
 #define SEMICOLON 261
 #define COMMA 262
-#define MSG 263
-#define NEWL 264
-#define IDENTIFIER 265
-#define QSTRING 266
+#define LPAR 263
+#define RPAR 264
+#define ASSIGN 265
+#define PRINT 266
+#define READ 267
+#define MSG 268
+#define NEWL 269
+#define READOCT 270
+#define PRINTOCT 271
+#define PLUS 272
+#define MINUS 273
+#define MULTIPLY 274
+#define DIVIDE 275
+#define LESS 276
+#define GE 277
+#define WHILE 278
+#define DO 279
+#define ENDWHILE 280
+#define IDENTIFIER 281
+#define QSTRING 282
+#define NUMBER 283
 
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 24 "parser.y"
+#line 30 "parser.y"
 {
   int ival; 
   char* str_val;
 }
 /* Line 1529 of yacc.c.  */
-#line 76 "parser.h"
+#line 110 "parser.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1

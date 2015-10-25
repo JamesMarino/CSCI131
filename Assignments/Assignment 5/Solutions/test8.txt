@@ -1,0 +1,18 @@
+PROGRAM twowhiles;
+  VAR i,j;
+  i = 0;
+  j=7;
+  WHILE (i<5) DO
+     MSG "i = ";
+     PRINT i;
+     NEWL;
+     i = i + 1;
+ ENDWHILE;
+
+  WHILE (j>=3) DO
+     MSG "j = ";
+     PRINT j;
+     NEWL;
+     j = j - 1;
+  ENDWHILE;
+END

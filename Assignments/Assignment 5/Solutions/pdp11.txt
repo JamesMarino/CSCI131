@@ -1,0 +1,368 @@
+; demo operating system
+;
+;  system calls
+;     exit = os executes halt instruction!
+;     read = os will under interrupts read a line from keyboard
+;        returning when a newline character read
+;     write = os will under interrupts write a line to teletype
+;        returning when line all written (nul character at end)
+;   os will use "wait" when it cannot return
+;
+; define the operating system calls as trap instructions
+exit=104400
+readline=104401
+writeline=104402
+; 
+; data for the trap instruction
+trapaddr=34 ; "interrupt entry point" - start address of request handler
+trapsw=36 ; location for status word
+opsyssw=40 ; value of status word - priority 1
+;
+; data for the teleprinter
+ttyaddr=64 ; interrupt entry point for tty - set to address of handler routine
+ttysw=66 ; holds status word to load when start handling tty event
+tpsw=200 ; value to put in status word - priority 4
+tps=177564 ; control register for console output
+tpb=177566 ; data register for console output
+;
+; data for the keyboard
+kbdaddr=60 ; interrupt entry point for kbd - set to address of handler routine
+kbdsw=62 ; holds status word to load when start handling kbd event
+kbsw=200 ; value to put in status word 
+kbdc=177560 ; control register for console input
+kbdb=177562 ; data register for console input
+;
+; now get code for os
+.origin 1000
+osstart: mov #os,@#trapaddr
+  mov #opsyssw, @#trapsw
+  mov #tput,@#ttyaddr
+  mov #tpsw,@#ttysw
+  mov #kget,@#kbdaddr
+  mov #kbsw,@#kbdsw
+;
+; need to enable interrupts from keyboard and teletype
+; set 'enable' and 'done' in tty
+; enable only in kbd
+ mov #300,@#tps
+ mov #100,@#kbdc
+;
+; hopefully all is ready
+; start the application
+  jmp application
+; ----------------------------------------------------------------------------------------
+; teletype output 
+;   two parts
+;     1) interrupt handling - each byte gets sent until find a null
+;     2) the os call writeline
+tput:tstb @obufptr
+  beq msgdone
+; There is another character to go
+  movb @obufptr,@#tpb
+  inc obufptr
+  rti
+msgdone:inc printdoneflag
+  rti
+;
+; os variables
+obufptr: .blkw 1
+printdoneflag: .blkw 1
+;
+; write - called by os code handling 'writeline'
+;   on entry r1 contains address of the request in user code
+;   the address of buffer is next word
+write:inc r1
+  inc r1
+  mov (r1),obufptr
+  clr printdoneflag
+; send the first character
+  movb @obufptr,@#tpb
+  inc obufptr
+; now wait in os until printdoneflag is set
+wrtwait:tst printdoneflag
+  bgt olinedone
+; nothing to do - it's kind of wait loop
+  wait
+  br wrtwait
+olinedone:mov #1,r0
+  jmp osreturn
+; ----------------------------------------------------------------------------------------
+; keyboard handling
+;  two parts
+;    1) interrupt handling - store bytes until get \n (add a nul)
+;    2) the os call readline
+kget:movb @#kbdb,ch
+   movb ch, @ibufptr
+   inc ibufptr
+   cmpb #15,ch
+   beq ilinedone
+   rti
+; ilinedone - add the nul byte, set flag saying input ready
+ilinedone: clrb @ibufptr
+  inc kbdoneflag
+  rti
+;
+; os variables
+ibufptr:.blkw 1
+kbdoneflag:.blkw 1
+ch:.blkw 1
+;
+; read - called by os code handling 'readline'
+;   on entry r1 contains address of the request in user code
+;   the address of buffer is next word
+read:inc r1
+  inc r1
+  mov (r1),ibufptr
+  clr kbdoneflag
+; and enable input
+  inc @#kbdc
+; now wait in os until kbdoneflag is set
+kbwait:tst kbdoneflag
+  bgt kblinedone
+; nothing to do - it's kind of wait loop
+  wait
+  br kbwait
+kblinedone:mov #1,r0
+  jmp osreturn
+;
+;--------------------------------------------------------------------
+; my micro operating system
+os:mov r0,-(sp)
+  mov r1,-(sp)
+  mov 4(sp),r1
+; program counter has been incremented - take off 2
+  dec r1
+  dec r1
+; r1 should hold the address of the trap instruction
+  mov (r1),r0
+; bottom 8 bits contain request id - (though typically far fewer calls defined)
+; clear the top byte
+  bic #177400,r0
+; all that this demo does is maintain counts of trap requests 0-7
+; convert index to byte offset
+  rol r0
+  jmp @osfns(r0)
+;
+; handle return from os call
+; when reach here r0 should hold number of arguments used
+; by last os call; need to adjust return address that is on stack
+osreturn:rol r0
+  add r0,4(sp)
+; and put back registers
+  mov (sp)+,r1
+  mov (sp)+,r0
+  rtt
+;
+; function table for my os
+osfns: exitos
+  read
+  write
+;
+; exit from os
+exitos: nop
+  nop
+  halt
+  br exitos ; no escape
+;
+;---------------------------------------------------------------------------
+;
+; library functions
+; 
+; equivalent of libc in Linux
+;
+; just readint and printint
+;
+; readint - invokes system function readline, reading into buffer
+; unpacks contents as integer - or 0 if cannot understand
+;
+; printint - creates decimal string in buffer, then calls system function
+; writeline
+;
+printint: clr numsign
+   tst r0
+   bge wpos
+   inc numsign
+   neg r0
+wpos: mov #obuf,r2
+   mov #10,r1
+wclr:   movb #40,(r2)+
+   sob r1,wclr
+wlp: mov r0,r1
+   clr r0
+   div #12,r0
+   add #60,r1
+   movb r1,-(r2)
+   tst r0
+   bgt wlp
+   tst numsign
+   beq wdone
+   movb #55,-(r2)
+wdone: writeline
+   obuf
+   return
+readint:  readline
+  inbuf
+  writeline
+  inbuf
+  clr ival
+  clr numsign
+  mov #inbuf,r0
+  cmpb (r0),#55 ; checking for negative sign
+  bne rilp
+; -ve number
+  inc numsign
+  inc r0
+rilp:   movb (r0)+,r1
+; is it a digit
+;
+  cmp r1,#60
+  blt rdone
+  cmp r1,#71
+  bgt rdone
+  sub #60,r1
+  mov ival,r3
+  mul #12,r3
+  add r1,r3
+  mov r3,ival
+  br rilp
+rdone:  mov ival,r0
+  tst numsign
+  beq unsigned
+  neg r0
+unsigned:
+  return
+ival: 0
+numsign: 0
+inbuf: .blkw 10
+obuf: .blkw 10
+newline:writeline
+  newl
+  return
+newl: .word 15
+; readoct and printoct added later
+readoct:  readline
+  inbuf
+  writeline
+  inbuf
+  clr ival2
+  mov #inbuf,r0
+rilp2:   movb (r0)+,r1
+; is it an octal digit
+  cmp r1,#60
+  blt rdone2
+  cmp r1,#67
+  bgt rdone2
+  sub #60,r1
+  mov ival2,r3
+  ash #3,r3
+  add r1,r3
+  mov r3,ival2
+  br rilp2
+rdone2:  mov ival2,r0
+  return
+ival2: 0
+; print number as unsigned octal bit pattern
+; start by clearing output buffer
+printoct:mov #obuf2,r2
+   mov #10,r1
+wclr2:   movb #40,(r2)+
+   sob r1,wclr2
+   mov #5,r3
+wlp2:mov r0,r1
+   bic mask,r1
+   add #60,r1
+   movb r1,-(r2)
+   asr r0
+   asr r0
+   asr r0
+   sob r3,wlp2
+   bic mask2,r0
+   add #60,r0
+   movb r0,-(r2)
+   writeline
+   obuf2
+   return
+mask:177770
+mask2:17776
+obuf2:.blkw 10
+;----------------------------
+.origin 2400
+application: writeline
+ msg0
+call newline
+mov #7,-(sp)
+mov (sp)+,x
+mov #11,-(sp)
+mov (sp)+,y
+mov x,-(sp)
+mov y,-(sp)
+neg (sp)
+add (sp)+,(sp)
+mov (sp)+,z
+writeline
+msg1
+call newline
+mov x,-(sp)
+mov (sp)+,r0
+call printint
+mov y,-(sp)
+mov (sp)+,r0
+call printint
+mov z,-(sp)
+mov (sp)+,r0
+call printint
+mov y,-(sp)
+mov x,-(sp)
+mov (sp)+,r0
+ clr r2
+mov (sp)+,r3
+ div r0,r2
+mov r2,-(sp)
+mov (sp)+,z
+writeline
+msg2
+call newline
+mov z,-(sp)
+mov (sp)+,r0
+call printint
+mov #41,-(sp)
+mov (sp)+,z
+mov z,-(sp)
+mov x,-(sp)
+neg (sp)
+add (sp)+,(sp)
+mov y,-(sp)
+neg (sp)
+add (sp)+,(sp)
+mov (sp)+,z
+writeline
+msg3
+call newline
+mov z,-(sp)
+mov (sp)+,r0
+call printint
+mov #41,-(sp)
+mov (sp)+,z
+mov z,-(sp)
+mov x,-(sp)
+mov y,-(sp)
+neg (sp)
+add (sp)+,(sp)
+neg (sp)
+add (sp)+,(sp)
+mov (sp)+,z
+writeline
+msg4
+mov z,-(sp)
+mov (sp)+,r0
+call printint
+exit
+x: .word 0
+y: .word 0
+z: .word 0
+msg0: .string "Program democ"
+msg1: .string "x, y, and z = (x-y)"
+msg2: .string "z = y / x"
+msg3: .string "33 -x -y"
+msg4: .string "33 - (x - y)"
+.end osstart
