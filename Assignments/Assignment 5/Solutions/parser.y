@@ -117,6 +117,39 @@ comparison: LPAR expression LESS expression RPAR            {
 	fprintf(output,"cmp%d: ",comparecount);
 	comparecount++;
 }
+| LPAR expression LE expression RPAR             {
+	fprintf(output,"clr r0\n");
+	fprintf(output,"cmp (sp)+,(sp)+\n");
+	fprintf(output,"blt cmp%d\n",comparecount);
+	fprintf(output,"inc r0\n");
+	fprintf(output,"cmp%d: ",comparecount);
+	comparecount++;
+}
+| LPAR expression GT expression RPAR             {
+	fprintf(output,"clr r0\n");
+	fprintf(output,"cmp (sp)+,(sp)+\n");
+	fprintf(output,"bge cmp%d\n",comparecount);
+	fprintf(output,"inc r0\n");
+	fprintf(output,"cmp%d: ",comparecount);
+	comparecount++;
+}
+| LPAR expression EQ expression RPAR             {
+	fprintf(output,"clr r0\n");
+	fprintf(output,"cmp (sp)+,(sp)+\n");
+	fprintf(output,"bne cmp%d\n",comparecount);
+	fprintf(output,"inc r0\n");
+	fprintf(output,"cmp%d: ",comparecount);
+	comparecount++;
+}
+| LPAR expression NEQ expression RPAR             {
+	fprintf(output,"clr r0\n");
+	fprintf(output,"cmp (sp)+,(sp)+\n");
+	fprintf(output,"beq cmp%d\n",comparecount);
+	fprintf(output,"inc r0\n");
+	fprintf(output,"cmp%d: ",comparecount);
+	comparecount++;
+}
+
 %%
 
 void copyFilePDP(char* filename) {
