@@ -128,21 +128,31 @@
 /* Copy the first part of user declarations.  */
 #line 1 "parser.y"
 
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h> 
 #include "data.h"
+
 extern FILE *yyin;
 extern int yylineno;
 extern char* yytext;
-int yylex(); 
-int yyerror(const char *p) { printf("Error : %s\n",p);
- printf("About line %d\n", yylineno);
- printf("Near %s\n", yytext);
- return 0;
- }
 
-void undefined(char *varname) { printf("Reference to undefined variable %s\n", varname); exit(1); }
+int yylex();
+
+int yyerror(const char *p)
+{
+	printf("Error : %s\n",p);
+	printf("About line %d\n", yylineno);
+	printf("Near %s\n", yytext);
+	return 0;
+}
+
+void undefined(char *varname)
+{
+	printf("Reference to undefined variable %s\n", varname);
+	exit(1);
+}
 
 FILE *output;
 
@@ -153,6 +163,7 @@ int nestinglevel = 0;
 
 char* programname;
 char header[100];
+
 
 
 /* Enabling traces.  */
@@ -175,13 +186,13 @@ char header[100];
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 30 "parser.y"
+#line 41 "parser.y"
 {
   int ival; 
   char* str_val;
 }
 /* Line 193 of yacc.c.  */
-#line 185 "parser.c"
+#line 196 "parser.c"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -194,7 +205,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 198 "parser.c"
+#line 209 "parser.c"
 
 #ifdef short
 # undef short
@@ -491,10 +502,10 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    50,    50,    52,    58,    59,    62,    63,    65,    66,
-      68,    69,    70,    71,    72,    73,    74,    75,    79,    81,
-      79,    84,    85,    86,    88,    89,    90,    92,    93,    94,
-      96,   104
+       0,    62,    62,    68,    76,    77,    81,    82,    86,    87,
+      89,    90,    93,    97,   100,   103,   106,   109,   113,   118,
+     113,   130,   131,   134,   138,   139,   142,   146,   147,   150,
+     154,   163
 };
 #endif
 
@@ -1440,159 +1451,205 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 50 "parser.y"
-    {  fprintf(output,"exit\n"); printsyms(output); printstrings(output); ;}
+#line 62 "parser.y"
+    {
+	fprintf(output,"exit\n");
+	printsyms(output);
+	printstrings(output);
+;}
     break;
 
   case 3:
-#line 52 "parser.y"
-    { programname = (yyvsp[(1) - (2)].str_val); 
-                                                          strcpy(header,"\"Program "); strcat(header,(yyvsp[(1) - (2)].str_val)); strcat(header,"\"");
-                                                          int ival = addstring(header);
-                                                          fprintf(output,".origin 2400\napplication: writeline\n msg%d\ncall newline\n", ival);
-                                                        ;}
+#line 68 "parser.y"
+    {
+	programname = (yyvsp[(1) - (2)].str_val);
+	strcpy(header,"\"Program ");
+	strcat(header,(yyvsp[(1) - (2)].str_val)); strcat(header,"\"");
+	int ival = addstring(header);
+	fprintf(output,".origin 2400\napplication: writeline\n msg%d\ncall newline\n", ival);
+;}
     break;
 
   case 5:
-#line 59 "parser.y"
-    {  /* printf("Parsed declarations\n"); */ ;}
+#line 77 "parser.y"
+    {
+		/* printf("Parsed declarations\n"); */
+	;}
     break;
 
   case 6:
-#line 62 "parser.y"
-    {   insert((yyvsp[(3) - (3)].str_val)); ;}
+#line 81 "parser.y"
+    { insert((yyvsp[(3) - (3)].str_val)); ;}
     break;
 
   case 7:
-#line 63 "parser.y"
-    {   insert((yyvsp[(1) - (1)].str_val)); ;}
+#line 82 "parser.y"
+    {
+		insert((yyvsp[(1) - (1)].str_val));
+	;}
     break;
 
   case 11:
-#line 69 "parser.y"
-    {   fprintf(output,"call newline\n"); ;}
+#line 90 "parser.y"
+    {
+		fprintf(output,"call newline\n");
+	;}
     break;
 
   case 12:
-#line 70 "parser.y"
-    {   int ival = addstring((yyvsp[(2) - (3)].str_val)); fprintf(output,"writeline\nmsg%d\n", ival); ;}
+#line 93 "parser.y"
+    {
+		int ival = addstring((yyvsp[(2) - (3)].str_val));
+		fprintf(output,"writeline\nmsg%d\n", ival);
+	;}
     break;
 
   case 13:
-#line 71 "parser.y"
-    {   fprintf(output,"call readint\nmov r0,%s\n",(yyvsp[(2) - (3)].str_val));  ;}
+#line 97 "parser.y"
+    {
+		fprintf(output,"call readint\nmov r0,%s\n",(yyvsp[(2) - (3)].str_val));
+	;}
     break;
 
   case 14:
-#line 72 "parser.y"
-    {   fprintf(output,"mov (sp)+,r0\ncall printint\n"); ;}
+#line 100 "parser.y"
+    {
+		fprintf(output,"mov (sp)+,r0\ncall printint\n");
+	;}
     break;
 
   case 15:
-#line 73 "parser.y"
-    {   fprintf(output,"call readoct\nmov r0,%s\n",(yyvsp[(2) - (3)].str_val));  ;}
+#line 103 "parser.y"
+    {
+		fprintf(output,"call readoct\nmov r0,%s\n",(yyvsp[(2) - (3)].str_val));
+	;}
     break;
 
   case 16:
-#line 74 "parser.y"
-    {   fprintf(output,"mov (sp)+,r0\ncall printoct\n"); ;}
+#line 106 "parser.y"
+    {
+		fprintf(output,"mov (sp)+,r0\ncall printoct\n");
+	;}
     break;
 
   case 17:
-#line 75 "parser.y"
+#line 109 "parser.y"
     {
-                                                            fprintf(output,"mov (sp)+,%s\n", (yyvsp[(1) - (4)].str_val));
-                                                            free((yyvsp[(1) - (4)].str_val));
-                                                        ;}
+		fprintf(output,"mov (sp)+,%s\n", (yyvsp[(1) - (4)].str_val));
+		free((yyvsp[(1) - (4)].str_val));
+	;}
     break;
 
   case 18:
-#line 79 "parser.y"
-    { fprintf(output,"wh%d:  ", lblcount); nestingstack[nestinglevel++] = lblcount; ;}
+#line 113 "parser.y"
+    {
+		fprintf(output,"wh%d:  ", lblcount);
+		nestingstack[nestinglevel++] = lblcount;
+	;}
     break;
 
   case 19:
-#line 81 "parser.y"
-    { fprintf(output,"tst r0\nbeq ewh%d\n",lblcount);   lblcount++;;}
+#line 118 "parser.y"
+    {
+	fprintf(output,"tst r0\nbeq ewh%d\n",lblcount);
+	lblcount++;
+;}
     break;
 
   case 20:
-#line 82 "parser.y"
-    { int lbl; nestinglevel--; lbl = nestingstack[nestinglevel]; fprintf(output,"br wh%d\newh%d: ",lbl,lbl);;}
+#line 123 "parser.y"
+    {
+	int lbl;
+	nestinglevel--;
+	lbl = nestingstack[nestinglevel];
+	fprintf(output,"br wh%d\newh%d: ",lbl,lbl);
+;}
     break;
 
   case 21:
-#line 84 "parser.y"
-    {   ;}
+#line 130 "parser.y"
+    { ;}
     break;
 
   case 22:
-#line 85 "parser.y"
-    { fprintf(output,"add (sp)+,(sp)\n"); ;}
+#line 131 "parser.y"
+    {
+		fprintf(output,"add (sp)+,(sp)\n");
+	;}
     break;
 
   case 23:
-#line 86 "parser.y"
-    { fprintf(output,"neg (sp)\nadd (sp)+,(sp)\n"); ;}
+#line 134 "parser.y"
+    {
+		fprintf(output,"neg (sp)\nadd (sp)+,(sp)\n");
+	;}
     break;
 
   case 24:
-#line 88 "parser.y"
-    {  ;}
+#line 138 "parser.y"
+    { ;}
     break;
 
   case 25:
-#line 89 "parser.y"
-    { fprintf(output,"mov (sp)+,r3\nmul (sp)+,r3\nmov r3,-(sp)\n"); ;}
+#line 139 "parser.y"
+    {
+		fprintf(output,"mov (sp)+,r3\nmul (sp)+,r3\nmov r3,-(sp)\n");
+	;}
     break;
 
   case 26:
-#line 90 "parser.y"
-    { fprintf(output,"mov (sp)+,r0\n clr r2\nmov (sp)+,r3\n div r0,r2\nmov r2,-(sp)\n");;}
+#line 142 "parser.y"
+    {
+		fprintf(output,"mov (sp)+,r0\n clr r2\nmov (sp)+,r3\n div r0,r2\nmov r2,-(sp)\n");
+	;}
     break;
 
   case 27:
-#line 92 "parser.y"
-    {  ;}
+#line 146 "parser.y"
+    { ;}
     break;
 
   case 28:
-#line 93 "parser.y"
-    { fprintf(output,"mov %s,-(sp)\n", (yyvsp[(1) - (1)].str_val)); ;}
+#line 147 "parser.y"
+    {
+		printf(output,"mov %s,-(sp)\n", (yyvsp[(1) - (1)].str_val));
+	;}
     break;
 
   case 29:
-#line 94 "parser.y"
-    { fprintf(output,"mov #%o,-(sp)\n", (yyvsp[(1) - (1)].ival)); ;}
+#line 150 "parser.y"
+    {
+		fprintf(output,"mov #%o,-(sp)\n", (yyvsp[(1) - (1)].ival));
+	;}
     break;
 
   case 30:
-#line 96 "parser.y"
-    { 
-                                                          fprintf(output,"clr r0\n");  
-                                                          fprintf(output,"cmp (sp)+,(sp)+\n");
-                                                          fprintf(output,"ble cmp%d\n",comparecount);
-                                                          fprintf(output,"inc r0\n");
-                                                          fprintf(output,"cmp%d: ",comparecount);
-                                                          comparecount++;
-                                                        ;}
+#line 154 "parser.y"
+    {
+	fprintf(output,"clr r0\n");
+	fprintf(output,"cmp (sp)+,(sp)+\n");
+	fprintf(output,"ble cmp%d\n",comparecount);
+	fprintf(output,"inc r0\n");
+	fprintf(output,"cmp%d: ",comparecount);
+	comparecount++;
+;}
     break;
 
   case 31:
-#line 104 "parser.y"
-    { 
-                                                          fprintf(output,"clr r0\n");  
-                                                          fprintf(output,"cmp (sp)+,(sp)+\n");
-                                                          fprintf(output,"bgt cmp%d\n",comparecount);
-                                                          fprintf(output,"inc r0\n");
-                                                          fprintf(output,"cmp%d: ",comparecount);
-                                                          comparecount++;
-                                                        ;}
+#line 163 "parser.y"
+    {
+		fprintf(output,"clr r0\n");
+		fprintf(output,"cmp (sp)+,(sp)+\n");
+		fprintf(output,"bgt cmp%d\n",comparecount);
+		fprintf(output,"inc r0\n");
+		fprintf(output,"cmp%d: ",comparecount);
+		comparecount++;
+	;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1596 "parser.c"
+#line 1653 "parser.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1806,31 +1863,40 @@ yyreturn:
 }
 
 
-#line 112 "parser.y"
+#line 171 "parser.y"
 
 
-void copyfile1(char* filename) {
-  FILE* tmp = fopen(filename,"r");
-  char ch;
-  while(( ch = fgetc(tmp) ) != EOF ) fputc(ch,output);
-  fclose(tmp);
+void copyFilePDP(char* filename)
+{
+	FILE* tmp = fopen(filename,"r");
+	char ch;
+	while(( ch = fgetc(tmp) ) != EOF ) fputc(ch,output);
+	fclose(tmp);
 }
 
 int main(int argc, char** argv)
 {
-  char filename[128];
-  printf("Enter name of file with program to be interpreted : ");
-  scanf("%s",filename);
-  FILE* input = fopen(filename,"r");
-  if ( input == NULL ) { printf( "Could not open %s \n " , filename); exit (0);}
-  yyin = input; 
-  output = fopen("pdp11.txt","w");
-  copyfile1("os.txt");
-  copyfile1("libc.txt");
-  yyparse();
-  fprintf(output,".end osstart\n");
-  fclose(output);
-  return 0;
+	char filename[128];
+	printf("Enter name of file with program to be interpreted : ");
+	scanf("%s",filename);
+	FILE* input = fopen(filename,"r");
+	
+	if ( input == NULL ) {
+		printf( "Could not open %s \n " , filename);
+		exit (0);
+	}
+	
+	yyin = input;
+	output = fopen("pdp11.txt","w");
+	
+	copyFilePDP("os.txt");
+	copyFilePDP("libc.txt");
+	
+	yyparse();
+	
+	fprintf(output,".end osstart\n");
+	
+	fclose(output);
+	return 0;
 }
-
 

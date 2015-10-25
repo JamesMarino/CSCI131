@@ -7,7 +7,6 @@
 #define MAXSTRINGS 20
 
 
-
 static Data *variables[MAXVARS];
 static char *strings[MAXSTRINGS];
 

@@ -500,8 +500,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "scanner.lex"
-#line 4 "scanner.lex"
+#line 1 "scanner.l"
+#line 4 "scanner.l"
 #include "parser.h"
 #include <stdio.h>
 #include <string.h>
@@ -687,11 +687,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 15 "scanner.lex"
+#line 14 "scanner.l"
 
 
-
-#line 695 "<stdout>"
+#line 694 "<stdout>"
 
 	if ( !(yy_init) )
 		{
@@ -776,93 +775,93 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 "scanner.lex"
+#line 16 "scanner.l"
 return PROGRAM;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 19 "scanner.lex"
+#line 17 "scanner.l"
 return END;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 20 "scanner.lex"
+#line 18 "scanner.l"
 return DECLARE;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 21 "scanner.lex"
+#line 19 "scanner.l"
 return COMMA;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 22 "scanner.lex"
+#line 20 "scanner.l"
 return SEMICOLON;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 23 "scanner.lex"
+#line 21 "scanner.l"
 return PLUS;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 24 "scanner.lex"
+#line 22 "scanner.l"
 return MINUS;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 25 "scanner.lex"
+#line 23 "scanner.l"
 return MULTIPLY;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 26 "scanner.lex"
+#line 24 "scanner.l"
 return DIVIDE;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 27 "scanner.lex"
+#line 25 "scanner.l"
 return LPAR;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 28 "scanner.lex"
+#line 26 "scanner.l"
 return RPAR;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 29 "scanner.lex"
+#line 27 "scanner.l"
 return ASSIGN;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 30 "scanner.lex"
+#line 28 "scanner.l"
 return LESS;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 31 "scanner.lex"
+#line 29 "scanner.l"
 return GE;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 32 "scanner.lex"
+#line 30 "scanner.l"
 return WHILE;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 33 "scanner.lex"
+#line 31 "scanner.l"
 return DO;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 34 "scanner.lex"
+#line 32 "scanner.l"
 return ENDWHILE;
 	YY_BREAK
 case 18:
 /* rule 18 can match eol */
 YY_RULE_SETUP
-#line 35 "scanner.lex"
+#line 34 "scanner.l"
 {
                 yylval.str_val = strdup(yytext);
                 return QSTRING;
@@ -870,66 +869,77 @@ YY_RULE_SETUP
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 39 "scanner.lex"
+#line 39 "scanner.l"
 return READ;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 40 "scanner.lex"
+#line 40 "scanner.l"
 return READOCT;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 41 "scanner.lex"
+#line 41 "scanner.l"
 return PRINT;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 42 "scanner.lex"
+#line 42 "scanner.l"
 return PRINTOCT;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 43 "scanner.lex"
+#line 43 "scanner.l"
 return MSG;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 44 "scanner.lex"
-return NEWL; 
+#line 44 "scanner.l"
+return NEWL;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 45 "scanner.lex"
-{ yylval.str_val = strdup(yytext);  return IDENTIFIER; }
+#line 46 "scanner.l"
+{
+				yylval.str_val = strdup(yytext);
+				return IDENTIFIER;
+				}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 46 "scanner.lex"
-{ yylval.ival = atoi(yytext); return NUMBER; }
+#line 51 "scanner.l"
+{
+				yylval.ival = atoi(yytext);
+				return NUMBER;
+				}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 47 "scanner.lex"
+#line 56 "scanner.l"
 ;
 	YY_BREAK
 case 28:
 /* rule 28 can match eol */
 YY_RULE_SETUP
-#line 48 "scanner.lex"
-{ yylineno++; }
+#line 58 "scanner.l"
+{
+				yylineno++;
+				}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 49 "scanner.lex"
-{ printf("Unrecognized token%s!\n", yytext); exit(1);  }
+#line 62 "scanner.l"
+{
+				printf("Unrecognized token%s!\n", yytext);
+				exit(1);
+				}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 50 "scanner.lex"
+#line 67 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 933 "<stdout>"
+#line 943 "<stdout>"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1926,6 +1936,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 50 "scanner.lex"
+#line 67 "scanner.l"
+
 
 
