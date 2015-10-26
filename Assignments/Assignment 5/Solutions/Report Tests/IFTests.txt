@@ -1,0 +1,37 @@
+PROGRAM iftest;
+	VAR x;
+	MSG "Conditional tests - comparing number with 3";
+	NEWL;
+	MSG "Enter value x = ";
+	READ x;
+	MSG "X < 3";
+	IF(x<3)THEN
+		MSG " - True";
+	ENDIF;
+	NEWL;
+	MSG "x <= 3";
+	IF(x<=3)THEN
+		MSG " - True";
+	ENDIF;
+	NEWL;
+	MSG "x == 3";
+	IF(x==3)THEN
+		MSG " - True";
+	ENDIF;
+	NEWL;
+	MSG "x != 3";
+	IF(x!=3)THEN
+		MSG " - True";
+	ENDIF;
+	NEWL;
+	MSG "x >= 3";
+	IF(x>=3)THEN
+		MSG " - True";
+	ENDIF;
+	NEWL;
+	MSG "x > 3";
+	IF(x>3)THEN
+		MSG " - True";
+	ENDIF;
+	NEWL;
+END

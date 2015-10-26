@@ -1,0 +1,15 @@
+PROGRAM whileinif;
+	VAR i;
+	MSG "Enter i = ";
+	READ i;
+	IF(i==2)THEN
+		MSG "You Got Two!";
+		NEWL;
+		WHILE (i<4) DO
+			PRINT i;
+			NEWL;
+			i=i+1;
+		ENDWHILE;
+	ENDIF;
+	NEWL;
+END

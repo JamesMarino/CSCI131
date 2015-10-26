@@ -1,0 +1,15 @@
+PROGRAM ifinwhile;
+	VAR x;
+	MSG "Enter x = ";
+	READ x;
+	WHILE(x<=4) DO
+		MSG "> ";
+		PRINT x;
+		NEWL;
+		IF(x==2)THEN
+			MSG "You Found Three";
+			NEWL;
+		ENDIF;
+		x=x+1;
+	ENDWHILE;
+END
